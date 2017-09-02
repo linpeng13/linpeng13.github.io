@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="木月天空">
 <meta property="og:description" content="慕课网-在Ubuntu Server下搭建LAMP环境课程链接 2-1 性感的Ubuntu Server操作系统 LTS:Long Term Support(长期支持版本) 该课程使用Ubuntu Server环境版本是 LTS 12.04  4-1 使用apt-get工具安装Apache PHP MySQL Ubuntu 使用 apt-get 命令获取并安装软件安装包 检查Apache是否已加载">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-02T08:42:43.000Z">
+<meta property="og:updated_time" content="2017-09-02T12:40:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【学习】慕课网-在Ubuntu Server下搭建LAMP环境">
 <meta name="twitter:description" content="慕课网-在Ubuntu Server下搭建LAMP环境课程链接 2-1 性感的Ubuntu Server操作系统 LTS:Long Term Support(长期支持版本) 该课程使用Ubuntu Server环境版本是 LTS 12.04  4-1 使用apt-get工具安装Apache PHP MySQL Ubuntu 使用 apt-get 命令获取并安装软件安装包 检查Apache是否已加载">
@@ -379,11 +379,9 @@
 <li>Ubuntu 使用 apt-get 命令获取并安装软件安装包</li>
 <li><p>检查Apache是否已加载php5_module模块，执行命令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/apache2/mods-enabled/php5.load</div></pre></td></tr></table></figure>
+<p>如果出现如下提示，说明已加载</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LoadModule php5_module /usr/lib/apache2/modules/libphp5.so</div></pre></td></tr></table></figure>
 </li>
-</ul>
-<p>  如果出现如下提示，说明已加载</p>
-  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LoadModule php5_module /usr/lib/apache2/modules/libphp5.so</div></pre></td></tr></table></figure>
-<ul>
 <li><p>检查PHP是否已安装加载MYSQL.so扩展，执行命令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/php5/conf.d/mysql.ini</div></pre></td></tr></table></figure>
 <p>若存在该文件，且显示如下提示，说明已加载</p>

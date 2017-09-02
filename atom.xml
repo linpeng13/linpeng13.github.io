@@ -53,7 +53,7 @@
     <link href="http://yoursite.com/2016/03/22/%E3%80%90%E5%AD%A6%E4%B9%A0%E3%80%91%E6%85%95%E8%AF%BE%E7%BD%91-%E5%9C%A8Ubuntu-Server%E4%B8%8B%E6%90%AD%E5%BB%BALAMP%E7%8E%AF%E5%A2%83/"/>
     <id>http://yoursite.com/2016/03/22/【学习】慕课网-在Ubuntu-Server下搭建LAMP环境/</id>
     <published>2016-03-22T06:47:55.000Z</published>
-    <updated>2017-09-02T08:42:43.000Z</updated>
+    <updated>2017-09-02T12:40:29.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="慕课网-在Ubuntu-Server下搭建LAMP环境"><a href="#慕课网-在Ubuntu-Server下搭建LAMP环境" class="headerlink" title="慕课网-在Ubuntu Server下搭建LAMP环境"></a>慕课网-在Ubuntu Server下搭建LAMP环境</h1><p><a href="http://www.imooc.com/learn/170" target="_blank" rel="external">课程链接</a></p>
 <h2 id="2-1-性感的Ubuntu-Server操作系统"><a href="#2-1-性感的Ubuntu-Server操作系统" class="headerlink" title="2-1 性感的Ubuntu Server操作系统"></a>2-1 性感的Ubuntu Server操作系统</h2><ul>
@@ -64,11 +64,9 @@
 <li>Ubuntu 使用 apt-get 命令获取并安装软件安装包</li>
 <li><p>检查Apache是否已加载php5_module模块，执行命令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/apache2/mods-enabled/php5.load</div></pre></td></tr></table></figure>
+<p>如果出现如下提示，说明已加载</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LoadModule php5_module /usr/lib/apache2/modules/libphp5.so</div></pre></td></tr></table></figure>
 </li>
-</ul>
-<p>  如果出现如下提示，说明已加载</p>
-  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LoadModule php5_module /usr/lib/apache2/modules/libphp5.so</div></pre></td></tr></table></figure>
-<ul>
 <li><p>检查PHP是否已安装加载MYSQL.so扩展，执行命令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/php5/conf.d/mysql.ini</div></pre></td></tr></table></figure>
 <p>若存在该文件，且显示如下提示，说明已加载</p>

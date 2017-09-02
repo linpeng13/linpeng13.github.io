@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -114,7 +114,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Mist',
+    scheme: 'Gemini',
     version: '5.1.2',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -266,6 +266,232 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/02/Hexo-Github-搭建个人博客/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/author.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木月天空">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/02/Hexo-Github-搭建个人博客/" itemprop="url">Hexo+Github 搭建个人博客</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-02T21:29:20+08:00">
+                2017-09-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="/uploads/2017-09-02/hexo-home.png" alt="Hexo"><br>Hexo 是一个快速、简洁且高效的博客框架，基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，并且只需一条指令即可部署到 GitHub Pages（或Heroku 等其他网站）。</p>
+<p>使用Hexo+Github 搭建个人博客，简单来说分两步：</p>
+<ol>
+<li>本地搭建Hexo </li>
+<li>部署至Github</li>
+</ol>
+<p>说明：本文环境基于macOS Sierra 且已安装git 。</p>
+<h1 id="本地搭建Hexo"><a href="#本地搭建Hexo" class="headerlink" title="本地搭建Hexo"></a>本地搭建Hexo</h1><p>Hexo 是基于Node.js 环境，故搭建Hexo，即：</p>
+<ol>
+<li>搭建Node.js 环境</li>
+<li>安装Hexo </li>
+<li>安装喜欢的 Theme</li>
+<li>个性化配置</li>
+</ol>
+<h2 id="搭建Node-js-环境"><a href="#搭建Node-js-环境" class="headerlink" title="搭建Node.js 环境"></a>搭建Node.js 环境</h2><blockquote>
+<p>Node Version Manager - Simple bash script to manage multiple active node.js versions</p>
+</blockquote>
+<p>建议使用<code>nvm</code> 工具安装并操控<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js 环境</a>，步骤如下：</p>
+<ol>
+<li><p>在个人Home 目录安装 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a></p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> ~/</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/creationix/nvm.git .nvm</div></pre></td></tr></table></figure>
+</li>
+<li><p>在<code>~/.bash_profile</code> 中增加nvm 环境变量</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> ~/.nvm/nvm.sh</div></pre></td></tr></table></figure>
+</li>
+<li><p>执行<code>source ~/.bash_profile</code> 使环境变量生效</p>
+</li>
+<li><p>使用nvm 安装Node.js 环境（可同时安装多个版本的Node.js ，并使用步骤5 的命令指定当前使用的版本）</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## List remote versions available for install</span></div><div class="line">$ nvm ls-remote</div><div class="line"></div><div class="line"><span class="comment">## Download and install version 6.11.2</span></div><div class="line">$ nvm install v6.11.2</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用<code>nvm</code> 工具选择当前使用的Node.js 环境</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## List installed versions</span></div><div class="line">$ nvm ls</div><div class="line"></div><div class="line"><span class="comment">## Modify PATH to use version 6.11.2</span></div><div class="line">$ nvm use v6.11.2</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>上述步骤已完成Node.js 环境安装及当前使用的Node.js 环境设置。以下是nvm 使用技巧说明：</p>
+<ol>
+<li><p>常用的nvm 命令</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## List remote versions available for install</span></div><div class="line">$ nvm ls-remote</div><div class="line"></div><div class="line"><span class="comment">## Download and install a &lt;version&gt;</span></div><div class="line">$ nvm install &lt;version&gt;</div><div class="line"></div><div class="line"><span class="comment">## List installed versions</span></div><div class="line">$ nvm ls</div><div class="line"></div><div class="line"><span class="comment">## Modify PATH to use &lt;version&gt;.</span></div><div class="line">$ nvm use &lt;version&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>npm 更新慢问题解决<br> Node.js 采用<a href="https://www.npmjs.com/" target="_blank" rel="external">npm（Node Package Manager）工具</a>进行Node 程序包管理。但npm 默认采用国外的镜像点，更新较慢，可更换为<a href="https://npm.taobao.org/" target="_blank" rel="external">淘宝镜像点</a>。</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ npm config ls -l|grep registry</div><div class="line">registry = <span class="string">"https://registry.npmjs.org/"</span></div><div class="line"></div><div class="line">$ npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</div><div class="line">$ npm config ls -l|grep registry</div><div class="line">registry = <span class="string">"https://registry.npm.taobao.org/"</span></div><div class="line">; registry = <span class="string">"https://registry.npmjs.org/"</span> (overridden) </div><div class="line"></div><div class="line">$ npm update</div></pre></td></tr></table></figure>
+</li>
+<li><p>更新npm 工具</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm install npm@latest -g</div><div class="line"></div><div class="line"><span class="comment">## 查看npm 版本</span></div><div class="line">$ npm -v</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>安装Hexo 步骤如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init [blog-site-folder]</div><div class="line">$ <span class="built_in">cd</span> [blog-site-folder]</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>说明：使用npm 下载安装<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo 程序</a>，选项参数<code>-g</code>的作用是将Hexo 程序安装在当前Node.js 环境中，例如<code>~/.nvm/versions/node/v6.11.2/lib/node_modules</code> 。</p>
+<p>常用的Hexo 命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</span></div><div class="line">$ hexo init [folder]</div><div class="line"></div><div class="line"><span class="comment">## 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。</span></div><div class="line"><span class="comment">## 如果标题包含空格的话，请使用引号括起来。</span></div><div class="line">$ hexo new [layout] &lt;title&gt;</div><div class="line"></div><div class="line"><span class="comment">## 生成静态文件</span></div><div class="line"><span class="comment">## 若附加选项参数"-d" 或"--deploy" ，即文件生成后立即部署网站</span></div><div class="line"><span class="comment">## 若附加选项参数"-w" 或"--watch" ，即监视文件变动</span></div><div class="line"><span class="comment">## 可以简写为"hexo g"</span></div><div class="line">$ hexo generate</div><div class="line"></div><div class="line"><span class="comment">## 发表草稿</span></div><div class="line">$ hexo publish [layout] &lt;filename&gt;</div><div class="line"></div><div class="line"><span class="comment">## 启动服务器。默认情况下，访问网址为： http://localhost:4000/</span></div><div class="line"><span class="comment">## 可以简写为"hexo s"</span></div><div class="line">$ hexo server</div><div class="line"></div><div class="line"><span class="comment">## 部署网站</span></div><div class="line"><span class="comment">## 可以简写为"hexo d"</span></div><div class="line">$ hexo deploy</div><div class="line"></div><div class="line"><span class="comment">## 清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span></div><div class="line"><span class="comment">## 在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</span></div><div class="line">$ hexo clean</div><div class="line"></div><div class="line"><span class="comment">## 显示 Hexo 版本</span></div><div class="line">$ hexo version</div></pre></td></tr></table></figure>
+<h2 id="安装喜欢的-Theme"><a href="#安装喜欢的-Theme" class="headerlink" title="安装喜欢的 Theme"></a>安装喜欢的 Theme</h2><p>Hexo 默认的Theme 是landscape ，显然还有更好的选择。Hexo Github 给出了”<a href="https://en.abnerchou.me/Blog/5c00ca67/" target="_blank" rel="external">Hexo top 10 themes</a>“ 。</p>
+<p>我这里选择下载<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">Hexo NexT 最新主题</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> [your-hexo-site]</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<p>当然，若是希望升级Hexo NexT 主题，可执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> themes/next</div><div class="line">$ git pull</div></pre></td></tr></table></figure>
+<p>启用Hexo NexT Theme ，在站点配置文件<code>_config.yml</code> 找到 <code>theme</code> 字段，并将其值更改为 <code>next</code><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: next</div></pre></td></tr></table></figure></p>
+<h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>站点和主题的个性化配置，可分别参考<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo 中文官网</a> 和<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT, Elegant Theme for Hexo</a> 。</p>
+<h1 id="部署至Github"><a href="#部署至Github" class="headerlink" title="部署至Github"></a>部署至Github</h1><ol>
+<li>首先在<a href="https://github.com/" target="_blank" rel="external">Github</a> 上注册一个账号，并建立GitHub Pages Repository ，该仓库名必须是<code>your_user_name.github.io</code></li>
+<li><p><a href="https://help.github.com/articles/about-ssh/" target="_blank" rel="external">本地生成ssh 公私钥</a>，并将公钥复制到Github 个人帐户SSH keys中</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> ~</div><div class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></div></pre></td></tr></table></figure>
+<p> 执行上述<code>ssh-keygen</code> 命令，会以交互式要求输入文件名（不输入直接<code>Enter</code>，默认生成的公私钥文件名分别是<code>id_rsa.pub</code> 和<code>id_rsa</code>）和密码。<br> 将公钥文件（例如<code>id_rsa.pub</code> ）中的内容拷贝至<code>Github</code> -&gt; <code>Settings</code> -&gt; <code>SSH and GPG keys</code> -&gt; <code>SSH Keys</code></p>
+</li>
+<li><p>修订站点配置文件<code>_config.yml</code></p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> [your-hexo-site]</div><div class="line">$ vi _config.yml</div></pre></td></tr></table></figure>
+<p> 找到<code>deploy</code> 字段，作如下修改</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git </div><div class="line">  repository: git@github.com:&lt;your_user_name&gt;/&lt;your_user_name&gt;.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+</li>
+<li><p>部署Hexo 站点到Github</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> [your-hexo-site]</div><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
+<li><a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm in Github</a></li>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js 官网</a></li>
+<li><a href="http://nodejs.cn/" target="_blank" rel="external">Node.js 中文官网</a></li>
+<li><a href="https://www.npmjs.com/" target="_blank" rel="external">npm 官网</a></li>
+<li><a href="https://npm.taobao.org/" target="_blank" rel="external">npm 淘宝镜像点</a></li>
+<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo 中文官网</a></li>
+<li><a href="https://github.com/hexojs/hexo" target="_blank" rel="external">Hexo in Github</a></li>
+<li><a href="https://en.abnerchou.me/Blog/5c00ca67/" target="_blank" rel="external">Hexo top 10 themes</a></li>
+<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT, Elegant Theme for Hexo</a></li>
+<li><a href="https://help.github.com/articles/about-ssh/" target="_blank" rel="external">github认证，ssh配置</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1108,7 +1334,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1130,7 +1356,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1168,39 +1394,6 @@
                   
                     
                       Weibo
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/muyuetiankong" target="_blank" title="Zhihu">
-                  
-                    <i class="fa fa-fw fa-mortar-board"></i>
-                  
-                    
-                      Zhihu
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://twitter.com/muyuetiankong" target="_blank" title="Twitter">
-                  
-                    <i class="fa fa-fw fa-twitter"></i>
-                  
-                    
-                      Twitter
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://facebook.com/muyuetiankong" target="_blank" title="FB Page">
-                  
-                    <i class="fa fa-fw fa-facebook"></i>
-                  
-                    
-                      FB Page
                     
                 </a>
               </span>
@@ -1250,7 +1443,7 @@
 
   <span class="post-meta-divider">|</span>
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.2</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.2</div>
 
 
         
@@ -1342,6 +1535,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
 
   <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>

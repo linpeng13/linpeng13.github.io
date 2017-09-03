@@ -106,7 +106,7 @@
 <meta property="og:description" content="Hexo 是一个快速、简洁且高效的博客框架，基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，并且只需一条指令即可部署到 GitHub Pages（或Heroku 等其他网站）。 使用Hexo+Github 搭建个人博客，简单来说分两步：  本地搭建Hexo  部署至Github  说明：本文环境基于macOS Sierra 且已安装git 。 本地搭建HexoHexo 是基">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://linpeng13.github.io/uploads/2017-09-02/hexo-home.png">
-<meta property="og:updated_time" content="2017-09-03T11:22:51.000Z">
+<meta property="og:updated_time" content="2017-09-03T11:38:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github 搭建个人博客">
 <meta name="twitter:description" content="Hexo 是一个快速、简洁且高效的博客框架，基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，并且只需一条指令即可部署到 GitHub Pages（或Heroku 等其他网站）。 使用Hexo+Github 搭建个人博客，简单来说分两步：  本地搭建Hexo  部署至Github  说明：本文环境基于macOS Sierra 且已安装git 。 本地搭建HexoHexo 是基">
@@ -377,7 +377,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,235(字)
+                  1,285(字)
                 </span>
               
 
@@ -393,7 +393,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  5(分)
+                  6(分)
                 </span>
               
             </div>
@@ -465,6 +465,8 @@
 <p>说明：使用npm 下载安装<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo 程序</a>，选项参数<code>-g</code>的作用是将Hexo 程序安装在当前Node.js 环境中，例如<code>~/.nvm/versions/node/v6.11.2/lib/node_modules</code> 。</p>
 <p>常用的Hexo 命令：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</span></div><div class="line">$ hexo init [folder]</div><div class="line"></div><div class="line"><span class="comment">## 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。</span></div><div class="line"><span class="comment">## 如果标题包含空格的话，请使用引号括起来。</span></div><div class="line">$ hexo new [layout] &lt;title&gt;</div><div class="line"></div><div class="line"><span class="comment">## 生成静态文件</span></div><div class="line"><span class="comment">## 若附加选项参数"-d" 或"--deploy" ，即文件生成后立即部署网站</span></div><div class="line"><span class="comment">## 若附加选项参数"-w" 或"--watch" ，即监视文件变动</span></div><div class="line"><span class="comment">## 可以简写为"hexo g"</span></div><div class="line">$ hexo generate</div><div class="line"></div><div class="line"><span class="comment">## 发表草稿</span></div><div class="line">$ hexo publish [layout] &lt;filename&gt;</div><div class="line"></div><div class="line"><span class="comment">## 启动服务器。默认情况下，访问网址为： http://localhost:4000/</span></div><div class="line"><span class="comment">## 可以简写为"hexo s"</span></div><div class="line">$ hexo server</div><div class="line"></div><div class="line"><span class="comment">## 部署网站</span></div><div class="line"><span class="comment">## 可以简写为"hexo d"</span></div><div class="line">$ hexo deploy</div><div class="line"></div><div class="line"><span class="comment">## 清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span></div><div class="line"><span class="comment">## 在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</span></div><div class="line">$ hexo clean</div><div class="line"></div><div class="line"><span class="comment">## 显示 Hexo 版本</span></div><div class="line">$ hexo version</div></pre></td></tr></table></figure>
+<p>插播一个有用的npm 命令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 查看Hexo 站点安装了哪些node 程序包</span></div><div class="line"><span class="comment">## `--depth` 表示检索深度为0，即不显示其依赖包</span></div><div class="line">$ <span class="built_in">cd</span> [blog-site-folder]</div><div class="line">$ npm list --depth=0</div></pre></td></tr></table></figure>
 <h2 id="安装喜欢的-Theme"><a href="#安装喜欢的-Theme" class="headerlink" title="安装喜欢的 Theme"></a>安装喜欢的 Theme</h2><p>Hexo 默认的Theme 是landscape ，显然还有更好的选择。Hexo Github 给出了”<a href="https://en.abnerchou.me/Blog/5c00ca67/" target="_blank" rel="external">Hexo top 10 themes</a>“ 。</p>
 <p>我这里选择下载<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">Hexo NexT 最新主题</a></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> [your-hexo-site]</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>

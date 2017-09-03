@@ -249,9 +249,43 @@
       
 
       
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
     </ul>
   
 
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
   
 </nav>
 
@@ -414,26 +448,15 @@
 
       
         
-          
-            <h1 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h1><p>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。<br><img src="/uploads/2017-09-03/header.png" alt="页头"></p>
+          <h1 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h1><p>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。<br><img src="/uploads/2017-09-03/header.png" alt="页头"></p>
 <h2 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h2><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="external">leanCloud,实现文章阅读量统计</a>》。</p>
-<h2 id="字数统计和阅读时长"><a href="#字数统计和阅读时长" class="headerlink" title="字数统计和阅读时长"></a>字数统计和阅读时长</h2><p>增加【字数统计】和【阅读时长】信息，需安装插件<a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="external">hexo-wordcount</a> ，安装方法相对简单：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm i --save hexo-wordcount</div><div class="line"></div><div class="line"><span class="comment">## Node 版本7.6.0之前,请安装 2.x 版本 (Node.js v7.6.0 and previous)</span></div><div class="line">$ npm install hexo-wordcount@2 --save</div></pre></td></tr></table></figure>
-<p>然后在<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 中，找到字段 <code>post_wordcount</code> ，其设置块内容默认是：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Post wordcount display settings</span></div><div class="line"><span class="comment"># Dependencies: https://github.com/willin/hexo-wordcount</span></div><div class="line">post_wordcount:</div><div class="line">  item_text: <span class="literal">true</span></div><div class="line">  wordcount: <span class="literal">false</span></div><div class="line">  min2read: <span class="literal">false</span></div><div class="line">  totalcount: <span class="literal">false</span></div><div class="line">  separated_meta: <span class="literal">true</span></div></pre></td></tr></table></figure>
-<p>字段<code>wordcount</code> 是文章的<strong>字数统计</strong>，字段<code>min2read</code>是文章的<strong>阅读时长</strong>预估值，这两个值默认显示在文章开头（如图）。<br>字段<code>totalcount</code>是整站的<strong>字数统计</strong>，默认显示在站点页面最下方。<br>按需要将<code>false</code> 修改为<code>true</code>即可。</p>
-<p>但默认开启的【字数统计】和【阅读时长】信息，是不包含单位的，故有强迫症的朋友，可以修订文件<code>themes/next/layout/_macro/post.swig</code> ，在<code>wordcount(post.content)</code> 所在行加<code>(字)</code> ，在<code>min2read(post.content)</code> 所在行加<code>(分)</code> 。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&#123;% <span class="keyword">if</span> theme.post_wordcount.wordcount or theme.post_wordcount.min2read %&#125;</div><div class="line">  &lt;div class=<span class="string">"post-wordcount"</span>&gt;</div><div class="line">    &#123;% <span class="keyword">if</span> theme.post_wordcount.wordcount %&#125;</div><div class="line">      &#123;% <span class="keyword">if</span> not theme.post_wordcount.separated_meta %&#125;</div><div class="line">        &lt;span class=<span class="string">"post-meta-divider"</span>&gt;|&lt;/span&gt;</div><div class="line">      &#123;% endif %&#125;</div><div class="line">      &lt;span class=<span class="string">"post-meta-item-icon"</span>&gt;</div><div class="line">        &lt;i class=<span class="string">"fa fa-file-word-o"</span>&gt;&lt;/i&gt;</div><div class="line">      &lt;/span&gt;</div><div class="line">      &#123;% <span class="keyword">if</span> theme.post_wordcount.item_text %&#125;</div><div class="line">        &lt;span class=<span class="string">"post-meta-item-text"</span>&gt;&#123;&#123; __(<span class="string">'post.wordcount'</span>) &#125;&#125;&amp;<span class="comment">#58;&lt;/span&gt;</span></div><div class="line">      &#123;% endif %&#125;</div><div class="line">      &lt;span title=<span class="string">"&#123;&#123; __('post.wordcount') &#125;&#125;"</span>&gt;</div><div class="line">        &#123;&#123; wordcount(post.content) &#125;&#125;(字)</div><div class="line">      &lt;/span&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">    &#123;% <span class="keyword">if</span> theme.post_wordcount.wordcount and theme.post_wordcount.min2read %&#125;</div><div class="line">      &lt;span class=<span class="string">"post-meta-divider"</span>&gt;|&lt;/span&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">    &#123;% <span class="keyword">if</span> theme.post_wordcount.min2read %&#125;</div><div class="line">      &lt;span class=<span class="string">"post-meta-item-icon"</span>&gt;</div><div class="line">        &lt;i class=<span class="string">"fa fa-clock-o"</span>&gt;&lt;/i&gt;</div><div class="line">      &lt;/span&gt;</div><div class="line">      &#123;% <span class="keyword">if</span> theme.post_wordcount.item_text %&#125;</div><div class="line">        &lt;span class=<span class="string">"post-meta-item-text"</span>&gt;&#123;&#123; __(<span class="string">'post.min2read'</span>) &#125;&#125; &amp;asymp;&lt;/span&gt;</div><div class="line">      &#123;% endif %&#125;</div><div class="line">      &lt;span title=<span class="string">"&#123;&#123; __('post.min2read') &#125;&#125;"</span>&gt;</div><div class="line">        &#123;&#123; min2read(post.content) &#125;&#125;(分)</div><div class="line">      &lt;/span&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line">  &lt;/div&gt;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
-<h1 id="页尾"><a href="#页尾" class="headerlink" title="页尾"></a>页尾</h1><p>NexT 主题的文章页面，想要在页尾增加文章的版权信息，如图：<br><img src="/uploads/2017-09-03/footer.png" alt="页尾"></p>
-<p>在<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 中，找到字段<code>post_copyright</code> ，将<code>enable</code> 设置为<code>true</code> 即可。</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>从上述设置，不难发现NexT 主题文章页面设置的几个重要文件，即：</p>
-<ul>
-<li><code>_layout.swig</code> -<code>themes/next/layout/_layout.swig</code> ，全局性的页面布局代码；</li>
-<li><code>post.swig</code> -<code>themes/next/layout/post.swig</code> ，文章类型页面框架布局代码，其中调用了<code>_macro/post.swig</code> ；</li>
-<li><code>_macro/post.swig</code> - themes/next/layout/_macro/post.swig` ，文章类型页面实际布局代码；</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/03/some-hexo-next-set-the-page-header-foter./#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -576,7 +599,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,285(字)
+                  1,287(字)
                 </span>
               
 
@@ -614,96 +637,20 @@
 
       
         
-          
-            <p><img src="/uploads/2017-09-02/hexo-home.png" alt="Hexo"><br>Hexo 是一个快速、简洁且高效的博客框架，基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，并且只需一条指令即可部署到 GitHub Pages（或Heroku 等其他网站）。</p>
+          <p><img src="/uploads/2017-09-02/hexo-home.png" alt="Hexo"><br>Hexo 是一个快速、简洁且高效的博客框架，基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，并且只需一条指令即可部署到 GitHub Pages（或Heroku 等其他网站）。</p>
 <p>使用Hexo+Github 搭建个人博客，简单来说分两步：</p>
 <ol>
 <li>本地搭建Hexo </li>
 <li>部署至Github</li>
 </ol>
 <p>说明：本文环境基于macOS Sierra 且已安装git 。</p>
-<h1 id="本地搭建Hexo"><a href="#本地搭建Hexo" class="headerlink" title="本地搭建Hexo"></a>本地搭建Hexo</h1><p>Hexo 是基于Node.js 环境，故搭建Hexo，即：</p>
-<ol>
-<li>搭建Node.js 环境</li>
-<li>安装Hexo </li>
-<li>安装喜欢的 Theme</li>
-<li>个性化配置</li>
-</ol>
-<h2 id="搭建Node-js-环境"><a href="#搭建Node-js-环境" class="headerlink" title="搭建Node.js 环境"></a>搭建Node.js 环境</h2><blockquote>
-<p>Node Version Manager - Simple bash script to manage multiple active node.js versions</p>
-</blockquote>
-<p>建议使用<code>nvm</code> 工具安装并操控<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js 环境</a>，步骤如下：</p>
-<ol>
-<li><p>在个人Home 目录安装 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a></p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> ~/</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/creationix/nvm.git .nvm</div></pre></td></tr></table></figure>
-</li>
-<li><p>在<code>~/.bash_profile</code> 中增加nvm 环境变量</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> ~/.nvm/nvm.sh</div></pre></td></tr></table></figure>
-</li>
-<li><p>执行<code>source ~/.bash_profile</code> 使环境变量生效</p>
-</li>
-<li><p>使用nvm 安装Node.js 环境（可同时安装多个版本的Node.js ，并使用步骤5 的命令指定当前使用的版本）</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## List remote versions available for install</span></div><div class="line">$ nvm ls-remote</div><div class="line"></div><div class="line"><span class="comment">## Download and install version 6.11.2</span></div><div class="line">$ nvm install v6.11.2</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用<code>nvm</code> 工具选择当前使用的Node.js 环境</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## List installed versions</span></div><div class="line">$ nvm ls</div><div class="line"></div><div class="line"><span class="comment">## Modify PATH to use version 6.11.2</span></div><div class="line">$ nvm use v6.11.2</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>上述步骤已完成Node.js 环境安装及当前使用的Node.js 环境设置。以下是nvm 使用技巧说明：</p>
-<ol>
-<li><p>常用的nvm 命令</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## List remote versions available for install</span></div><div class="line">$ nvm ls-remote</div><div class="line"></div><div class="line"><span class="comment">## Download and install a &lt;version&gt;</span></div><div class="line">$ nvm install &lt;version&gt;</div><div class="line"></div><div class="line"><span class="comment">## List installed versions</span></div><div class="line">$ nvm ls</div><div class="line"></div><div class="line"><span class="comment">## Modify PATH to use &lt;version&gt;.</span></div><div class="line">$ nvm use &lt;version&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>npm 更新慢问题解决<br> Node.js 采用<a href="https://www.npmjs.com/" target="_blank" rel="external">npm（Node Package Manager）工具</a>进行Node 程序包管理。但npm 默认采用国外的镜像点，更新较慢，可更换为<a href="https://npm.taobao.org/" target="_blank" rel="external">淘宝镜像点</a>。</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ npm config ls -l|grep registry</div><div class="line">registry = <span class="string">"https://registry.npmjs.org/"</span></div><div class="line"></div><div class="line">$ npm config <span class="built_in">set</span> registry https://registry.npm.taobao.org</div><div class="line">$ npm config ls -l|grep registry</div><div class="line">registry = <span class="string">"https://registry.npm.taobao.org/"</span></div><div class="line">; registry = <span class="string">"https://registry.npmjs.org/"</span> (overridden) </div><div class="line"></div><div class="line">$ npm update</div></pre></td></tr></table></figure>
-</li>
-<li><p>更新npm 工具</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm install npm@latest -g</div><div class="line"></div><div class="line"><span class="comment">## 查看npm 版本</span></div><div class="line">$ npm -v</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>安装Hexo 步骤如下：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init [blog-site-folder]</div><div class="line">$ <span class="built_in">cd</span> [blog-site-folder]</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<p>说明：使用npm 下载安装<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo 程序</a>，选项参数<code>-g</code>的作用是将Hexo 程序安装在当前Node.js 环境中，例如<code>~/.nvm/versions/node/v6.11.2/lib/node_modules</code> 。</p>
-<p>常用的Hexo 命令：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</span></div><div class="line">$ hexo init [folder]</div><div class="line"></div><div class="line"><span class="comment">## 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。</span></div><div class="line"><span class="comment">## 如果标题包含空格的话，请使用引号括起来。</span></div><div class="line">$ hexo new [layout] &lt;title&gt;</div><div class="line"></div><div class="line"><span class="comment">## 生成静态文件</span></div><div class="line"><span class="comment">## 若附加选项参数"-d" 或"--deploy" ，即文件生成后立即部署网站</span></div><div class="line"><span class="comment">## 若附加选项参数"-w" 或"--watch" ，即监视文件变动</span></div><div class="line"><span class="comment">## 可以简写为"hexo g"</span></div><div class="line">$ hexo generate</div><div class="line"></div><div class="line"><span class="comment">## 发表草稿</span></div><div class="line">$ hexo publish [layout] &lt;filename&gt;</div><div class="line"></div><div class="line"><span class="comment">## 启动服务器。默认情况下，访问网址为： http://localhost:4000/</span></div><div class="line"><span class="comment">## 可以简写为"hexo s"</span></div><div class="line">$ hexo server</div><div class="line"></div><div class="line"><span class="comment">## 部署网站</span></div><div class="line"><span class="comment">## 可以简写为"hexo d"</span></div><div class="line">$ hexo deploy</div><div class="line"></div><div class="line"><span class="comment">## 清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span></div><div class="line"><span class="comment">## 在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</span></div><div class="line">$ hexo clean</div><div class="line"></div><div class="line"><span class="comment">## 显示 Hexo 版本</span></div><div class="line">$ hexo version</div></pre></td></tr></table></figure>
-<p>插播一个有用的npm 命令</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 查看Hexo 站点安装了哪些node 程序包</span></div><div class="line"><span class="comment">## `--depth` 表示检索深度为0，即不显示其依赖包</span></div><div class="line">$ <span class="built_in">cd</span> [blog-site-folder]</div><div class="line">$ npm list --depth=0</div></pre></td></tr></table></figure>
-<h2 id="安装喜欢的-Theme"><a href="#安装喜欢的-Theme" class="headerlink" title="安装喜欢的 Theme"></a>安装喜欢的 Theme</h2><p>Hexo 默认的Theme 是landscape ，显然还有更好的选择。Hexo Github 给出了”<a href="https://en.abnerchou.me/Blog/5c00ca67/" target="_blank" rel="external">Hexo top 10 themes</a>“ 。</p>
-<p>我这里选择下载<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">Hexo NexT 最新主题</a></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> [your-hexo-site]</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
-<p>当然，若是希望升级Hexo NexT 主题，可执行</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> themes/next</div><div class="line">$ git pull</div></pre></td></tr></table></figure>
-<p>启用Hexo NexT Theme ，在站点配置文件<code>_config.yml</code> 找到 <code>theme</code> 字段，并将其值更改为 <code>next</code><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: next</div></pre></td></tr></table></figure></p>
-<h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>站点和主题的个性化配置，可分别参考<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo 中文官网</a> 和<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT, Elegant Theme for Hexo</a> 。</p>
-<h1 id="部署至Github"><a href="#部署至Github" class="headerlink" title="部署至Github"></a>部署至Github</h1><ol>
-<li>首先在<a href="https://github.com/" target="_blank" rel="external">Github</a> 上注册一个账号，并建立GitHub Pages Repository ，该仓库名必须是<code>your_user_name.github.io</code></li>
-<li><p><a href="https://help.github.com/articles/about-ssh/" target="_blank" rel="external">本地生成ssh 公私钥</a>，并将公钥复制到Github 个人帐户SSH keys中</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> ~</div><div class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></div></pre></td></tr></table></figure>
-<p> 执行上述<code>ssh-keygen</code> 命令，会以交互式要求输入文件名（不输入直接<code>Enter</code>，默认生成的公私钥文件名分别是<code>id_rsa.pub</code> 和<code>id_rsa</code>）和密码。<br> 将公钥文件（例如<code>id_rsa.pub</code> ）中的内容拷贝至<code>Github</code> -&gt; <code>Settings</code> -&gt; <code>SSH and GPG keys</code> -&gt; <code>SSH Keys</code></p>
-</li>
-<li><p>修订站点配置文件<code>_config.yml</code></p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> [your-hexo-site]</div><div class="line">$ vi _config.yml</div></pre></td></tr></table></figure>
-<p> 找到<code>deploy</code> 字段，作如下修改</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git </div><div class="line">  repository: git@github.com:&lt;your_user_name&gt;/&lt;your_user_name&gt;.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-</li>
-<li><p>部署Hexo 站点到Github</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> [your-hexo-site]</div><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
-<li><a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm in Github</a></li>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js 官网</a></li>
-<li><a href="http://nodejs.cn/" target="_blank" rel="external">Node.js 中文官网</a></li>
-<li><a href="https://www.npmjs.com/" target="_blank" rel="external">npm 官网</a></li>
-<li><a href="https://npm.taobao.org/" target="_blank" rel="external">npm 淘宝镜像点</a></li>
-<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo 中文官网</a></li>
-<li><a href="https://github.com/hexojs/hexo" target="_blank" rel="external">Hexo in Github</a></li>
-<li><a href="https://en.abnerchou.me/Blog/5c00ca67/" target="_blank" rel="external">Hexo top 10 themes</a></li>
-<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT, Elegant Theme for Hexo</a></li>
-<li><a href="https://help.github.com/articles/about-ssh/" target="_blank" rel="external">github认证，ssh配置</a></li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/02/hexo-github-build-personal-blog/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2025,6 +1972,10 @@
 
 
   
+    
+
+    
+  
 
 
 
@@ -2040,6 +1991,323 @@
 
 
   
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
@@ -2159,6 +2427,28 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
 
   
 

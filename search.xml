@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Hexo NexT主题文章页头页尾的一些设置]]></title>
+    <url>%2F2017%2F09%2F03%2Fsome-hexo-next-set-the-page-header-foter.%2F</url>
+    <content type="text"><![CDATA[页头NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。 阅读次数增加【阅读次数】信息，需要用到第三方的服务LeanCloud ，且需要修改主题配置文件themes/next/_config.yml 。详细的操作可参考这篇博文《leanCloud,实现文章阅读量统计》。 字数统计和阅读时长增加【字数统计】和【阅读时长】信息，需安装插件hexo-wordcount ，安装方法相对简单： 1234$ npm i --save hexo-wordcount## Node 版本7.6.0之前,请安装 2.x 版本 (Node.js v7.6.0 and previous)$ npm install hexo-wordcount@2 --save 然后在主题配置文件themes/next/_config.yml 中，找到字段 post_wordcount ，其设置块内容默认是： 12345678# Post wordcount display settings# Dependencies: https://github.com/willin/hexo-wordcountpost_wordcount: item_text: true wordcount: false min2read: false totalcount: false separated_meta: true 字段wordcount 是文章的字数统计，字段min2read是文章的阅读时长预估值，这两个值默认显示在文章开头（如图）。字段totalcount是整站的字数统计，默认显示在站点页面最下方。按需要将false 修改为true即可。 但默认开启的【字数统计】和【阅读时长】信息，是不包含单位的，故有强迫症的朋友，可以修订文件themes/next/layout/_macro/post.swig ，在wordcount(post.content) 所在行加(字) ，在min2read(post.content) 所在行加(分) 。 12345678910111213141516171819202122232425262728293031323334&#123;% if theme.post_wordcount.wordcount or theme.post_wordcount.min2read %&#125; &lt;div class="post-wordcount"&gt; &#123;% if theme.post_wordcount.wordcount %&#125; &#123;% if not theme.post_wordcount.separated_meta %&#125; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt; &#123;% endif %&#125; &lt;span class="post-meta-item-icon"&gt; &lt;i class="fa fa-file-word-o"&gt;&lt;/i&gt; &lt;/span&gt; &#123;% if theme.post_wordcount.item_text %&#125; &lt;span class="post-meta-item-text"&gt;&#123;&#123; __('post.wordcount') &#125;&#125;&amp;#58;&lt;/span&gt; &#123;% endif %&#125; &lt;span title="&#123;&#123; __('post.wordcount') &#125;&#125;"&gt; &#123;&#123; wordcount(post.content) &#125;&#125;(字) &lt;/span&gt; &#123;% endif %&#125; &#123;% if theme.post_wordcount.wordcount and theme.post_wordcount.min2read %&#125; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt; &#123;% endif %&#125; &#123;% if theme.post_wordcount.min2read %&#125; &lt;span class="post-meta-item-icon"&gt; &lt;i class="fa fa-clock-o"&gt;&lt;/i&gt; &lt;/span&gt; &#123;% if theme.post_wordcount.item_text %&#125; &lt;span class="post-meta-item-text"&gt;&#123;&#123; __('post.min2read') &#125;&#125; &amp;asymp;&lt;/span&gt; &#123;% endif %&#125; &lt;span title="&#123;&#123; __('post.min2read') &#125;&#125;"&gt; &#123;&#123; min2read(post.content) &#125;&#125;(分) &lt;/span&gt; &#123;% endif %&#125; &lt;/div&gt;&#123;% endif %&#125; 页尾NexT 主题的文章页面，想要在页尾增加文章的版权信息，如图： 在主题配置文件themes/next/_config.yml 中，找到字段post_copyright ，将enable 设置为true 即可。 其他从上述设置，不难发现NexT 主题文章页面设置的几个重要文件，即： _layout.swig -themes/next/layout/_layout.swig ，全局性的页面布局代码； post.swig -themes/next/layout/post.swig ，文章类型页面框架布局代码，其中调用了_macro/post.swig ； _macro/post.swig - themes/next/layout/_macro/post.swig` ，文章类型页面实际布局代码；]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>NexT</tag>
+        <tag>LeanCloud</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo+Github 搭建个人博客]]></title>
+    <url>%2F2017%2F09%2F02%2Fhexo-github-build-personal-blog%2F</url>
+    <content type="text"><![CDATA[Hexo 是一个快速、简洁且高效的博客框架，基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，并且只需一条指令即可部署到 GitHub Pages（或Heroku 等其他网站）。 使用Hexo+Github 搭建个人博客，简单来说分两步： 本地搭建Hexo 部署至Github 说明：本文环境基于macOS Sierra 且已安装git 。 本地搭建HexoHexo 是基于Node.js 环境，故搭建Hexo，即： 搭建Node.js 环境 安装Hexo 安装喜欢的 Theme 个性化配置 搭建Node.js 环境 Node Version Manager - Simple bash script to manage multiple active node.js versions 建议使用nvm 工具安装并操控Node.js 环境，步骤如下： 在个人Home 目录安装 nvm 12$ cd ~/$ git clone https://github.com/creationix/nvm.git .nvm 在~/.bash_profile 中增加nvm 环境变量 1source ~/.nvm/nvm.sh 执行source ~/.bash_profile 使环境变量生效 使用nvm 安装Node.js 环境（可同时安装多个版本的Node.js ，并使用步骤5 的命令指定当前使用的版本） 12345## List remote versions available for install$ nvm ls-remote## Download and install version 6.11.2$ nvm install v6.11.2 使用nvm 工具选择当前使用的Node.js 环境 12345## List installed versions$ nvm ls## Modify PATH to use version 6.11.2$ nvm use v6.11.2 上述步骤已完成Node.js 环境安装及当前使用的Node.js 环境设置。以下是nvm 使用技巧说明： 常用的nvm 命令 1234567891011## List remote versions available for install$ nvm ls-remote## Download and install a &lt;version&gt;$ nvm install &lt;version&gt;## List installed versions$ nvm ls## Modify PATH to use &lt;version&gt;.$ nvm use &lt;version&gt; npm 更新慢问题解决 Node.js 采用npm（Node Package Manager）工具进行Node 程序包管理。但npm 默认采用国外的镜像点，更新较慢，可更换为淘宝镜像点。 123456789$ npm config ls -l|grep registryregistry = "https://registry.npmjs.org/"$ npm config set registry https://registry.npm.taobao.org$ npm config ls -l|grep registryregistry = "https://registry.npm.taobao.org/"; registry = "https://registry.npmjs.org/" (overridden) $ npm update 更新npm 工具 1234$ npm install npm@latest -g## 查看npm 版本$ npm -v 安装Hexo安装Hexo 步骤如下： 1234$ npm install hexo-cli -g$ hexo init [blog-site-folder]$ cd [blog-site-folder]$ npm install 说明：使用npm 下载安装Hexo 程序，选项参数-g的作用是将Hexo 程序安装在当前Node.js 环境中，例如~/.nvm/versions/node/v6.11.2/lib/node_modules 。 常用的Hexo 命令： 123456789101112131415161718192021222324252627282930## 新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。$ hexo init [folder]## 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。## 如果标题包含空格的话，请使用引号括起来。$ hexo new [layout] &lt;title&gt;## 生成静态文件## 若附加选项参数"-d" 或"--deploy" ，即文件生成后立即部署网站## 若附加选项参数"-w" 或"--watch" ，即监视文件变动## 可以简写为"hexo g"$ hexo generate## 发表草稿$ hexo publish [layout] &lt;filename&gt;## 启动服务器。默认情况下，访问网址为： http://localhost:4000/## 可以简写为"hexo s"$ hexo server## 部署网站## 可以简写为"hexo d"$ hexo deploy## 清除缓存文件 (db.json) 和已生成的静态文件 (public)。## 在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。$ hexo clean## 显示 Hexo 版本$ hexo version 插播一个有用的npm 命令 1234## 查看Hexo 站点安装了哪些node 程序包## `--depth` 表示检索深度为0，即不显示其依赖包$ cd [blog-site-folder]$ npm list --depth=0 安装喜欢的 ThemeHexo 默认的Theme 是landscape ，显然还有更好的选择。Hexo Github 给出了”Hexo top 10 themes“ 。 我这里选择下载Hexo NexT 最新主题 12$ cd [your-hexo-site]$ git clone https://github.com/iissnan/hexo-theme-next themes/next 当然，若是希望升级Hexo NexT 主题，可执行 12$ cd themes/next$ git pull 启用Hexo NexT Theme ，在站点配置文件_config.yml 找到 theme 字段，并将其值更改为 next1theme: next 个性化配置站点和主题的个性化配置，可分别参考Hexo 中文官网 和NexT, Elegant Theme for Hexo 。 部署至Github 首先在Github 上注册一个账号，并建立GitHub Pages Repository ，该仓库名必须是your_user_name.github.io 本地生成ssh 公私钥，并将公钥复制到Github 个人帐户SSH keys中 12$ cd ~$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com" 执行上述ssh-keygen 命令，会以交互式要求输入文件名（不输入直接Enter，默认生成的公私钥文件名分别是id_rsa.pub 和id_rsa）和密码。 将公钥文件（例如id_rsa.pub ）中的内容拷贝至Github -&gt; Settings -&gt; SSH and GPG keys -&gt; SSH Keys 修订站点配置文件_config.yml 12$ cd [your-hexo-site]$ vi _config.yml 找到deploy 字段，作如下修改 1234deploy: type: git repository: git@github.com:&lt;your_user_name&gt;/&lt;your_user_name&gt;.github.io.git branch: master 部署Hexo 站点到Github 123$ cd [your-hexo-site]$ npm install hexo-deployer-git --save$ hexo deploy 参考链接 nvm in Github Node.js 官网 Node.js 中文官网 npm 官网 npm 淘宝镜像点 Hexo 中文官网 Hexo in Github Hexo top 10 themes NexT, Elegant Theme for Hexo github认证，ssh配置 Font Awesome]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+        <tag>NexT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux iptables设置]]></title>
+    <url>%2F2016%2F05%2F19%2Flinux-iptables-setings%2F</url>
+    <content type="text"><![CDATA[屏蔽指定IP以屏蔽IP： 192.168.184.13 为例 方法1：命令行1sudo iptables -I INPUT -s 192.168.184.13 -j DROP 说明：该方法临时修改防火墙配置，iptables服务重启后失效 方法2：修改 iptables 文件 打开 /etc/sysconfig/iptables 文件 增加一行 -A INPUT -s 192.168.184.13/32 -j DROP 说明：该方法永久有效]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>iptables</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[【学习】慕课网-在Ubuntu Server下搭建LAMP环境]]></title>
+    <url>%2F2016%2F03%2F22%2F%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server%2F</url>
+    <content type="text"><![CDATA[慕课网-在Ubuntu Server下搭建LAMP环境课程链接 2-1 性感的Ubuntu Server操作系统 LTS:Long Term Support(长期支持版本) 该课程使用Ubuntu Server环境版本是 LTS 12.04 4-1 使用apt-get工具安装Apache PHP MySQL Ubuntu 使用 apt-get 命令获取并安装软件安装包 检查Apache是否已加载php5_module模块，执行命令 1cat /etc/apache2/mods-enabled/php5.load 如果出现如下提示，说明已加载 1LoadModule php5_module /usr/lib/apache2/modules/libphp5.so 检查PHP是否已安装加载MYSQL.so扩展，执行命令 1cat /etc/php5/conf.d/mysql.ini 若存在该文件，且显示如下提示，说明已加载 1extension=mysql.so 4-3 给PHP添加常用扩展 安装了GD库和CURL（需了解是什么） 5-3 LAMP环境配置文件详解 Apache 配置文件加载流程通过 apache.conf 加载：conf.d/httpd.confports.confmods-enabled/sites-enabled/* MySQL 核心配置文件 my.cnf PHP 核心配置文件 php.ini 5-7 在Apache中配置虚拟主机在Ubuntu Server操作系统中，有一些软件的敏感操作受到 apparmore 的约束（apparmore是系统安全应用），apparmore关于mysql安全操作的配置文件路径是： 1/etc/apparmore.d/usr.sbin.mysqld 5-8 MySQL数据存储目录迁移默认情况下，mysql的数据存储目录是 /var/lib/mysql 5-11 开启MySQL的remote access软件： navicat]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>Ubuntu</tag>
+        <tag>Apache</tag>
+        <tag>MySQL</tag>
+        <tag>PHP</tag>
+        <tag>慕课网</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux中shell变量含义]]></title>
+    <url>%2F2016%2F03%2F18%2Fthe-meaning-of-the-shel-variable-in-linux%2F</url>
+    <content type="text"><![CDATA[shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf "this is %s\n" "$$"$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 123456789$ cat test.sh#!/bin/bash#printf "this is %s\n" "$@"$ bash test.sh aaa bbb cccthis is aaathis is bbbthis is ccc shell变量 $*含义：所有参数列表。如果”$*”用引号(“”)括起来的情况、以”$1 $2 … $n” 的形式输出所有参数 1234567$ cat test.sh#!/bin/bash#printf "this is %s\n" "$*"$ bash test.sh aaa bbb cccthis is aaa bbb ccc shell变量 $#含义：shell参数个数 1234567$ cat test.sh#!/bin/bash#printf "this is %s\n" "$#"$ bash test.sh aaa bbb cccthis is 3]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>shell</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[hexo发布新文章]]></title>
+    <url>%2F2016%2F01%2F08%2Fhexo-releases-new-articles%2F</url>
+    <content type="text"><![CDATA[发布新文章到我的github步骤 新建文章文件 123hexo new [layout] &lt;title&gt;# orhexo n [layout] &lt;title&gt; 生成静态文件 123hexo generate# orhexo g 发布站点 123hexo deploy# orhexo d 参考 hexo官网 NexT theme]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nginx install]]></title>
+    <url>%2F2016%2F01%2F08%2Fnginx-instal%2F</url>
+    <content type="text"><![CDATA[环境：OS X Yosemite(10.10.5) 下载PCRE和nginx 安装PCRE 12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install 安装nginx 12345$ tar xvzf nginx-1.6.0.tar.gz$ cd nginx-1.6.0$ sudo ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-cc-opt="-Wno-deprecated-declarations"$ sudo make$ sudo make install 开启nginx 将 /usr/local/nginx/sbin 加入到环境变量里，执行命令： 1$ sudo nginx 打开浏览器 http://localhost ，看到“Welcome to nginx!”字样，说明nginx安装启动成功 关闭nginx 1$ sudo nginx -s stop 重启nginx（有用的指令之一） 1$ sudo nginx -s reload 判断配置文件是否正确（有用的指令之一） 1$ sudo nginx -t]]></content>
+      <categories>
+        <category>nginx</category>
+      </categories>
+      <tags>
+        <tag>nginx</tag>
+        <tag>OS X</tag>
+      </tags>
+  </entry>
+</search>

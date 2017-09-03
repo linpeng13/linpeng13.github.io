@@ -280,6 +280,206 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://linpeng13.github.io/2017/09/03/some-hexo-next-set-the-page-header-foter./">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/author.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木月天空">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/03/some-hexo-next-set-the-page-header-foter./" itemprop="url">Hexo NexT主题文章页头页尾的一些设置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-03T17:51:17+08:00">
+                2017-09-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/03/some-hexo-next-set-the-page-header-foter./" class="leancloud_visitors" data-flag-title="Hexo NexT主题文章页头页尾的一些设置">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  638(字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3(分)
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h1><p>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。<br><img src="/uploads/2017-09-03/header.png" alt="页头"></p>
+<h2 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h2><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="external">leanCloud,实现文章阅读量统计</a>》。</p>
+<h2 id="字数统计和阅读时长"><a href="#字数统计和阅读时长" class="headerlink" title="字数统计和阅读时长"></a>字数统计和阅读时长</h2><p>增加【字数统计】和【阅读时长】信息，需安装插件<a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="external">hexo-wordcount</a> ，安装方法相对简单：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm i --save hexo-wordcount</div><div class="line"></div><div class="line"><span class="comment">## Node 版本7.6.0之前,请安装 2.x 版本 (Node.js v7.6.0 and previous)</span></div><div class="line">$ npm install hexo-wordcount@2 --save</div></pre></td></tr></table></figure>
+<p>然后在<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 中，找到字段 <code>post_wordcount</code> ，其设置块内容默认是：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Post wordcount display settings</span></div><div class="line"><span class="comment"># Dependencies: https://github.com/willin/hexo-wordcount</span></div><div class="line">post_wordcount:</div><div class="line">  item_text: <span class="literal">true</span></div><div class="line">  wordcount: <span class="literal">false</span></div><div class="line">  min2read: <span class="literal">false</span></div><div class="line">  totalcount: <span class="literal">false</span></div><div class="line">  separated_meta: <span class="literal">true</span></div></pre></td></tr></table></figure>
+<p>字段<code>wordcount</code> 是文章的<strong>字数统计</strong>，字段<code>min2read</code>是文章的<strong>阅读时长</strong>预估值，这两个值默认显示在文章开头（如图）。<br>字段<code>totalcount</code>是整站的<strong>字数统计</strong>，默认显示在站点页面最下方。<br>按需要将<code>false</code> 修改为<code>true</code>即可。</p>
+<p>但默认开启的【字数统计】和【阅读时长】信息，是不包含单位的，故有强迫症的朋友，可以修订文件<code>themes/next/layout/_macro/post.swig</code> ，在<code>wordcount(post.content)</code> 所在行加<code>(字)</code> ，在<code>min2read(post.content)</code> 所在行加<code>(分)</code> 。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&#123;% <span class="keyword">if</span> theme.post_wordcount.wordcount or theme.post_wordcount.min2read %&#125;</div><div class="line">  &lt;div class=<span class="string">"post-wordcount"</span>&gt;</div><div class="line">    &#123;% <span class="keyword">if</span> theme.post_wordcount.wordcount %&#125;</div><div class="line">      &#123;% <span class="keyword">if</span> not theme.post_wordcount.separated_meta %&#125;</div><div class="line">        &lt;span class=<span class="string">"post-meta-divider"</span>&gt;|&lt;/span&gt;</div><div class="line">      &#123;% endif %&#125;</div><div class="line">      &lt;span class=<span class="string">"post-meta-item-icon"</span>&gt;</div><div class="line">        &lt;i class=<span class="string">"fa fa-file-word-o"</span>&gt;&lt;/i&gt;</div><div class="line">      &lt;/span&gt;</div><div class="line">      &#123;% <span class="keyword">if</span> theme.post_wordcount.item_text %&#125;</div><div class="line">        &lt;span class=<span class="string">"post-meta-item-text"</span>&gt;&#123;&#123; __(<span class="string">'post.wordcount'</span>) &#125;&#125;&amp;<span class="comment">#58;&lt;/span&gt;</span></div><div class="line">      &#123;% endif %&#125;</div><div class="line">      &lt;span title=<span class="string">"&#123;&#123; __('post.wordcount') &#125;&#125;"</span>&gt;</div><div class="line">        &#123;&#123; wordcount(post.content) &#125;&#125;(字)</div><div class="line">      &lt;/span&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">    &#123;% <span class="keyword">if</span> theme.post_wordcount.wordcount and theme.post_wordcount.min2read %&#125;</div><div class="line">      &lt;span class=<span class="string">"post-meta-divider"</span>&gt;|&lt;/span&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">    &#123;% <span class="keyword">if</span> theme.post_wordcount.min2read %&#125;</div><div class="line">      &lt;span class=<span class="string">"post-meta-item-icon"</span>&gt;</div><div class="line">        &lt;i class=<span class="string">"fa fa-clock-o"</span>&gt;&lt;/i&gt;</div><div class="line">      &lt;/span&gt;</div><div class="line">      &#123;% <span class="keyword">if</span> theme.post_wordcount.item_text %&#125;</div><div class="line">        &lt;span class=<span class="string">"post-meta-item-text"</span>&gt;&#123;&#123; __(<span class="string">'post.min2read'</span>) &#125;&#125; &amp;asymp;&lt;/span&gt;</div><div class="line">      &#123;% endif %&#125;</div><div class="line">      &lt;span title=<span class="string">"&#123;&#123; __('post.min2read') &#125;&#125;"</span>&gt;</div><div class="line">        &#123;&#123; min2read(post.content) &#125;&#125;(分)</div><div class="line">      &lt;/span&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line">  &lt;/div&gt;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
+<h1 id="页尾"><a href="#页尾" class="headerlink" title="页尾"></a>页尾</h1><p>NexT 主题的文章页面，想要在页尾增加文章的版权信息，如图：<br><img src="/uploads/2017-09-03/footer.png" alt="页尾"></p>
+<p>在<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 中，找到字段<code>post_copyright</code> ，将<code>enable</code> 设置为<code>true</code> 即可。</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>从上述设置，不难发现NexT 主题文章页面设置的几个重要文件，即：</p>
+<ul>
+<li><code>_layout.swig</code> -<code>themes/next/layout/_layout.swig</code> ，全局性的页面布局代码；</li>
+<li><code>post.swig</code> -<code>themes/next/layout/post.swig</code> ，文章类型页面框架布局代码，其中调用了<code>_macro/post.swig</code> ；</li>
+<li><code>_macro/post.swig</code> - themes/next/layout/_macro/post.swig` ，文章类型页面实际布局代码；</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1586,7 +1786,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1608,7 +1808,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

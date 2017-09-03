@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="nginx,OS X," />
+  <meta name="keywords" content="linux,Ubuntu,Apache,MySQL,PHP,慕课网," />
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="环境：OS X Yosemite(10.10.5)  下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install  安装nginx  12345$ tar xvzf nginx-1.6.0.tar.gz$">
-<meta name="keywords" content="nginx,OS X">
+<meta name="description" content="慕课网-在Ubuntu Server下搭建LAMP环境课程链接 2-1 性感的Ubuntu Server操作系统 LTS:Long Term Support(长期支持版本) 该课程使用Ubuntu Server环境版本是 LTS 12.04  4-1 使用apt-get工具安装Apache PHP MySQL Ubuntu 使用 apt-get 命令获取并安装软件安装包 检查Apache是否已加载">
+<meta name="keywords" content="linux,Ubuntu,Apache,MySQL,PHP,慕课网">
 <meta property="og:type" content="article">
-<meta property="og:title" content="nginx install">
-<meta property="og:url" content="http://yoursite.com/2016/01/08/nginx-install/index.html">
+<meta property="og:title" content="【学习】慕课网-在Ubuntu Server下搭建LAMP环境">
+<meta property="og:url" content="http://yoursite.com/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/index.html">
 <meta property="og:site_name" content="木月天空">
-<meta property="og:description" content="环境：OS X Yosemite(10.10.5)  下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install  安装nginx  12345$ tar xvzf nginx-1.6.0.tar.gz$">
+<meta property="og:description" content="慕课网-在Ubuntu Server下搭建LAMP环境课程链接 2-1 性感的Ubuntu Server操作系统 LTS:Long Term Support(长期支持版本) 该课程使用Ubuntu Server环境版本是 LTS 12.04  4-1 使用apt-get工具安装Apache PHP MySQL Ubuntu 使用 apt-get 命令获取并安装软件安装包 检查Apache是否已加载">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-02T08:47:25.000Z">
+<meta property="og:updated_time" content="2017-09-03T02:58:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nginx install">
-<meta name="twitter:description" content="环境：OS X Yosemite(10.10.5)  下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install  安装nginx  12345$ tar xvzf nginx-1.6.0.tar.gz$">
+<meta name="twitter:title" content="【学习】慕课网-在Ubuntu Server下搭建LAMP环境">
+<meta name="twitter:description" content="慕课网-在Ubuntu Server下搭建LAMP环境课程链接 2-1 性感的Ubuntu Server操作系统 LTS:Long Term Support(长期支持版本) 该课程使用Ubuntu Server环境版本是 LTS 12.04  4-1 使用apt-get工具安装Apache PHP MySQL Ubuntu 使用 apt-get 命令获取并安装软件安装包 检查Apache是否已加载">
 
 
 
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/01/08/nginx-install/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/"/>
 
 
 
 
 
-  <title>nginx install | 木月天空</title>
+  <title>【学习】慕课网-在Ubuntu Server下搭建LAMP环境 | 木月天空</title>
   
 
 
@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/08/nginx-install/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sky">
@@ -298,7 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">nginx install</h1>
+          <h1 class="post-title" itemprop="name headline">【学习】慕课网-在Ubuntu Server下搭建LAMP环境</h1>
         
 
         <div class="post-meta">
@@ -310,8 +310,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-08T12:20:25+08:00">
-                2016-01-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-22T14:47:55+08:00">
+                2016-03-22
               </time>
             
 
@@ -333,8 +333,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/nginx/" itemprop="url" rel="index">
-                    <span itemprop="name">nginx</span>
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
                   </a>
                 </span>
 
@@ -370,30 +370,36 @@
       
 
       
-        <p><strong>环境：OS X Yosemite(10.10.5)</strong></p>
-<ol>
-<li><p>下载<a href="http://www.pcre.org/" target="_blank" rel="external">PCRE</a>和<a href="http://nginx.org/" target="_blank" rel="external">nginx</a></p>
+        <h1 id="慕课网-在Ubuntu-Server下搭建LAMP环境"><a href="#慕课网-在Ubuntu-Server下搭建LAMP环境" class="headerlink" title="慕课网-在Ubuntu Server下搭建LAMP环境"></a>慕课网-在Ubuntu Server下搭建LAMP环境</h1><p><a href="http://www.imooc.com/learn/170" target="_blank" rel="external">课程链接</a></p>
+<h2 id="2-1-性感的Ubuntu-Server操作系统"><a href="#2-1-性感的Ubuntu-Server操作系统" class="headerlink" title="2-1 性感的Ubuntu Server操作系统"></a>2-1 性感的Ubuntu Server操作系统</h2><ul>
+<li>LTS:Long Term Support(长期支持版本)</li>
+<li>该课程使用Ubuntu Server环境版本是 <em>LTS 12.04</em></li>
+</ul>
+<h2 id="4-1-使用apt-get工具安装Apache-PHP-MySQL"><a href="#4-1-使用apt-get工具安装Apache-PHP-MySQL" class="headerlink" title="4-1 使用apt-get工具安装Apache PHP MySQL"></a>4-1 使用apt-get工具安装Apache PHP MySQL</h2><ul>
+<li>Ubuntu 使用 apt-get 命令获取并安装软件安装包</li>
+<li><p>检查Apache是否已加载php5_module模块，执行命令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/apache2/mods-enabled/php5.load</div></pre></td></tr></table></figure>
+<p>如果出现如下提示，说明已加载</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LoadModule php5_module /usr/lib/apache2/modules/libphp5.so</div></pre></td></tr></table></figure>
 </li>
-<li><p>安装PCRE</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ tar xvzf pcre-8.5</div><div class="line">$ <span class="built_in">cd</span> pcre-8.5</div><div class="line">$ sudo ./configure --prefix=/usr/<span class="built_in">local</span></div><div class="line">$ sudo make</div><div class="line">$ sudo make install</div></pre></td></tr></table></figure>
+<li><p>检查PHP是否已安装加载MYSQL.so扩展，执行命令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/php5/conf.d/mysql.ini</div></pre></td></tr></table></figure>
+<p>若存在该文件，且显示如下提示，说明已加载</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">extension=mysql.so</div></pre></td></tr></table></figure>
 </li>
-<li><p>安装nginx</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ tar xvzf nginx-1.6.0.tar.gz</div><div class="line">$ <span class="built_in">cd</span> nginx-1.6.0</div><div class="line">$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/nginx --with-http_ssl_module --with-cc-opt=<span class="string">"-Wno-deprecated-declarations"</span></div><div class="line">$ sudo make</div><div class="line">$ sudo make install</div></pre></td></tr></table></figure>
-</li>
-<li><p>开启nginx<br> 将 /usr/local/nginx/sbin 加入到环境变量里，执行命令：</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx</div></pre></td></tr></table></figure>
-<p> 打开浏览器 <a href="http://localhost" target="_blank" rel="external">http://localhost</a> ，看到“Welcome to nginx!”字样，说明nginx安装启动成功</p>
-</li>
-<li><p>关闭nginx</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx -s stop</div></pre></td></tr></table></figure>
-</li>
-<li><p>重启nginx（有用的指令之一）</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx -s reload</div></pre></td></tr></table></figure>
-</li>
-<li><p>判断配置文件是否正确（有用的指令之一）</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx -t</div></pre></td></tr></table></figure>
-</li>
-</ol>
+</ul>
+<h2 id="4-3-给PHP添加常用扩展"><a href="#4-3-给PHP添加常用扩展" class="headerlink" title="4-3 给PHP添加常用扩展"></a>4-3 给PHP添加常用扩展</h2><ul>
+<li>安装了GD库和CURL（需了解是什么）</li>
+</ul>
+<h2 id="5-3-LAMP环境配置文件详解"><a href="#5-3-LAMP环境配置文件详解" class="headerlink" title="5-3 LAMP环境配置文件详解"></a>5-3 LAMP环境配置文件详解</h2><ul>
+<li>Apache 配置文件加载流程<br>通过 apache.conf 加载：<br>conf.d/<em><br>httpd.conf<br>ports.conf<br>mods-enabled/</em><br>sites-enabled/* </li>
+<li>MySQL 核心配置文件 my.cnf</li>
+<li>PHP 核心配置文件 php.ini</li>
+</ul>
+<h2 id="5-7-在Apache中配置虚拟主机"><a href="#5-7-在Apache中配置虚拟主机" class="headerlink" title="5-7 在Apache中配置虚拟主机"></a>5-7 在Apache中配置虚拟主机</h2><p>在Ubuntu Server操作系统中，有一些软件的敏感操作受到 <strong>apparmore</strong> 的约束（apparmore是系统安全应用），apparmore关于mysql安全操作的配置文件路径是：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/etc/apparmore.d/usr.sbin.mysqld</div></pre></td></tr></table></figure>
+<h2 id="5-8-MySQL数据存储目录迁移"><a href="#5-8-MySQL数据存储目录迁移" class="headerlink" title="5-8 MySQL数据存储目录迁移"></a>5-8 MySQL数据存储目录迁移</h2><p>默认情况下，mysql的数据存储目录是 <code>/var/lib/mysql</code></p>
+<h2 id="5-11-开启MySQL的remote-access"><a href="#5-11-开启MySQL的remote-access" class="headerlink" title="5-11 开启MySQL的remote access"></a>5-11 开启MySQL的remote access</h2><p>软件： <strong>navicat</strong></p>
 
       
     </div>
@@ -411,9 +417,17 @@
       
         <div class="post-tags">
           
-            <a href="/tags/nginx/" rel="tag"># nginx</a>
+            <a href="/tags/linux/" rel="tag"># linux</a>
           
-            <a href="/tags/OS-X/" rel="tag"># OS X</a>
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+            <a href="/tags/Apache/" rel="tag"># Apache</a>
+          
+            <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          
+            <a href="/tags/PHP/" rel="tag"># PHP</a>
+          
+            <a href="/tags/慕课网/" rel="tag"># 慕课网</a>
           
         </div>
       
@@ -426,14 +440,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/18/the-meaning-of-the-shel-variable-in-linux/" rel="next" title="linux中shell变量含义">
+                <i class="fa fa-chevron-left"></i> linux中shell变量含义
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/08/hexo发布新文章/" rel="prev" title="hexo发布新文章">
-                hexo发布新文章 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/05/19/linux-iptables-setings/" rel="prev" title="Linux iptables设置">
+                Linux iptables设置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -486,8 +504,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -583,6 +610,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#慕课网-在Ubuntu-Server下搭建LAMP环境"><span class="nav-number">1.</span> <span class="nav-text">慕课网-在Ubuntu Server下搭建LAMP环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-性感的Ubuntu-Server操作系统"><span class="nav-number">1.1.</span> <span class="nav-text">2-1 性感的Ubuntu Server操作系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-使用apt-get工具安装Apache-PHP-MySQL"><span class="nav-number">1.2.</span> <span class="nav-text">4-1 使用apt-get工具安装Apache PHP MySQL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-给PHP添加常用扩展"><span class="nav-number">1.3.</span> <span class="nav-text">4-3 给PHP添加常用扩展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-3-LAMP环境配置文件详解"><span class="nav-number">1.4.</span> <span class="nav-text">5-3 LAMP环境配置文件详解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-7-在Apache中配置虚拟主机"><span class="nav-number">1.5.</span> <span class="nav-text">5-7 在Apache中配置虚拟主机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-8-MySQL数据存储目录迁移"><span class="nav-number">1.6.</span> <span class="nav-text">5-8 MySQL数据存储目录迁移</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-11-开启MySQL的remote-access"><span class="nav-number">1.7.</span> <span class="nav-text">5-11 开启MySQL的remote access</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux,iptables," />
+  <meta name="keywords" content="nginx,OS X," />
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="屏蔽指定IP以屏蔽IP： 192.168.184.13 为例  方法1：命令行1sudo iptables -I INPUT -s 192.168.184.13 -j DROP 说明：该方法临时修改防火墙配置，iptables服务重启后失效  方法2：修改 iptables 文件 打开 /etc/sysconfig/iptables 文件 增加一行 -A INPUT -s 192.168.184.">
-<meta name="keywords" content="linux,iptables">
+<meta name="description" content="环境：OS X Yosemite(10.10.5)  下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install  安装nginx  12345$ tar xvzf nginx-1.6.0.tar.gz$">
+<meta name="keywords" content="nginx,OS X">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux iptables设置">
-<meta property="og:url" content="http://yoursite.com/2016/05/19/Linux-iptables设置/index.html">
+<meta property="og:title" content="nginx install">
+<meta property="og:url" content="http://yoursite.com/2016/01/08/nginx-instal/index.html">
 <meta property="og:site_name" content="木月天空">
-<meta property="og:description" content="屏蔽指定IP以屏蔽IP： 192.168.184.13 为例  方法1：命令行1sudo iptables -I INPUT -s 192.168.184.13 -j DROP 说明：该方法临时修改防火墙配置，iptables服务重启后失效  方法2：修改 iptables 文件 打开 /etc/sysconfig/iptables 文件 增加一行 -A INPUT -s 192.168.184.">
+<meta property="og:description" content="环境：OS X Yosemite(10.10.5)  下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install  安装nginx  12345$ tar xvzf nginx-1.6.0.tar.gz$">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-02T08:45:53.000Z">
+<meta property="og:updated_time" content="2017-09-03T02:58:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux iptables设置">
-<meta name="twitter:description" content="屏蔽指定IP以屏蔽IP： 192.168.184.13 为例  方法1：命令行1sudo iptables -I INPUT -s 192.168.184.13 -j DROP 说明：该方法临时修改防火墙配置，iptables服务重启后失效  方法2：修改 iptables 文件 打开 /etc/sysconfig/iptables 文件 增加一行 -A INPUT -s 192.168.184.">
+<meta name="twitter:title" content="nginx install">
+<meta name="twitter:description" content="环境：OS X Yosemite(10.10.5)  下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install  安装nginx  12345$ tar xvzf nginx-1.6.0.tar.gz$">
 
 
 
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/05/19/Linux-iptables设置/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/01/08/nginx-instal/"/>
 
 
 
 
 
-  <title>Linux iptables设置 | 木月天空</title>
+  <title>nginx install | 木月天空</title>
   
 
 
@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/19/Linux-iptables设置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/08/nginx-instal/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sky">
@@ -298,7 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux iptables设置</h1>
+          <h1 class="post-title" itemprop="name headline">nginx install</h1>
         
 
         <div class="post-meta">
@@ -310,8 +310,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-19T08:30:21+08:00">
-                2016-05-19
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-08T12:20:25+08:00">
+                2016-01-08
               </time>
             
 
@@ -333,8 +333,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux/" itemprop="url" rel="index">
-                    <span itemprop="name">linux</span>
+                  <a href="/categories/nginx/" itemprop="url" rel="index">
+                    <span itemprop="name">nginx</span>
                   </a>
                 </span>
 
@@ -370,14 +370,30 @@
       
 
       
-        <h1 id="屏蔽指定IP"><a href="#屏蔽指定IP" class="headerlink" title="屏蔽指定IP"></a>屏蔽指定IP</h1><p>以屏蔽IP： 192.168.184.13 为例 </p>
-<h3 id="方法1：命令行"><a href="#方法1：命令行" class="headerlink" title="方法1：命令行"></a>方法1：命令行</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo iptables -I INPUT -s 192.168.184.13 -j DROP</div></pre></td></tr></table></figure>
-<p>说明：该方法临时修改防火墙配置，iptables服务重启后失效 </p>
-<h3 id="方法2：修改-iptables-文件"><a href="#方法2：修改-iptables-文件" class="headerlink" title="方法2：修改 iptables 文件"></a>方法2：修改 iptables 文件</h3><ol>
-<li>打开 <code>/etc/sysconfig/iptables</code> 文件</li>
-<li>增加一行 <code>-A INPUT -s 192.168.184.13/32 -j DROP</code> </li>
+        <p><strong>环境：OS X Yosemite(10.10.5)</strong></p>
+<ol>
+<li><p>下载<a href="http://www.pcre.org/" target="_blank" rel="external">PCRE</a>和<a href="http://nginx.org/" target="_blank" rel="external">nginx</a></p>
+</li>
+<li><p>安装PCRE</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ tar xvzf pcre-8.5</div><div class="line">$ <span class="built_in">cd</span> pcre-8.5</div><div class="line">$ sudo ./configure --prefix=/usr/<span class="built_in">local</span></div><div class="line">$ sudo make</div><div class="line">$ sudo make install</div></pre></td></tr></table></figure>
+</li>
+<li><p>安装nginx</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ tar xvzf nginx-1.6.0.tar.gz</div><div class="line">$ <span class="built_in">cd</span> nginx-1.6.0</div><div class="line">$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/nginx --with-http_ssl_module --with-cc-opt=<span class="string">"-Wno-deprecated-declarations"</span></div><div class="line">$ sudo make</div><div class="line">$ sudo make install</div></pre></td></tr></table></figure>
+</li>
+<li><p>开启nginx<br> 将 /usr/local/nginx/sbin 加入到环境变量里，执行命令：</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx</div></pre></td></tr></table></figure>
+<p> 打开浏览器 <a href="http://localhost" target="_blank" rel="external">http://localhost</a> ，看到“Welcome to nginx!”字样，说明nginx安装启动成功</p>
+</li>
+<li><p>关闭nginx</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx -s stop</div></pre></td></tr></table></figure>
+</li>
+<li><p>重启nginx（有用的指令之一）</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx -s reload</div></pre></td></tr></table></figure>
+</li>
+<li><p>判断配置文件是否正确（有用的指令之一）</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx -t</div></pre></td></tr></table></figure>
+</li>
 </ol>
-<p>说明：该方法永久有效 </p>
 
       
     </div>
@@ -395,9 +411,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/nginx/" rel="tag"># nginx</a>
           
-            <a href="/tags/iptables/" rel="tag"># iptables</a>
+            <a href="/tags/OS-X/" rel="tag"># OS X</a>
           
         </div>
       
@@ -410,18 +426,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/03/22/【学习】慕课网-在Ubuntu-Server下搭建LAMP环境/" rel="next" title="【学习】慕课网-在Ubuntu Server下搭建LAMP环境">
-                <i class="fa fa-chevron-left"></i> 【学习】慕课网-在Ubuntu Server下搭建LAMP环境
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/09/02/Hexo-Github-搭建个人博客/" rel="prev" title="Hexo+Github 搭建个人博客">
-                Hexo+Github 搭建个人博客 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/01/08/hexo-releases-new-articles/" rel="prev" title="hexo发布新文章">
+                hexo发布新文章 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -474,17 +486,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -580,22 +583,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#屏蔽指定IP"><span class="nav-number">1.</span> <span class="nav-text">屏蔽指定IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法1：命令行"><span class="nav-number">1.0.1.</span> <span class="nav-text">方法1：命令行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法2：修改-iptables-文件"><span class="nav-number">1.0.2.</span> <span class="nav-text">方法2：修改 iptables 文件</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

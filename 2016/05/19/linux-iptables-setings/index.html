@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux,shell," />
+  <meta name="keywords" content="linux,iptables," />
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 1234567">
-<meta name="keywords" content="linux,shell">
+<meta name="description" content="屏蔽指定IP以屏蔽IP： 192.168.184.13 为例  方法1：命令行1sudo iptables -I INPUT -s 192.168.184.13 -j DROP 说明：该方法临时修改防火墙配置，iptables服务重启后失效  方法2：修改 iptables 文件 打开 /etc/sysconfig/iptables 文件 增加一行 -A INPUT -s 192.168.184.">
+<meta name="keywords" content="linux,iptables">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux中shell变量含义">
-<meta property="og:url" content="http://yoursite.com/2016/03/18/linux中shell变量含义/index.html">
+<meta property="og:title" content="Linux iptables设置">
+<meta property="og:url" content="http://yoursite.com/2016/05/19/linux-iptables-setings/index.html">
 <meta property="og:site_name" content="木月天空">
-<meta property="og:description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 1234567">
+<meta property="og:description" content="屏蔽指定IP以屏蔽IP： 192.168.184.13 为例  方法1：命令行1sudo iptables -I INPUT -s 192.168.184.13 -j DROP 说明：该方法临时修改防火墙配置，iptables服务重启后失效  方法2：修改 iptables 文件 打开 /etc/sysconfig/iptables 文件 增加一行 -A INPUT -s 192.168.184.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-02T08:46:41.000Z">
+<meta property="og:updated_time" content="2017-09-03T02:58:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux中shell变量含义">
-<meta name="twitter:description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 1234567">
+<meta name="twitter:title" content="Linux iptables设置">
+<meta name="twitter:description" content="屏蔽指定IP以屏蔽IP： 192.168.184.13 为例  方法1：命令行1sudo iptables -I INPUT -s 192.168.184.13 -j DROP 说明：该方法临时修改防火墙配置，iptables服务重启后失效  方法2：修改 iptables 文件 打开 /etc/sysconfig/iptables 文件 增加一行 -A INPUT -s 192.168.184.">
 
 
 
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/03/18/linux中shell变量含义/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/05/19/linux-iptables-setings/"/>
 
 
 
 
 
-  <title>linux中shell变量含义 | 木月天空</title>
+  <title>Linux iptables设置 | 木月天空</title>
   
 
 
@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/18/linux中shell变量含义/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/05/19/linux-iptables-setings/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sky">
@@ -298,7 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">linux中shell变量含义</h1>
+          <h1 class="post-title" itemprop="name headline">Linux iptables设置</h1>
         
 
         <div class="post-meta">
@@ -310,8 +310,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-18T19:26:07+08:00">
-                2016-03-18
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-19T08:30:21+08:00">
+                2016-05-19
               </time>
             
 
@@ -370,14 +370,14 @@
       
 
       
-        <h1 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h1><p>含义：shell本身的PID（ProcessID）</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$$"</span></div><div class="line">$ bash test.sh aaa</div><div class="line">this is 2638</div></pre></td></tr></table></figure>
-<h1 id="shell变量-1"><a href="#shell变量-1" class="headerlink" title="shell变量 $@"></a>shell变量 <code>$@</code></h1><p>含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"<span class="variable">$@</span>"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is aaa</div><div class="line">this is bbb</div><div class="line">this is ccc</div></pre></td></tr></table></figure>
-<h1 id="shell变量-2"><a href="#shell变量-2" class="headerlink" title="shell变量 $*"></a>shell变量 <code>$*</code></h1><p>含义：所有参数列表。如果”$*”用引号(“”)括起来的情况、以”$1 $2 … $n” 的形式输出所有参数</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$*"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is aaa bbb ccc</div></pre></td></tr></table></figure>
-<h1 id="shell变量-3"><a href="#shell变量-3" class="headerlink" title="shell变量 $#"></a>shell变量 <code>$#</code></h1><p>含义：shell参数个数</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"<span class="variable">$#</span>"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is 3</div></pre></td></tr></table></figure>
+        <h1 id="屏蔽指定IP"><a href="#屏蔽指定IP" class="headerlink" title="屏蔽指定IP"></a>屏蔽指定IP</h1><p>以屏蔽IP： 192.168.184.13 为例 </p>
+<h3 id="方法1：命令行"><a href="#方法1：命令行" class="headerlink" title="方法1：命令行"></a>方法1：命令行</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo iptables -I INPUT -s 192.168.184.13 -j DROP</div></pre></td></tr></table></figure>
+<p>说明：该方法临时修改防火墙配置，iptables服务重启后失效 </p>
+<h3 id="方法2：修改-iptables-文件"><a href="#方法2：修改-iptables-文件" class="headerlink" title="方法2：修改 iptables 文件"></a>方法2：修改 iptables 文件</h3><ol>
+<li>打开 <code>/etc/sysconfig/iptables</code> 文件</li>
+<li>增加一行 <code>-A INPUT -s 192.168.184.13/32 -j DROP</code> </li>
+</ol>
+<p>说明：该方法永久有效 </p>
 
       
     </div>
@@ -397,7 +397,7 @@
           
             <a href="/tags/linux/" rel="tag"># linux</a>
           
-            <a href="/tags/shell/" rel="tag"># shell</a>
+            <a href="/tags/iptables/" rel="tag"># iptables</a>
           
         </div>
       
@@ -410,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/08/hexo发布新文章/" rel="next" title="hexo发布新文章">
-                <i class="fa fa-chevron-left"></i> hexo发布新文章
+              <a href="/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/" rel="next" title="【学习】慕课网-在Ubuntu Server下搭建LAMP环境">
+                <i class="fa fa-chevron-left"></i> 【学习】慕课网-在Ubuntu Server下搭建LAMP环境
               </a>
             
           </div>
@@ -420,8 +420,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/22/【学习】慕课网-在Ubuntu-Server下搭建LAMP环境/" rel="prev" title="【学习】慕课网-在Ubuntu Server下搭建LAMP环境">
-                【学习】慕课网-在Ubuntu Server下搭建LAMP环境 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/02/hexo-github-build-personal-blog/" rel="prev" title="Hexo+Github 搭建个人博客">
+                Hexo+Github 搭建个人博客 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -590,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量"><span class="nav-number">1.</span> <span class="nav-text">shell变量 $$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量-1"><span class="nav-number">2.</span> <span class="nav-text">shell变量 $@</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量-2"><span class="nav-number">3.</span> <span class="nav-text">shell变量 $*</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量-3"><span class="nav-number">4.</span> <span class="nav-text">shell变量 $#</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#屏蔽指定IP"><span class="nav-number">1.</span> <span class="nav-text">屏蔽指定IP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#方法1：命令行"><span class="nav-number">1.0.1.</span> <span class="nav-text">方法1：命令行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#方法2：修改-iptables-文件"><span class="nav-number">1.0.2.</span> <span class="nav-text">方法2：修改 iptables 文件</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

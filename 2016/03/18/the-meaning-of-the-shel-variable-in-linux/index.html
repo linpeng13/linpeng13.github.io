@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo," />
+  <meta name="keywords" content="linux,shell," />
 
 
 
@@ -97,18 +97,18 @@
 
 
 
-<meta name="description" content="发布新文章到我的github步骤  新建文章文件  123hexo new [layout] &amp;lt;title&amp;gt;# orhexo n [layout] &amp;lt;title&amp;gt;  生成静态文件  123hexo generate# orhexo g  发布站点  123hexo deploy# orhexo d   参考  hexo官网 NexT theme">
-<meta name="keywords" content="hexo">
+<meta name="description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 1234567">
+<meta name="keywords" content="linux,shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo发布新文章">
-<meta property="og:url" content="http://yoursite.com/2016/01/08/hexo发布新文章/index.html">
+<meta property="og:title" content="linux中shell变量含义">
+<meta property="og:url" content="http://yoursite.com/2016/03/18/the-meaning-of-the-shel-variable-in-linux/index.html">
 <meta property="og:site_name" content="木月天空">
-<meta property="og:description" content="发布新文章到我的github步骤  新建文章文件  123hexo new [layout] &amp;lt;title&amp;gt;# orhexo n [layout] &amp;lt;title&amp;gt;  生成静态文件  123hexo generate# orhexo g  发布站点  123hexo deploy# orhexo d   参考  hexo官网 NexT theme">
+<meta property="og:description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 1234567">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-02T08:44:15.000Z">
+<meta property="og:updated_time" content="2017-09-03T02:58:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo发布新文章">
-<meta name="twitter:description" content="发布新文章到我的github步骤  新建文章文件  123hexo new [layout] &amp;lt;title&amp;gt;# orhexo n [layout] &amp;lt;title&amp;gt;  生成静态文件  123hexo generate# orhexo g  发布站点  123hexo deploy# orhexo d   参考  hexo官网 NexT theme">
+<meta name="twitter:title" content="linux中shell变量含义">
+<meta name="twitter:description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 1234567">
 
 
 
@@ -138,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/01/08/hexo发布新文章/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/03/18/the-meaning-of-the-shel-variable-in-linux/"/>
 
 
 
 
 
-  <title>hexo发布新文章 | 木月天空</title>
+  <title>linux中shell变量含义 | 木月天空</title>
   
 
 
@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/01/08/hexo发布新文章/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/03/18/the-meaning-of-the-shel-variable-in-linux/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sky">
@@ -298,7 +298,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">hexo发布新文章</h1>
+          <h1 class="post-title" itemprop="name headline">linux中shell变量含义</h1>
         
 
         <div class="post-meta">
@@ -310,8 +310,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-01-08T13:56:12+08:00">
-                2016-01-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-18T19:26:07+08:00">
+                2016-03-18
               </time>
             
 
@@ -333,8 +333,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">hexo</span>
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
                   </a>
                 </span>
 
@@ -370,23 +370,14 @@
       
 
       
-        <p><strong>发布新文章到我的github步骤</strong></p>
-<ol>
-<li><p>新建文章文件</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo new [layout] &lt;title&gt;</div><div class="line"><span class="comment"># or</span></div><div class="line">hexo n [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>生成静态文件</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line"><span class="comment"># or</span></div><div class="line">hexo g</div></pre></td></tr></table></figure>
-</li>
-<li><p>发布站点</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div><div class="line"><span class="comment"># or</span></div><div class="line">hexo d</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><em>参考</em></p>
-<ol>
-<li><a href="https://hexo.io/zh-cn/docs/generating.html" target="_blank" rel="external">hexo官网</a></li>
-<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT theme</a></li>
-</ol>
+        <h1 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h1><p>含义：shell本身的PID（ProcessID）</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$$"</span></div><div class="line">$ bash test.sh aaa</div><div class="line">this is 2638</div></pre></td></tr></table></figure>
+<h1 id="shell变量-1"><a href="#shell变量-1" class="headerlink" title="shell变量 $@"></a>shell变量 <code>$@</code></h1><p>含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"<span class="variable">$@</span>"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is aaa</div><div class="line">this is bbb</div><div class="line">this is ccc</div></pre></td></tr></table></figure>
+<h1 id="shell变量-2"><a href="#shell变量-2" class="headerlink" title="shell变量 $*"></a>shell变量 <code>$*</code></h1><p>含义：所有参数列表。如果”$*”用引号(“”)括起来的情况、以”$1 $2 … $n” 的形式输出所有参数</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$*"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is aaa bbb ccc</div></pre></td></tr></table></figure>
+<h1 id="shell变量-3"><a href="#shell变量-3" class="headerlink" title="shell变量 $#"></a>shell变量 <code>$#</code></h1><p>含义：shell参数个数</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"<span class="variable">$#</span>"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is 3</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -404,7 +395,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+            <a href="/tags/shell/" rel="tag"># shell</a>
           
         </div>
       
@@ -417,8 +410,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/08/nginx-install/" rel="next" title="nginx install">
-                <i class="fa fa-chevron-left"></i> nginx install
+              <a href="/2016/01/08/hexo-releases-new-articles/" rel="next" title="hexo发布新文章">
+                <i class="fa fa-chevron-left"></i> hexo发布新文章
               </a>
             
           </div>
@@ -427,8 +420,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/03/18/linux中shell变量含义/" rel="prev" title="linux中shell变量含义">
-                linux中shell变量含义 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/" rel="prev" title="【学习】慕课网-在Ubuntu Server下搭建LAMP环境">
+                【学习】慕课网-在Ubuntu Server下搭建LAMP环境 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -481,8 +474,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -578,6 +580,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量"><span class="nav-number">1.</span> <span class="nav-text">shell变量 $$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量-1"><span class="nav-number">2.</span> <span class="nav-text">shell变量 $@</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量-2"><span class="nav-number">3.</span> <span class="nav-text">shell变量 $*</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量-3"><span class="nav-number">4.</span> <span class="nav-text">shell变量 $#</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

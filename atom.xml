@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linpeng13.github.io/"/>
-  <updated>2017-09-03T14:02:27.000Z</updated>
+  <updated>2017-09-04T15:49:23.000Z</updated>
   <id>http://linpeng13.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://linpeng13.github.io/2017/09/03/some-hexo-next-set-the-page-header-foter./"/>
     <id>http://linpeng13.github.io/2017/09/03/some-hexo-next-set-the-page-header-foter./</id>
     <published>2017-09-03T09:51:17.000Z</published>
-    <updated>2017-09-03T14:02:27.000Z</updated>
+    <updated>2017-09-04T15:49:23.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h1><p>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。<br><img src="/uploads/2017-09-03/header.png" alt="页头"></p>
 <h2 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h2><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="external">leanCloud,实现文章阅读量统计</a>》。</p>
@@ -65,7 +65,7 @@
     <link href="http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/"/>
     <id>http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/</id>
     <published>2017-09-02T13:29:20.000Z</published>
-    <updated>2017-09-03T14:17:07.000Z</updated>
+    <updated>2017-09-04T15:53:28.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/uploads/2017-09-02/hexo-home.png" alt="Hexo"><br>Hexo 是一个快速、简洁且高效的博客框架，基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，并且只需一条指令即可部署到 GitHub Pages（或Heroku 等其他网站）。</p>
 <p>使用Hexo+Github 搭建个人博客，简单来说分两步：</p>
@@ -148,6 +148,7 @@
 <li><strong><a href="https://github.com/cometlj/hexo-translate-title" target="_blank" rel="external">hexo-translate-title</a></strong>: translate the chinese title of Hexo blog to english words automatially</li>
 <li><strong><a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="external">hexo-wordcount</a></strong>: Word Count Plugin for Hexo.</li>
 <li><strong><a href="https://github.com/flashlab/hexo-generator-search" target="_blank" rel="external">hexo-generator-searchdb</a></strong>: A plugin to generate the site’s search data</li>
+<li><strong><a href="https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap" target="_blank" rel="external">hexo-generator-seo-friendly-sitemap</a></strong>: Generate SEO-friendly sitemap.</li>
 </ul>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
 <li><a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm in Github</a></li>
@@ -192,7 +193,7 @@
     <link href="http://linpeng13.github.io/2016/05/19/linux-iptables-setings/"/>
     <id>http://linpeng13.github.io/2016/05/19/linux-iptables-setings/</id>
     <published>2016-05-19T00:30:21.000Z</published>
-    <updated>2017-09-03T14:02:28.000Z</updated>
+    <updated>2017-09-04T15:49:23.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="屏蔽指定IP"><a href="#屏蔽指定IP" class="headerlink" title="屏蔽指定IP"></a>屏蔽指定IP</h1><p>以屏蔽IP： 192.168.184.13 为例 </p>
 <h3 id="方法1：命令行"><a href="#方法1：命令行" class="headerlink" title="方法1：命令行"></a>方法1：命令行</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo iptables -I INPUT -s 192.168.184.13 -j DROP</div></pre></td></tr></table></figure>
@@ -225,7 +226,7 @@
     <link href="http://linpeng13.github.io/2016/03/22/%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server/"/>
     <id>http://linpeng13.github.io/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/</id>
     <published>2016-03-22T06:47:55.000Z</published>
-    <updated>2017-09-03T14:02:28.000Z</updated>
+    <updated>2017-09-04T15:49:22.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="慕课网-在Ubuntu-Server下搭建LAMP环境"><a href="#慕课网-在Ubuntu-Server下搭建LAMP环境" class="headerlink" title="慕课网-在Ubuntu Server下搭建LAMP环境"></a>慕课网-在Ubuntu Server下搭建LAMP环境</h1><p><a href="http://www.imooc.com/learn/170" target="_blank" rel="external">课程链接</a></p>
 <h2 id="2-1-性感的Ubuntu-Server操作系统"><a href="#2-1-性感的Ubuntu-Server操作系统" class="headerlink" title="2-1 性感的Ubuntu Server操作系统"></a>2-1 性感的Ubuntu Server操作系统</h2><ul>
@@ -287,7 +288,7 @@
     <link href="http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/"/>
     <id>http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/</id>
     <published>2016-03-18T11:26:07.000Z</published>
-    <updated>2017-09-03T14:02:28.000Z</updated>
+    <updated>2017-09-04T15:49:22.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h1><p>含义：shell本身的PID（ProcessID）</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$$"</span></div><div class="line">$ bash test.sh aaa</div><div class="line">this is 2638</div></pre></td></tr></table></figure>
@@ -320,7 +321,7 @@
     <link href="http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/"/>
     <id>http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/</id>
     <published>2016-01-08T05:56:12.000Z</published>
-    <updated>2017-09-03T14:02:27.000Z</updated>
+    <updated>2017-09-04T15:49:23.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>发布新文章到我的github步骤</strong></p>
 <ol>
@@ -362,7 +363,7 @@
     <link href="http://linpeng13.github.io/2016/01/08/nginx-instal/"/>
     <id>http://linpeng13.github.io/2016/01/08/nginx-instal/</id>
     <published>2016-01-08T04:20:25.000Z</published>
-    <updated>2017-09-03T14:02:28.000Z</updated>
+    <updated>2017-09-04T15:49:23.000Z</updated>
     
     <content type="html"><![CDATA[<p><strong>环境：OS X Yosemite(10.10.5)</strong></p>
 <ol>

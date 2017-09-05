@@ -7,16 +7,8 @@
     </url>
 
     <url>
-        <loc>http://linpeng13.github.io/2017/09/05/Ubuntu-%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E8%B0%83%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%88%E6%88%96%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%89/</loc>
-        <lastmod>2017-09-05T06:16:11.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/</loc>
-        <lastmod>2017-09-05T04:12:45.000Z</lastmod>
+        <loc>http://linpeng13.github.io/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/</loc>
+        <lastmod>2017-09-05T06:16:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,39 +16,7 @@
 
     <url>
         <loc>http://linpeng13.github.io/2017/09/03/some-hexo-next-set-the-page-header-foter./</loc>
-        <lastmod>2017-09-05T04:12:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/</loc>
-        <lastmod>2017-09-05T04:12:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://linpeng13.github.io/2016/05/19/linux-iptables-setings/</loc>
-        <lastmod>2017-09-05T04:12:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/</loc>
-        <lastmod>2017-09-05T04:12:45.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://linpeng13.github.io/2016/01/08/nginx-instal/</loc>
-        <lastmod>2017-09-05T04:12:45.000Z</lastmod>
+        <lastmod>2017-09-05T06:16:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -64,7 +24,23 @@
 
     <url>
         <loc>http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/</loc>
-        <lastmod>2017-09-05T04:12:45.000Z</lastmod>
+        <lastmod>2017-09-05T06:16:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://linpeng13.github.io/2016/01/08/nginx-instal/</loc>
+        <lastmod>2017-09-05T06:16:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/</loc>
+        <lastmod>2017-09-05T06:16:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -72,7 +48,31 @@
 
     <url>
         <loc>http://linpeng13.github.io/2016/03/22/%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server/</loc>
-        <lastmod>2017-09-05T04:12:45.000Z</lastmod>
+        <lastmod>2017-09-05T06:16:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://linpeng13.github.io/2016/05/19/linux-iptables-setings/</loc>
+        <lastmod>2017-09-05T06:16:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/</loc>
+        <lastmod>2017-09-05T06:16:25.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/</loc>
+        <lastmod>2017-09-05T06:16:25.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

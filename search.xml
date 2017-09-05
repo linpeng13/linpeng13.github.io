@@ -2,14 +2,14 @@
 <search>
   <entry>
     <title><![CDATA[Ubuntu 系统用户登录调用的文件（或环境变量）]]></title>
-    <url>%2F2017%2F09%2F05%2FUbuntu-%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E8%B0%83%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%88%E6%88%96%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%89%2F</url>
+    <url>%2F2017%2F09%2F05%2Fthe-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled%2F</url>
     <content type="text"><![CDATA[调用顺序普通用户登录Ubuntu 系统一般会依次调用如下配置文件： /etc/environment：在登录时操作系统使用的第一个文件，设置系统默认的环境变量； /etc/profile：在登录时操作系统定制用户环境时使用的第二个文件，此文件为系统的每个用户设置默认的变量，当用户第一次登录时，该文件被执行； ~/.bash_profile：登录用户的环境变量设置； ~/.profile：登录用户环境变量设置（若不存在 ~/.bash_profile 文件时执行）； /etc/environment该文件默认的内容如下： 1PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games" 若需要配置系统用户均需要用到的环境变量，例如JAVA 相关，可增加如下内容： 12JAVA_HOME="/usr/jdk1.8.0_144"JRE_HOME="/usr/jdk1.8.0_144/jre" /etc/profile该文件默认的内容如下： 12345678910111213141516171819202122232425# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))# and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).if [ "$PS1" ]; then if [ "$BASH" ] &amp;&amp; [ "$BASH" != "/bin/sh" ]; then # The file bash.bashrc already sets the default PS1. # PS1='\h:\w\$ ' if [ -f /etc/bash.bashrc ]; then . /etc/bash.bashrc fi else if [ "`id -u`" -eq 0 ]; then PS1='# ' else PS1='$ ' fi fifiif [ -d /etc/profile.d ]; then for i in /etc/profile.d/*.sh; do if [ -r $i ]; then . $i fi done unset ifi 该文件关键点分析如下： 若环境变量 BASH 存在且非 /bin/sh ，则执行配置文件 /etc/bash.bashrc ； 若不满足第1点，则按照root 用户为# ，其他用户为$ 设置提示符； 依次执行目录 /etc/profile.d 下的配置文件； ~/.profile该文件默认的内容如下： 1234567891011121314151617181920# ~/.profile: executed by the command interpreter for login shells.# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login# exists.# see /usr/share/doc/bash/examples/startup-files for examples.# the files are located in the bash-doc package.# the default umask is set in /etc/profile; for setting the umask# for ssh logins, install and configure the libpam-umask package.#umask 022# if running bashif [ -n "$BASH_VERSION" ]; then # include .bashrc if it exists if [ -f "$HOME/.bashrc" ]; then . "$HOME/.bashrc" fifi# set PATH so it includes user's private bin directoriesPATH="$HOME/bin:$HOME/.local/bin:$PATH" 注意如下说明： This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login exists.]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -20,8 +20,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -46,8 +46,8 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>NexT</tag>
         <tag>github</tag>
+        <tag>NexT</tag>
       </tags>
   </entry>
   <entry>
@@ -70,8 +70,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
+        <tag>Linux</tag>
         <tag>Apache</tag>
         <tag>MySQL</tag>
         <tag>PHP</tag>

@@ -60,13 +60,19 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
 
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -97,18 +103,18 @@
 
 
 
-<meta name="description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 1234567">
+<meta name="description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638">
 <meta name="keywords" content="Linux,shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux中shell变量含义">
 <meta property="og:url" content="http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/index.html">
 <meta property="og:site_name" content="木月天空">
-<meta property="og:description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 1234567">
+<meta property="og:description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-05T03:00:20.000Z">
+<meta property="og:updated_time" content="2017-09-05T04:08:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux中shell变量含义">
-<meta name="twitter:description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 1234567">
+<meta name="twitter:description" content="shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf &quot;this is %s\n&quot; &quot;$$&quot;$ bash test.sh aaathis is 2638">
 
 
 
@@ -446,13 +452,14 @@
       
 
       
-        <h1 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h1><p>含义：shell本身的PID（ProcessID）</p>
+        <h2 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h2><p>含义：shell本身的PID（ProcessID）</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$$"</span></div><div class="line">$ bash test.sh aaa</div><div class="line">this is 2638</div></pre></td></tr></table></figure>
-<h1 id="shell变量-1"><a href="#shell变量-1" class="headerlink" title="shell变量 $@"></a>shell变量 <code>$@</code></h1><p>含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数</p>
+<a id="more"></a>
+<h2 id="shell变量-1"><a href="#shell变量-1" class="headerlink" title="shell变量 $@"></a>shell变量 <code>$@</code></h2><p>含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"<span class="variable">$@</span>"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is aaa</div><div class="line">this is bbb</div><div class="line">this is ccc</div></pre></td></tr></table></figure>
-<h1 id="shell变量-2"><a href="#shell变量-2" class="headerlink" title="shell变量 $*"></a>shell变量 <code>$*</code></h1><p>含义：所有参数列表。如果”$*”用引号(“”)括起来的情况、以”$1 $2 … $n” 的形式输出所有参数</p>
+<h2 id="shell变量-2"><a href="#shell变量-2" class="headerlink" title="shell变量 $*"></a>shell变量 <code>$*</code></h2><p>含义：所有参数列表。如果”$*”用引号(“”)括起来的情况、以”$1 $2 … $n” 的形式输出所有参数</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$*"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is aaa bbb ccc</div></pre></td></tr></table></figure>
-<h1 id="shell变量-3"><a href="#shell变量-3" class="headerlink" title="shell变量 $#"></a>shell变量 <code>$#</code></h1><p>含义：shell参数个数</p>
+<h2 id="shell变量-3"><a href="#shell变量-3" class="headerlink" title="shell变量 $#"></a>shell变量 <code>$#</code></h2><p>含义：shell参数个数</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"<span class="variable">$#</span>"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is 3</div></pre></td></tr></table></figure>
 
       
@@ -712,7 +719,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量"><span class="nav-number">1.</span> <span class="nav-text">shell变量 $$</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量-1"><span class="nav-number">2.</span> <span class="nav-text">shell变量 $@</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量-2"><span class="nav-number">3.</span> <span class="nav-text">shell变量 $*</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell变量-3"><span class="nav-number">4.</span> <span class="nav-text">shell变量 $#</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#shell变量"><span class="nav-number">1.</span> <span class="nav-text">shell变量 $$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell变量-1"><span class="nav-number">2.</span> <span class="nav-text">shell变量 $@</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell变量-2"><span class="nav-number">3.</span> <span class="nav-text">shell变量 $*</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#shell变量-3"><span class="nav-number">4.</span> <span class="nav-text">shell变量 $#</span></a></li></ol></div>
             
 
           </div>

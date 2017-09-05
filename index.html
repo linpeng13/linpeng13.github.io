@@ -60,13 +60,19 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
 
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -448,7 +454,7 @@
 
       
         
-          <h1 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a>/etc/passwd</h1><p>查看Ubuntu 系统存在的用户信息，可执行：</p>
+          <h2 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a>/etc/passwd</h2><p>查看Ubuntu 系统存在的用户信息，可执行：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/passwd</div></pre></td></tr></table></figure>
 <p>该文件每行代表一个用户，格式为：<em>用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell</em></p>
 <p>例如：<code>hadoop:x:1000:1000:hadoop-01,,,:/home/hadoop:/bin/bash</code></p>
@@ -648,8 +654,8 @@
 
       
         
-          <h1 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h1><p>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。<br><img src="/uploads/2017-09-03/header.png" alt="页头"></p>
-<h2 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h2><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="external">leanCloud,实现文章阅读量统计</a>》。</p>
+          <h2 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h2><p>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。<br><img src="/uploads/2017-09-03/header.png" alt="页头"></p>
+<h3 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h3><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="external">leanCloud,实现文章阅读量统计</a>》。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/03/some-hexo-next-set-the-page-header-foter./#more" rel="contents">
@@ -1032,7 +1038,7 @@
       
         
           
-            <h1 id="屏蔽指定IP"><a href="#屏蔽指定IP" class="headerlink" title="屏蔽指定IP"></a>屏蔽指定IP</h1><p>以屏蔽IP： 192.168.184.13 为例 </p>
+            <h2 id="屏蔽指定IP"><a href="#屏蔽指定IP" class="headerlink" title="屏蔽指定IP"></a>屏蔽指定IP</h2><p>以屏蔽IP： 192.168.184.13 为例 </p>
 <h3 id="方法1：命令行"><a href="#方法1：命令行" class="headerlink" title="方法1：命令行"></a>方法1：命令行</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo iptables -I INPUT -s 192.168.184.13 -j DROP</div></pre></td></tr></table></figure>
 <p>说明：该方法临时修改防火墙配置，iptables服务重启后失效 </p>
 <h3 id="方法2：修改-iptables-文件"><a href="#方法2：修改-iptables-文件" class="headerlink" title="方法2：修改 iptables 文件"></a>方法2：修改 iptables 文件</h3><ol>
@@ -1222,39 +1228,18 @@
 
       
         
-          
-            <h1 id="慕课网-在Ubuntu-Server下搭建LAMP环境"><a href="#慕课网-在Ubuntu-Server下搭建LAMP环境" class="headerlink" title="慕课网-在Ubuntu Server下搭建LAMP环境"></a>慕课网-在Ubuntu Server下搭建LAMP环境</h1><p><a href="http://www.imooc.com/learn/170" target="_blank" rel="external">课程链接</a></p>
-<h2 id="2-1-性感的Ubuntu-Server操作系统"><a href="#2-1-性感的Ubuntu-Server操作系统" class="headerlink" title="2-1 性感的Ubuntu Server操作系统"></a>2-1 性感的Ubuntu Server操作系统</h2><ul>
+          <h2 id="慕课网-在Ubuntu-Server下搭建LAMP环境"><a href="#慕课网-在Ubuntu-Server下搭建LAMP环境" class="headerlink" title="慕课网-在Ubuntu Server下搭建LAMP环境"></a>慕课网-在Ubuntu Server下搭建LAMP环境</h2><p><a href="http://www.imooc.com/learn/170" target="_blank" rel="external">课程链接</a></p>
+<h3 id="2-1-性感的Ubuntu-Server操作系统"><a href="#2-1-性感的Ubuntu-Server操作系统" class="headerlink" title="2-1 性感的Ubuntu Server操作系统"></a>2-1 性感的Ubuntu Server操作系统</h3><ul>
 <li>LTS:Long Term Support(长期支持版本)</li>
 <li>该课程使用Ubuntu Server环境版本是 <em>LTS 12.04</em></li>
 </ul>
-<h2 id="4-1-使用apt-get工具安装Apache-PHP-MySQL"><a href="#4-1-使用apt-get工具安装Apache-PHP-MySQL" class="headerlink" title="4-1 使用apt-get工具安装Apache PHP MySQL"></a>4-1 使用apt-get工具安装Apache PHP MySQL</h2><ul>
-<li>Ubuntu 使用 apt-get 命令获取并安装软件安装包</li>
-<li><p>检查Apache是否已加载php5_module模块，执行命令</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/apache2/mods-enabled/php5.load</div></pre></td></tr></table></figure>
-<p>如果出现如下提示，说明已加载</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">LoadModule php5_module /usr/lib/apache2/modules/libphp5.so</div></pre></td></tr></table></figure>
-</li>
-<li><p>检查PHP是否已安装加载MYSQL.so扩展，执行命令</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/php5/conf.d/mysql.ini</div></pre></td></tr></table></figure>
-<p>若存在该文件，且显示如下提示，说明已加载</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">extension=mysql.so</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="4-3-给PHP添加常用扩展"><a href="#4-3-给PHP添加常用扩展" class="headerlink" title="4-3 给PHP添加常用扩展"></a>4-3 给PHP添加常用扩展</h2><ul>
-<li>安装了GD库和CURL（需了解是什么）</li>
-</ul>
-<h2 id="5-3-LAMP环境配置文件详解"><a href="#5-3-LAMP环境配置文件详解" class="headerlink" title="5-3 LAMP环境配置文件详解"></a>5-3 LAMP环境配置文件详解</h2><ul>
-<li>Apache 配置文件加载流程<br>通过 apache.conf 加载：<br>conf.d/<em><br>httpd.conf<br>ports.conf<br>mods-enabled/</em><br>sites-enabled/* </li>
-<li>MySQL 核心配置文件 my.cnf</li>
-<li>PHP 核心配置文件 php.ini</li>
-</ul>
-<h2 id="5-7-在Apache中配置虚拟主机"><a href="#5-7-在Apache中配置虚拟主机" class="headerlink" title="5-7 在Apache中配置虚拟主机"></a>5-7 在Apache中配置虚拟主机</h2><p>在Ubuntu Server操作系统中，有一些软件的敏感操作受到 <strong>apparmore</strong> 的约束（apparmore是系统安全应用），apparmore关于mysql安全操作的配置文件路径是：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/etc/apparmore.d/usr.sbin.mysqld</div></pre></td></tr></table></figure>
-<h2 id="5-8-MySQL数据存储目录迁移"><a href="#5-8-MySQL数据存储目录迁移" class="headerlink" title="5-8 MySQL数据存储目录迁移"></a>5-8 MySQL数据存储目录迁移</h2><p>默认情况下，mysql的数据存储目录是 <code>/var/lib/mysql</code></p>
-<h2 id="5-11-开启MySQL的remote-access"><a href="#5-11-开启MySQL的remote-access" class="headerlink" title="5-11 开启MySQL的remote access"></a>5-11 开启MySQL的remote access</h2><p>软件： <strong>navicat</strong></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1435,17 +1420,15 @@
 
       
         
-          
-            <h1 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h1><p>含义：shell本身的PID（ProcessID）</p>
+          <h2 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h2><p>含义：shell本身的PID（ProcessID）</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$$"</span></div><div class="line">$ bash test.sh aaa</div><div class="line">this is 2638</div></pre></td></tr></table></figure>
-<h1 id="shell变量-1"><a href="#shell变量-1" class="headerlink" title="shell变量 $@"></a>shell变量 <code>$@</code></h1><p>含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"<span class="variable">$@</span>"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is aaa</div><div class="line">this is bbb</div><div class="line">this is ccc</div></pre></td></tr></table></figure>
-<h1 id="shell变量-2"><a href="#shell变量-2" class="headerlink" title="shell变量 $*"></a>shell变量 <code>$*</code></h1><p>含义：所有参数列表。如果”$*”用引号(“”)括起来的情况、以”$1 $2 … $n” 的形式输出所有参数</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$*"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is aaa bbb ccc</div></pre></td></tr></table></figure>
-<h1 id="shell变量-3"><a href="#shell变量-3" class="headerlink" title="shell变量 $#"></a>shell变量 <code>$#</code></h1><p>含义：shell参数个数</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"<span class="variable">$#</span>"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is 3</div></pre></td></tr></table></figure>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/03/18/the-meaning-of-the-shel-variable-in-linux/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1588,7 +1571,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  58(字)
+                  56(字)
                 </span>
               
 
@@ -1626,26 +1609,18 @@
 
       
         
-          
-            <p><strong>发布新文章到我的github步骤</strong></p>
-<ol>
+          <h2 id="发布新文章到我的github步骤"><a href="#发布新文章到我的github步骤" class="headerlink" title="发布新文章到我的github步骤"></a>发布新文章到我的github步骤</h2><ol>
 <li><p>新建文章文件</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo new [layout] &lt;title&gt;</div><div class="line"><span class="comment"># or</span></div><div class="line">hexo n [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
 </li>
-<li><p>生成静态文件</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line"><span class="comment"># or</span></div><div class="line">hexo g</div></pre></td></tr></table></figure>
-</li>
-<li><p>发布站点</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div><div class="line"><span class="comment"># or</span></div><div class="line">hexo d</div></pre></td></tr></table></figure>
-</li>
 </ol>
-<p><em>参考</em></p>
-<ol>
-<li><a href="https://hexo.io/zh-cn/docs/generating.html" target="_blank" rel="external">hexo官网</a></li>
-<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT theme</a></li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/01/08/hexo-releases-new-articles/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1826,33 +1801,20 @@
 
       
         
-          
-            <p><strong>环境：OS X Yosemite(10.10.5)</strong></p>
-<ol>
+          <h2 id="环境：OS-X-Yosemite-10-10-5"><a href="#环境：OS-X-Yosemite-10-10-5" class="headerlink" title="环境：OS X Yosemite(10.10.5)"></a>环境：OS X Yosemite(10.10.5)</h2><ol>
 <li><p>下载<a href="http://www.pcre.org/" target="_blank" rel="external">PCRE</a>和<a href="http://nginx.org/" target="_blank" rel="external">nginx</a></p>
 </li>
 <li><p>安装PCRE</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ tar xvzf pcre-8.5</div><div class="line">$ <span class="built_in">cd</span> pcre-8.5</div><div class="line">$ sudo ./configure --prefix=/usr/<span class="built_in">local</span></div><div class="line">$ sudo make</div><div class="line">$ sudo make install</div></pre></td></tr></table></figure>
 </li>
-<li><p>安装nginx</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ tar xvzf nginx-1.6.0.tar.gz</div><div class="line">$ <span class="built_in">cd</span> nginx-1.6.0</div><div class="line">$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/nginx --with-http_ssl_module --with-cc-opt=<span class="string">"-Wno-deprecated-declarations"</span></div><div class="line">$ sudo make</div><div class="line">$ sudo make install</div></pre></td></tr></table></figure>
-</li>
-<li><p>开启nginx<br> 将 /usr/local/nginx/sbin 加入到环境变量里，执行命令：</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx</div></pre></td></tr></table></figure>
-<p> 打开浏览器 <a href="http://localhost" target="_blank" rel="external">http://localhost</a> ，看到“Welcome to nginx!”字样，说明nginx安装启动成功</p>
-</li>
-<li><p>关闭nginx</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx -s stop</div></pre></td></tr></table></figure>
-</li>
-<li><p>重启nginx（有用的指令之一）</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx -s reload</div></pre></td></tr></table></figure>
-</li>
-<li><p>判断配置文件是否正确（有用的指令之一）</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo nginx -t</div></pre></td></tr></table></figure>
-</li>
 </ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/01/08/nginx-instal/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

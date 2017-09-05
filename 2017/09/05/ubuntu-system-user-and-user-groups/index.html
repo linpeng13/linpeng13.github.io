@@ -60,13 +60,19 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
 
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -79,7 +85,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux,Ubuntu," />
+  <meta name="keywords" content="Ubuntu,Linux," />
 
 
 
@@ -98,14 +104,14 @@
 
 
 <meta name="description" content="/etc/passwd查看Ubuntu 系统存在的用户信息，可执行： 1cat /etc/passwd 该文件每行代表一个用户，格式为：用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell 例如：hadoop:x:1000:1000:hadoop-01,,,:/home/hadoop:/bin/bash  用户名：hadoop 口令：x（详见下节 “/etc/shadow”） 用">
-<meta name="keywords" content="Linux,Ubuntu">
+<meta name="keywords" content="Ubuntu,Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu 系统用户和用户组">
 <meta property="og:url" content="http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/index.html">
 <meta property="og:site_name" content="木月天空">
 <meta property="og:description" content="/etc/passwd查看Ubuntu 系统存在的用户信息，可执行： 1cat /etc/passwd 该文件每行代表一个用户，格式为：用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell 例如：hadoop:x:1000:1000:hadoop-01,,,:/home/hadoop:/bin/bash  用户名：hadoop 口令：x（详见下节 “/etc/shadow”） 用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-05T03:03:39.000Z">
+<meta property="og:updated_time" content="2017-09-05T04:06:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu 系统用户和用户组">
 <meta name="twitter:description" content="/etc/passwd查看Ubuntu 系统存在的用户信息，可执行： 1cat /etc/passwd 该文件每行代表一个用户，格式为：用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell 例如：hadoop:x:1000:1000:hadoop-01,,,:/home/hadoop:/bin/bash  用户名：hadoop 口令：x（详见下节 “/etc/shadow”） 用">
@@ -446,7 +452,7 @@
       
 
       
-        <h1 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a>/etc/passwd</h1><p>查看Ubuntu 系统存在的用户信息，可执行：</p>
+        <h2 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a>/etc/passwd</h2><p>查看Ubuntu 系统存在的用户信息，可执行：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/passwd</div></pre></td></tr></table></figure>
 <p>该文件每行代表一个用户，格式为：<em>用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell</em></p>
 <p>例如：<code>hadoop:x:1000:1000:hadoop-01,,,:/home/hadoop:/bin/bash</code></p>
@@ -460,7 +466,7 @@
 <li>登录Shell：/bin/bash</li>
 </ul>
 <a id="more"></a>
-<h1 id="etc-shadow"><a href="#etc-shadow" class="headerlink" title="/etc/shadow"></a>/etc/shadow</h1><p>Unix系统最初是用明文保存密码的，后来由于安全的考虑，采用crypt() 算法加密密码并存放在 <code>/etc/passwd</code> 文件。现在，由于计算机处理能力的提高，使密码破解变得越来越容易。<code>/etc/passwd</code> 文件是所有合法用户都可访问的，大家都可互相看到密码的加密字符串，这给系统带来很大的安全威胁。现代的Unix系统使用影子密码系统，它把密码从<code>/etc/passwd</code> 文件中分离出来，真正的密码保存在<code>/etc/shadow</code> 文件中，该文件只能由超级用户访问。这样入侵者就不能获得加密密码串，用于破解。使用shadow 密码文件后，<code>/etc/passwd</code> 文件中所有帐户的password 域的内容为”x”，如果password 域的内容为”*”，则该帐号被停用。</p>
+<h2 id="etc-shadow"><a href="#etc-shadow" class="headerlink" title="/etc/shadow"></a>/etc/shadow</h2><p>Unix系统最初是用明文保存密码的，后来由于安全的考虑，采用crypt() 算法加密密码并存放在 <code>/etc/passwd</code> 文件。现在，由于计算机处理能力的提高，使密码破解变得越来越容易。<code>/etc/passwd</code> 文件是所有合法用户都可访问的，大家都可互相看到密码的加密字符串，这给系统带来很大的安全威胁。现代的Unix系统使用影子密码系统，它把密码从<code>/etc/passwd</code> 文件中分离出来，真正的密码保存在<code>/etc/shadow</code> 文件中，该文件只能由超级用户访问。这样入侵者就不能获得加密密码串，用于破解。使用shadow 密码文件后，<code>/etc/passwd</code> 文件中所有帐户的password 域的内容为”x”，如果password 域的内容为”*”，则该帐号被停用。</p>
 <p>格式为：<em>username:password:last_change:min_change:max_change:warm:failed_expire:expiration:reserved</em></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo cat /etc/shadow</div></pre></td></tr></table></figure>
 <p>例如：<code>hadoop:$1$dwXYMXgF$4Tqzw9pwsUCsYAWmJEgak/:17381:0:99999:7:::</code></p>
@@ -475,7 +481,7 @@
 <li>expiration：（账号失效时间）</li>
 <li>reserved：</li>
 </ul>
-<h1 id="etc-group"><a href="#etc-group" class="headerlink" title="/etc/group"></a>/etc/group</h1><p>查看Ubuntu 系统存在的组信息，可执行：</p>
+<h2 id="etc-group"><a href="#etc-group" class="headerlink" title="/etc/group"></a>/etc/group</h2><p>查看Ubuntu 系统存在的组信息，可执行：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/group</div></pre></td></tr></table></figure>
 <p>该文件每行代表一个组，格式为：<em>groupname:password:gid:members</em></p>
 <p>例如：<code>hadoop:x:1000:</code></p>
@@ -520,9 +526,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
-          
             <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
         </div>
       
@@ -739,7 +745,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#etc-passwd"><span class="nav-number">1.</span> <span class="nav-text">/etc/passwd</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#etc-shadow"><span class="nav-number">2.</span> <span class="nav-text">/etc/shadow</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#etc-group"><span class="nav-number">3.</span> <span class="nav-text">/etc/group</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-passwd"><span class="nav-number">1.</span> <span class="nav-text">/etc/passwd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-shadow"><span class="nav-number">2.</span> <span class="nav-text">/etc/shadow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-group"><span class="nav-number">3.</span> <span class="nav-text">/etc/group</span></a></li></ol></div>
             
 
           </div>

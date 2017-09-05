@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linpeng13.github.io/"/>
-  <updated>2017-09-05T03:03:39.000Z</updated>
+  <updated>2017-09-05T04:06:40.000Z</updated>
   <id>http://linpeng13.github.io/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/"/>
     <id>http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/</id>
     <published>2017-09-05T02:55:18.000Z</published>
-    <updated>2017-09-05T03:03:39.000Z</updated>
+    <updated>2017-09-05T04:06:40.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a>/etc/passwd</h1><p>查看Ubuntu 系统存在的用户信息，可执行：</p>
+    <content type="html"><![CDATA[<h2 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a>/etc/passwd</h2><p>查看Ubuntu 系统存在的用户信息，可执行：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/passwd</div></pre></td></tr></table></figure>
 <p>该文件每行代表一个用户，格式为：<em>用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell</em></p>
 <p>例如：<code>hadoop:x:1000:1000:hadoop-01,,,:/home/hadoop:/bin/bash</code></p>
@@ -36,7 +36,7 @@
 <li>登录Shell：/bin/bash</li>
 </ul>
 <a id="more"></a>
-<h1 id="etc-shadow"><a href="#etc-shadow" class="headerlink" title="/etc/shadow"></a>/etc/shadow</h1><p>Unix系统最初是用明文保存密码的，后来由于安全的考虑，采用crypt() 算法加密密码并存放在 <code>/etc/passwd</code> 文件。现在，由于计算机处理能力的提高，使密码破解变得越来越容易。<code>/etc/passwd</code> 文件是所有合法用户都可访问的，大家都可互相看到密码的加密字符串，这给系统带来很大的安全威胁。现代的Unix系统使用影子密码系统，它把密码从<code>/etc/passwd</code> 文件中分离出来，真正的密码保存在<code>/etc/shadow</code> 文件中，该文件只能由超级用户访问。这样入侵者就不能获得加密密码串，用于破解。使用shadow 密码文件后，<code>/etc/passwd</code> 文件中所有帐户的password 域的内容为”x”，如果password 域的内容为”*”，则该帐号被停用。</p>
+<h2 id="etc-shadow"><a href="#etc-shadow" class="headerlink" title="/etc/shadow"></a>/etc/shadow</h2><p>Unix系统最初是用明文保存密码的，后来由于安全的考虑，采用crypt() 算法加密密码并存放在 <code>/etc/passwd</code> 文件。现在，由于计算机处理能力的提高，使密码破解变得越来越容易。<code>/etc/passwd</code> 文件是所有合法用户都可访问的，大家都可互相看到密码的加密字符串，这给系统带来很大的安全威胁。现代的Unix系统使用影子密码系统，它把密码从<code>/etc/passwd</code> 文件中分离出来，真正的密码保存在<code>/etc/shadow</code> 文件中，该文件只能由超级用户访问。这样入侵者就不能获得加密密码串，用于破解。使用shadow 密码文件后，<code>/etc/passwd</code> 文件中所有帐户的password 域的内容为”x”，如果password 域的内容为”*”，则该帐号被停用。</p>
 <p>格式为：<em>username:password:last_change:min_change:max_change:warm:failed_expire:expiration:reserved</em></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo cat /etc/shadow</div></pre></td></tr></table></figure>
 <p>例如：<code>hadoop:$1$dwXYMXgF$4Tqzw9pwsUCsYAWmJEgak/:17381:0:99999:7:::</code></p>
@@ -51,7 +51,7 @@
 <li>expiration：（账号失效时间）</li>
 <li>reserved：</li>
 </ul>
-<h1 id="etc-group"><a href="#etc-group" class="headerlink" title="/etc/group"></a>/etc/group</h1><p>查看Ubuntu 系统存在的组信息，可执行：</p>
+<h2 id="etc-group"><a href="#etc-group" class="headerlink" title="/etc/group"></a>/etc/group</h2><p>查看Ubuntu 系统存在的组信息，可执行：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/group</div></pre></td></tr></table></figure>
 <p>该文件每行代表一个组，格式为：<em>groupname:password:gid:members</em></p>
 <p>例如：<code>hadoop:x:1000:</code></p>
@@ -65,7 +65,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;etc-passwd&quot;&gt;&lt;a href=&quot;#etc-passwd&quot; class=&quot;headerlink&quot; title=&quot;/etc/passwd&quot;&gt;&lt;/a&gt;/etc/passwd&lt;/h1&gt;&lt;p&gt;查看Ubuntu 系统存在的用户信息，可执行：&lt;/p&gt;
+      &lt;h2 id=&quot;etc-passwd&quot;&gt;&lt;a href=&quot;#etc-passwd&quot; class=&quot;headerlink&quot; title=&quot;/etc/passwd&quot;&gt;&lt;/a&gt;/etc/passwd&lt;/h2&gt;&lt;p&gt;查看Ubuntu 系统存在的用户信息，可执行：&lt;/p&gt;
 &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;cat /etc/passwd&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;该文件每行代表一个用户，格式为：&lt;em&gt;用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;例如：&lt;code&gt;hadoop:x:1000:1000:hadoop-01,,,:/home/hadoop:/bin/bash&lt;/code&gt;&lt;/p&gt;
@@ -84,9 +84,9 @@
       <category term="Linux" scheme="http://linpeng13.github.io/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
-    
       <category term="Ubuntu" scheme="http://linpeng13.github.io/tags/Ubuntu/"/>
+    
+      <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
     
   </entry>
   
@@ -95,21 +95,21 @@
     <link href="http://linpeng13.github.io/2017/09/03/some-hexo-next-set-the-page-header-foter./"/>
     <id>http://linpeng13.github.io/2017/09/03/some-hexo-next-set-the-page-header-foter./</id>
     <published>2017-09-03T09:51:17.000Z</published>
-    <updated>2017-09-04T15:53:40.000Z</updated>
+    <updated>2017-09-05T04:08:15.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h1><p>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。<br><img src="/uploads/2017-09-03/header.png" alt="页头"></p>
-<h2 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h2><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="external">leanCloud,实现文章阅读量统计</a>》。</p>
+    <content type="html"><![CDATA[<h2 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h2><p>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。<br><img src="/uploads/2017-09-03/header.png" alt="页头"></p>
+<h3 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h3><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="external">leanCloud,实现文章阅读量统计</a>》。</p>
 <a id="more"></a>
-<h2 id="字数统计和阅读时长"><a href="#字数统计和阅读时长" class="headerlink" title="字数统计和阅读时长"></a>字数统计和阅读时长</h2><p>增加【字数统计】和【阅读时长】信息，需安装插件<a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="external">hexo-wordcount</a> ，安装方法相对简单：</p>
+<h3 id="字数统计和阅读时长"><a href="#字数统计和阅读时长" class="headerlink" title="字数统计和阅读时长"></a>字数统计和阅读时长</h3><p>增加【字数统计】和【阅读时长】信息，需安装插件<a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="external">hexo-wordcount</a> ，安装方法相对简单：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm i --save hexo-wordcount</div><div class="line"></div><div class="line"><span class="comment">## Node 版本7.6.0之前,请安装 2.x 版本 (Node.js v7.6.0 and previous)</span></div><div class="line">$ npm install hexo-wordcount@2 --save</div></pre></td></tr></table></figure>
 <p>然后在<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 中，找到字段 <code>post_wordcount</code> ，其设置块内容默认是：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Post wordcount display settings</span></div><div class="line"><span class="comment"># Dependencies: https://github.com/willin/hexo-wordcount</span></div><div class="line">post_wordcount:</div><div class="line">  item_text: <span class="literal">true</span></div><div class="line">  wordcount: <span class="literal">false</span></div><div class="line">  min2read: <span class="literal">false</span></div><div class="line">  totalcount: <span class="literal">false</span></div><div class="line">  separated_meta: <span class="literal">true</span></div></pre></td></tr></table></figure>
 <p>字段<code>wordcount</code> 是文章的<strong>字数统计</strong>，字段<code>min2read</code>是文章的<strong>阅读时长</strong>预估值，这两个值默认显示在文章开头（如图）。<br>字段<code>totalcount</code>是整站的<strong>字数统计</strong>，默认显示在站点页面最下方。<br>按需要将<code>false</code> 修改为<code>true</code>即可。</p>
 <p>但默认开启的【字数统计】和【阅读时长】信息，是不包含单位的，故有强迫症的朋友，可以修订文件<code>themes/next/layout/_macro/post.swig</code> ，在<code>wordcount(post.content)</code> 所在行加<code>(字)</code> ，在<code>min2read(post.content)</code> 所在行加<code>(分)</code> 。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">&#123;% <span class="keyword">if</span> theme.post_wordcount.wordcount or theme.post_wordcount.min2read %&#125;</div><div class="line">  &lt;div class=<span class="string">"post-wordcount"</span>&gt;</div><div class="line">    &#123;% <span class="keyword">if</span> theme.post_wordcount.wordcount %&#125;</div><div class="line">      &#123;% <span class="keyword">if</span> not theme.post_wordcount.separated_meta %&#125;</div><div class="line">        &lt;span class=<span class="string">"post-meta-divider"</span>&gt;|&lt;/span&gt;</div><div class="line">      &#123;% endif %&#125;</div><div class="line">      &lt;span class=<span class="string">"post-meta-item-icon"</span>&gt;</div><div class="line">        &lt;i class=<span class="string">"fa fa-file-word-o"</span>&gt;&lt;/i&gt;</div><div class="line">      &lt;/span&gt;</div><div class="line">      &#123;% <span class="keyword">if</span> theme.post_wordcount.item_text %&#125;</div><div class="line">        &lt;span class=<span class="string">"post-meta-item-text"</span>&gt;&#123;&#123; __(<span class="string">'post.wordcount'</span>) &#125;&#125;&amp;<span class="comment">#58;&lt;/span&gt;</span></div><div class="line">      &#123;% endif %&#125;</div><div class="line">      &lt;span title=<span class="string">"&#123;&#123; __('post.wordcount') &#125;&#125;"</span>&gt;</div><div class="line">        &#123;&#123; wordcount(post.content) &#125;&#125;(字)</div><div class="line">      &lt;/span&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">    &#123;% <span class="keyword">if</span> theme.post_wordcount.wordcount and theme.post_wordcount.min2read %&#125;</div><div class="line">      &lt;span class=<span class="string">"post-meta-divider"</span>&gt;|&lt;/span&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line"></div><div class="line">    &#123;% <span class="keyword">if</span> theme.post_wordcount.min2read %&#125;</div><div class="line">      &lt;span class=<span class="string">"post-meta-item-icon"</span>&gt;</div><div class="line">        &lt;i class=<span class="string">"fa fa-clock-o"</span>&gt;&lt;/i&gt;</div><div class="line">      &lt;/span&gt;</div><div class="line">      &#123;% <span class="keyword">if</span> theme.post_wordcount.item_text %&#125;</div><div class="line">        &lt;span class=<span class="string">"post-meta-item-text"</span>&gt;&#123;&#123; __(<span class="string">'post.min2read'</span>) &#125;&#125; &amp;asymp;&lt;/span&gt;</div><div class="line">      &#123;% endif %&#125;</div><div class="line">      &lt;span title=<span class="string">"&#123;&#123; __('post.min2read') &#125;&#125;"</span>&gt;</div><div class="line">        &#123;&#123; min2read(post.content) &#125;&#125;(分)</div><div class="line">      &lt;/span&gt;</div><div class="line">    &#123;% endif %&#125;</div><div class="line">  &lt;/div&gt;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
-<h1 id="页尾"><a href="#页尾" class="headerlink" title="页尾"></a>页尾</h1><p>NexT 主题的文章页面，想要在页尾增加文章的版权信息，如图：<br><img src="/uploads/2017-09-03/footer.png" alt="页尾"></p>
+<h2 id="页尾"><a href="#页尾" class="headerlink" title="页尾"></a>页尾</h2><p>NexT 主题的文章页面，想要在页尾增加文章的版权信息，如图：<br><img src="/uploads/2017-09-03/footer.png" alt="页尾"></p>
 <p>在<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 中，找到字段<code>post_copyright</code> ，将<code>enable</code> 设置为<code>true</code> 即可。</p>
-<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><p>从上述设置，不难发现NexT 主题文章页面设置的几个重要文件，即：</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>从上述设置，不难发现NexT 主题文章页面设置的几个重要文件，即：</p>
 <ul>
 <li><code>_layout.swig</code> -<code>themes/next/layout/_layout.swig</code> ，全局性的页面布局代码；</li>
 <li><code>post.swig</code> -<code>themes/next/layout/post.swig</code> ，文章类型页面框架布局代码，其中调用了<code>_macro/post.swig</code> ；</li>
@@ -119,8 +119,8 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;页头&quot;&gt;&lt;a href=&quot;#页头&quot; class=&quot;headerlink&quot; title=&quot;页头&quot;&gt;&lt;/a&gt;页头&lt;/h1&gt;&lt;p&gt;NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。&lt;br&gt;&lt;img src=&quot;/uploads/2017-09-03/header.png&quot; alt=&quot;页头&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;阅读次数&quot;&gt;&lt;a href=&quot;#阅读次数&quot; class=&quot;headerlink&quot; title=&quot;阅读次数&quot;&gt;&lt;/a&gt;阅读次数&lt;/h2&gt;&lt;p&gt;增加【阅读次数】信息，需要用到第三方的服务&lt;a href=&quot;https://leancloud.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LeanCloud&lt;/a&gt; ，且需要修改&lt;strong&gt;主题配置文件&lt;/strong&gt;&lt;code&gt;themes/next/_config.yml&lt;/code&gt; 。&lt;br&gt;详细的操作可参考这篇博文《&lt;a href=&quot;http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;leanCloud,实现文章阅读量统计&lt;/a&gt;》。&lt;/p&gt;
+      &lt;h2 id=&quot;页头&quot;&gt;&lt;a href=&quot;#页头&quot; class=&quot;headerlink&quot; title=&quot;页头&quot;&gt;&lt;/a&gt;页头&lt;/h2&gt;&lt;p&gt;NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。&lt;br&gt;&lt;img src=&quot;/uploads/2017-09-03/header.png&quot; alt=&quot;页头&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;阅读次数&quot;&gt;&lt;a href=&quot;#阅读次数&quot; class=&quot;headerlink&quot; title=&quot;阅读次数&quot;&gt;&lt;/a&gt;阅读次数&lt;/h3&gt;&lt;p&gt;增加【阅读次数】信息，需要用到第三方的服务&lt;a href=&quot;https://leancloud.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LeanCloud&lt;/a&gt; ，且需要修改&lt;strong&gt;主题配置文件&lt;/strong&gt;&lt;code&gt;themes/next/_config.yml&lt;/code&gt; 。&lt;br&gt;详细的操作可参考这篇博文《&lt;a href=&quot;http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;leanCloud,实现文章阅读量统计&lt;/a&gt;》。&lt;/p&gt;
     
     </summary>
     
@@ -140,7 +140,7 @@
     <link href="http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/"/>
     <id>http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/</id>
     <published>2017-09-02T13:29:20.000Z</published>
-    <updated>2017-09-05T02:59:34.000Z</updated>
+    <updated>2017-09-05T04:02:51.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/uploads/2017-09-02/hexo-home.png" alt="Hexo"><br>Hexo 是一个快速、简洁且高效的博客框架，基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，并且只需一条指令即可部署到 GitHub Pages（或Heroku 等其他网站）。</p>
 <p>使用Hexo+Github 搭建个人博客，简单来说分两步：</p>
@@ -150,14 +150,14 @@
 </ol>
 <p>说明：本文环境基于macOS Sierra 且已安装git 。</p>
 <a id="more"></a>
-<h1 id="本地搭建Hexo"><a href="#本地搭建Hexo" class="headerlink" title="本地搭建Hexo"></a>本地搭建Hexo</h1><p>Hexo 是基于Node.js 环境，故搭建Hexo，即：</p>
+<h2 id="本地搭建Hexo"><a href="#本地搭建Hexo" class="headerlink" title="本地搭建Hexo"></a>本地搭建Hexo</h2><p>Hexo 是基于Node.js 环境，故搭建Hexo，即：</p>
 <ol>
 <li>搭建Node.js 环境</li>
 <li>安装Hexo </li>
 <li>安装喜欢的 Theme</li>
 <li>个性化配置</li>
 </ol>
-<h2 id="搭建Node-js-环境"><a href="#搭建Node-js-环境" class="headerlink" title="搭建Node.js 环境"></a>搭建Node.js 环境</h2><blockquote>
+<h3 id="搭建Node-js-环境"><a href="#搭建Node-js-环境" class="headerlink" title="搭建Node.js 环境"></a>搭建Node.js 环境</h3><blockquote>
 <p>Node Version Manager - Simple bash script to manage multiple active node.js versions</p>
 </blockquote>
 <p>建议使用<code>nvm</code> 工具安装并操控<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js 环境</a>，步骤如下：</p>
@@ -189,21 +189,21 @@
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm install npm@latest -g</div><div class="line"></div><div class="line"><span class="comment">## 查看npm 版本</span></div><div class="line">$ npm -v</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>安装Hexo 步骤如下：</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>安装Hexo 步骤如下：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init [blog-site-folder]</div><div class="line">$ <span class="built_in">cd</span> [blog-site-folder]</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
 <p>说明：使用npm 下载安装<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo 程序</a>，选项参数<code>-g</code>的作用是将Hexo 程序安装在当前Node.js 环境中，例如<code>~/.nvm/versions/node/v6.11.2/lib/node_modules</code> 。</p>
 <p>常用的Hexo 命令：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</span></div><div class="line">$ hexo init [folder]</div><div class="line"></div><div class="line"><span class="comment">## 新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。</span></div><div class="line"><span class="comment">## 如果标题包含空格的话，请使用引号括起来。</span></div><div class="line">$ hexo new [layout] &lt;title&gt;</div><div class="line"></div><div class="line"><span class="comment">## 生成静态文件</span></div><div class="line"><span class="comment">## 若附加选项参数"-d" 或"--deploy" ，即文件生成后立即部署网站</span></div><div class="line"><span class="comment">## 若附加选项参数"-w" 或"--watch" ，即监视文件变动</span></div><div class="line"><span class="comment">## 可以简写为"hexo g"</span></div><div class="line">$ hexo generate</div><div class="line"></div><div class="line"><span class="comment">## 发表草稿</span></div><div class="line">$ hexo publish [layout] &lt;filename&gt;</div><div class="line"></div><div class="line"><span class="comment">## 启动服务器。默认情况下，访问网址为： http://localhost:4000/</span></div><div class="line"><span class="comment">## 可以简写为"hexo s"</span></div><div class="line">$ hexo server</div><div class="line"></div><div class="line"><span class="comment">## 部署网站</span></div><div class="line"><span class="comment">## 可以简写为"hexo d"</span></div><div class="line">$ hexo deploy</div><div class="line"></div><div class="line"><span class="comment">## 清除缓存文件 (db.json) 和已生成的静态文件 (public)。</span></div><div class="line"><span class="comment">## 在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</span></div><div class="line">$ hexo clean</div><div class="line"></div><div class="line"><span class="comment">## 显示 Hexo 版本</span></div><div class="line">$ hexo version</div></pre></td></tr></table></figure>
 <p>插播一个有用的npm 命令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">## 查看Hexo 站点安装了哪些node 程序包</span></div><div class="line"><span class="comment">## `--depth` 表示检索深度为0，即不显示其依赖包</span></div><div class="line">$ <span class="built_in">cd</span> [blog-site-folder]</div><div class="line">$ npm list --depth=0</div></pre></td></tr></table></figure>
-<h2 id="安装喜欢的-Theme"><a href="#安装喜欢的-Theme" class="headerlink" title="安装喜欢的 Theme"></a>安装喜欢的 Theme</h2><p>Hexo 默认的Theme 是landscape ，显然还有更好的选择。Hexo Github 给出了”<a href="https://en.abnerchou.me/Blog/5c00ca67/" target="_blank" rel="external">Hexo top 10 themes</a>“ 。</p>
+<h3 id="安装喜欢的-Theme"><a href="#安装喜欢的-Theme" class="headerlink" title="安装喜欢的 Theme"></a>安装喜欢的 Theme</h3><p>Hexo 默认的Theme 是landscape ，显然还有更好的选择。Hexo Github 给出了”<a href="https://en.abnerchou.me/Blog/5c00ca67/" target="_blank" rel="external">Hexo top 10 themes</a>“ 。</p>
 <p>我这里选择下载<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">Hexo NexT 最新主题</a></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> [your-hexo-site]</div><div class="line">$ git <span class="built_in">clone</span> https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
 <p>当然，若是希望升级Hexo NexT 主题，可执行</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> themes/next</div><div class="line">$ git pull</div></pre></td></tr></table></figure>
 <p>启用Hexo NexT Theme ，在站点配置文件<code>_config.yml</code> 找到 <code>theme</code> 字段，并将其值更改为 <code>next</code><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: next</div></pre></td></tr></table></figure></p>
-<h2 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h2><p>站点和主题的个性化配置，可分别参考<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo 中文官网</a> 和<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT, Elegant Theme for Hexo</a> 。</p>
-<h1 id="部署至Github"><a href="#部署至Github" class="headerlink" title="部署至Github"></a>部署至Github</h1><ol>
+<h3 id="个性化配置"><a href="#个性化配置" class="headerlink" title="个性化配置"></a>个性化配置</h3><p>站点和主题的个性化配置，可分别参考<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">Hexo 中文官网</a> 和<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT, Elegant Theme for Hexo</a> 。</p>
+<h2 id="部署至Github"><a href="#部署至Github" class="headerlink" title="部署至Github"></a>部署至Github</h2><ol>
 <li>首先在<a href="https://github.com/" target="_blank" rel="external">Github</a> 上注册一个账号，并建立GitHub Pages Repository ，该仓库名必须是<code>your_user_name.github.io</code></li>
 <li><p><a href="https://help.github.com/articles/about-ssh/" target="_blank" rel="external">本地生成ssh 公私钥</a>，并将公钥复制到Github 个人帐户SSH keys中</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> ~</div><div class="line">$ ssh-keygen -t rsa -b 4096 -C <span class="string">"your_email@example.com"</span></div></pre></td></tr></table></figure>
@@ -218,14 +218,14 @@
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> [your-hexo-site]</div><div class="line">$ npm install hexo-deployer-git --save</div><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<h1 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h1><ul>
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><ul>
 <li><strong><a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">hexo-deployer-git</a></strong>: Git deployer plugin for Hexo.</li>
 <li><strong><a href="https://github.com/cometlj/hexo-translate-title" target="_blank" rel="external">hexo-translate-title</a></strong>: translate the chinese title of Hexo blog to english words automatially</li>
 <li><strong><a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="external">hexo-wordcount</a></strong>: Word Count Plugin for Hexo.</li>
 <li><strong><a href="https://github.com/flashlab/hexo-generator-search" target="_blank" rel="external">hexo-generator-searchdb</a></strong>: A plugin to generate the site’s search data</li>
 <li><strong><a href="https://github.com/ludoviclefevre/hexo-generator-seo-friendly-sitemap" target="_blank" rel="external">hexo-generator-seo-friendly-sitemap</a></strong>: Generate SEO-friendly sitemap.</li>
 </ul>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ul>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
 <li><a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm in Github</a></li>
 <li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js 官网</a></li>
 <li><a href="http://nodejs.cn/" target="_blank" rel="external">Node.js 中文官网</a></li>
@@ -257,9 +257,9 @@
     
       <category term="hexo" scheme="http://linpeng13.github.io/tags/hexo/"/>
     
-      <category term="NexT" scheme="http://linpeng13.github.io/tags/NexT/"/>
-    
       <category term="github" scheme="http://linpeng13.github.io/tags/github/"/>
+    
+      <category term="NexT" scheme="http://linpeng13.github.io/tags/NexT/"/>
     
   </entry>
   
@@ -268,9 +268,9 @@
     <link href="http://linpeng13.github.io/2016/05/19/linux-iptables-setings/"/>
     <id>http://linpeng13.github.io/2016/05/19/linux-iptables-setings/</id>
     <published>2016-05-19T00:30:21.000Z</published>
-    <updated>2017-09-05T03:00:18.000Z</updated>
+    <updated>2017-09-05T04:08:57.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="屏蔽指定IP"><a href="#屏蔽指定IP" class="headerlink" title="屏蔽指定IP"></a>屏蔽指定IP</h1><p>以屏蔽IP： 192.168.184.13 为例 </p>
+    <content type="html"><![CDATA[<h2 id="屏蔽指定IP"><a href="#屏蔽指定IP" class="headerlink" title="屏蔽指定IP"></a>屏蔽指定IP</h2><p>以屏蔽IP： 192.168.184.13 为例 </p>
 <h3 id="方法1：命令行"><a href="#方法1：命令行" class="headerlink" title="方法1：命令行"></a>方法1：命令行</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo iptables -I INPUT -s 192.168.184.13 -j DROP</div></pre></td></tr></table></figure>
 <p>说明：该方法临时修改防火墙配置，iptables服务重启后失效 </p>
 <h3 id="方法2：修改-iptables-文件"><a href="#方法2：修改-iptables-文件" class="headerlink" title="方法2：修改 iptables 文件"></a>方法2：修改 iptables 文件</h3><ol>
@@ -282,7 +282,7 @@
     
     <summary type="html">
     
-      &lt;h1 id=&quot;屏蔽指定IP&quot;&gt;&lt;a href=&quot;#屏蔽指定IP&quot; class=&quot;headerlink&quot; title=&quot;屏蔽指定IP&quot;&gt;&lt;/a&gt;屏蔽指定IP&lt;/h1&gt;&lt;p&gt;以屏蔽IP： 192.168.184.13 为例 &lt;/p&gt;
+      &lt;h2 id=&quot;屏蔽指定IP&quot;&gt;&lt;a href=&quot;#屏蔽指定IP&quot; class=&quot;headerlink&quot; title=&quot;屏蔽指定IP&quot;&gt;&lt;/a&gt;屏蔽指定IP&lt;/h2&gt;&lt;p&gt;以屏蔽IP： 192.168.184.13 为例 &lt;/p&gt;
 &lt;h3 id=&quot;方法1：命令行&quot;&gt;&lt;a href
     
     </summary>
@@ -301,14 +301,15 @@
     <link href="http://linpeng13.github.io/2016/03/22/%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server/"/>
     <id>http://linpeng13.github.io/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/</id>
     <published>2016-03-22T06:47:55.000Z</published>
-    <updated>2017-09-05T03:00:34.000Z</updated>
+    <updated>2017-09-05T04:08:15.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="慕课网-在Ubuntu-Server下搭建LAMP环境"><a href="#慕课网-在Ubuntu-Server下搭建LAMP环境" class="headerlink" title="慕课网-在Ubuntu Server下搭建LAMP环境"></a>慕课网-在Ubuntu Server下搭建LAMP环境</h1><p><a href="http://www.imooc.com/learn/170" target="_blank" rel="external">课程链接</a></p>
-<h2 id="2-1-性感的Ubuntu-Server操作系统"><a href="#2-1-性感的Ubuntu-Server操作系统" class="headerlink" title="2-1 性感的Ubuntu Server操作系统"></a>2-1 性感的Ubuntu Server操作系统</h2><ul>
+    <content type="html"><![CDATA[<h2 id="慕课网-在Ubuntu-Server下搭建LAMP环境"><a href="#慕课网-在Ubuntu-Server下搭建LAMP环境" class="headerlink" title="慕课网-在Ubuntu Server下搭建LAMP环境"></a>慕课网-在Ubuntu Server下搭建LAMP环境</h2><p><a href="http://www.imooc.com/learn/170" target="_blank" rel="external">课程链接</a></p>
+<h3 id="2-1-性感的Ubuntu-Server操作系统"><a href="#2-1-性感的Ubuntu-Server操作系统" class="headerlink" title="2-1 性感的Ubuntu Server操作系统"></a>2-1 性感的Ubuntu Server操作系统</h3><ul>
 <li>LTS:Long Term Support(长期支持版本)</li>
 <li>该课程使用Ubuntu Server环境版本是 <em>LTS 12.04</em></li>
 </ul>
-<h2 id="4-1-使用apt-get工具安装Apache-PHP-MySQL"><a href="#4-1-使用apt-get工具安装Apache-PHP-MySQL" class="headerlink" title="4-1 使用apt-get工具安装Apache PHP MySQL"></a>4-1 使用apt-get工具安装Apache PHP MySQL</h2><ul>
+<a id="more"></a>
+<h3 id="4-1-使用apt-get工具安装Apache-PHP-MySQL"><a href="#4-1-使用apt-get工具安装Apache-PHP-MySQL" class="headerlink" title="4-1 使用apt-get工具安装Apache PHP MySQL"></a>4-1 使用apt-get工具安装Apache PHP MySQL</h3><ul>
 <li>Ubuntu 使用 apt-get 命令获取并安装软件安装包</li>
 <li><p>检查Apache是否已加载php5_module模块，执行命令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/apache2/mods-enabled/php5.load</div></pre></td></tr></table></figure>
@@ -321,32 +322,36 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">extension=mysql.so</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="4-3-给PHP添加常用扩展"><a href="#4-3-给PHP添加常用扩展" class="headerlink" title="4-3 给PHP添加常用扩展"></a>4-3 给PHP添加常用扩展</h2><ul>
+<h3 id="4-3-给PHP添加常用扩展"><a href="#4-3-给PHP添加常用扩展" class="headerlink" title="4-3 给PHP添加常用扩展"></a>4-3 给PHP添加常用扩展</h3><ul>
 <li>安装了GD库和CURL（需了解是什么）</li>
 </ul>
-<h2 id="5-3-LAMP环境配置文件详解"><a href="#5-3-LAMP环境配置文件详解" class="headerlink" title="5-3 LAMP环境配置文件详解"></a>5-3 LAMP环境配置文件详解</h2><ul>
+<h3 id="5-3-LAMP环境配置文件详解"><a href="#5-3-LAMP环境配置文件详解" class="headerlink" title="5-3 LAMP环境配置文件详解"></a>5-3 LAMP环境配置文件详解</h3><ul>
 <li>Apache 配置文件加载流程<br>通过 apache.conf 加载：<br>conf.d/<em><br>httpd.conf<br>ports.conf<br>mods-enabled/</em><br>sites-enabled/* </li>
 <li>MySQL 核心配置文件 my.cnf</li>
 <li>PHP 核心配置文件 php.ini</li>
 </ul>
-<h2 id="5-7-在Apache中配置虚拟主机"><a href="#5-7-在Apache中配置虚拟主机" class="headerlink" title="5-7 在Apache中配置虚拟主机"></a>5-7 在Apache中配置虚拟主机</h2><p>在Ubuntu Server操作系统中，有一些软件的敏感操作受到 <strong>apparmore</strong> 的约束（apparmore是系统安全应用），apparmore关于mysql安全操作的配置文件路径是：</p>
+<h3 id="5-7-在Apache中配置虚拟主机"><a href="#5-7-在Apache中配置虚拟主机" class="headerlink" title="5-7 在Apache中配置虚拟主机"></a>5-7 在Apache中配置虚拟主机</h3><p>在Ubuntu Server操作系统中，有一些软件的敏感操作受到 <strong>apparmore</strong> 的约束（apparmore是系统安全应用），apparmore关于mysql安全操作的配置文件路径是：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/etc/apparmore.d/usr.sbin.mysqld</div></pre></td></tr></table></figure>
-<h2 id="5-8-MySQL数据存储目录迁移"><a href="#5-8-MySQL数据存储目录迁移" class="headerlink" title="5-8 MySQL数据存储目录迁移"></a>5-8 MySQL数据存储目录迁移</h2><p>默认情况下，mysql的数据存储目录是 <code>/var/lib/mysql</code></p>
-<h2 id="5-11-开启MySQL的remote-access"><a href="#5-11-开启MySQL的remote-access" class="headerlink" title="5-11 开启MySQL的remote access"></a>5-11 开启MySQL的remote access</h2><p>软件： <strong>navicat</strong></p>
+<h3 id="5-8-MySQL数据存储目录迁移"><a href="#5-8-MySQL数据存储目录迁移" class="headerlink" title="5-8 MySQL数据存储目录迁移"></a>5-8 MySQL数据存储目录迁移</h3><p>默认情况下，mysql的数据存储目录是 <code>/var/lib/mysql</code></p>
+<h3 id="5-11-开启MySQL的remote-access"><a href="#5-11-开启MySQL的remote-access" class="headerlink" title="5-11 开启MySQL的remote access"></a>5-11 开启MySQL的remote access</h3><p>软件： <strong>navicat</strong></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;慕课网-在Ubuntu-Server下搭建LAMP环境&quot;&gt;&lt;a href=&quot;#慕课网-在Ubuntu-Server下搭建LAMP环境&quot; class=&quot;headerlink&quot; title=&quot;慕课网-在Ubuntu Server下搭建LAMP环境&quot;&gt;&lt;/a&gt;慕课网-在
+      &lt;h2 id=&quot;慕课网-在Ubuntu-Server下搭建LAMP环境&quot;&gt;&lt;a href=&quot;#慕课网-在Ubuntu-Server下搭建LAMP环境&quot; class=&quot;headerlink&quot; title=&quot;慕课网-在Ubuntu Server下搭建LAMP环境&quot;&gt;&lt;/a&gt;慕课网-在Ubuntu Server下搭建LAMP环境&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://www.imooc.com/learn/170&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;课程链接&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;2-1-性感的Ubuntu-Server操作系统&quot;&gt;&lt;a href=&quot;#2-1-性感的Ubuntu-Server操作系统&quot; class=&quot;headerlink&quot; title=&quot;2-1 性感的Ubuntu Server操作系统&quot;&gt;&lt;/a&gt;2-1 性感的Ubuntu Server操作系统&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;LTS:Long Term Support(长期支持版本)&lt;/li&gt;
+&lt;li&gt;该课程使用Ubuntu Server环境版本是 &lt;em&gt;LTS 12.04&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
       <category term="Linux" scheme="http://linpeng13.github.io/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
-    
       <category term="Ubuntu" scheme="http://linpeng13.github.io/tags/Ubuntu/"/>
+    
+      <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
     
       <category term="Apache" scheme="http://linpeng13.github.io/tags/Apache/"/>
     
@@ -363,22 +368,23 @@
     <link href="http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/"/>
     <id>http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/</id>
     <published>2016-03-18T11:26:07.000Z</published>
-    <updated>2017-09-05T03:00:20.000Z</updated>
+    <updated>2017-09-05T04:08:33.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h1><p>含义：shell本身的PID（ProcessID）</p>
+    <content type="html"><![CDATA[<h2 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h2><p>含义：shell本身的PID（ProcessID）</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$$"</span></div><div class="line">$ bash test.sh aaa</div><div class="line">this is 2638</div></pre></td></tr></table></figure>
-<h1 id="shell变量-1"><a href="#shell变量-1" class="headerlink" title="shell变量 $@"></a>shell变量 <code>$@</code></h1><p>含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数</p>
+<a id="more"></a>
+<h2 id="shell变量-1"><a href="#shell变量-1" class="headerlink" title="shell变量 $@"></a>shell变量 <code>$@</code></h2><p>含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"<span class="variable">$@</span>"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is aaa</div><div class="line">this is bbb</div><div class="line">this is ccc</div></pre></td></tr></table></figure>
-<h1 id="shell变量-2"><a href="#shell变量-2" class="headerlink" title="shell变量 $*"></a>shell变量 <code>$*</code></h1><p>含义：所有参数列表。如果”$*”用引号(“”)括起来的情况、以”$1 $2 … $n” 的形式输出所有参数</p>
+<h2 id="shell变量-2"><a href="#shell变量-2" class="headerlink" title="shell变量 $*"></a>shell变量 <code>$*</code></h2><p>含义：所有参数列表。如果”$*”用引号(“”)括起来的情况、以”$1 $2 … $n” 的形式输出所有参数</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$*"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is aaa bbb ccc</div></pre></td></tr></table></figure>
-<h1 id="shell变量-3"><a href="#shell变量-3" class="headerlink" title="shell变量 $#"></a>shell变量 <code>$#</code></h1><p>含义：shell参数个数</p>
+<h2 id="shell变量-3"><a href="#shell变量-3" class="headerlink" title="shell变量 $#"></a>shell变量 <code>$#</code></h2><p>含义：shell参数个数</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"<span class="variable">$#</span>"</span></div><div class="line">$ bash test.sh aaa bbb ccc</div><div class="line">this is 3</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;shell变量&quot;&gt;&lt;a href=&quot;#shell变量&quot; class=&quot;headerlink&quot; title=&quot;shell变量 $$&quot;&gt;&lt;/a&gt;shell变量 &lt;code&gt;$$&lt;/code&gt;&lt;/h1&gt;&lt;p&gt;含义：shell本身的PID（ProcessID）&lt;/p&gt;
-&lt;
+      &lt;h2 id=&quot;shell变量&quot;&gt;&lt;a href=&quot;#shell变量&quot; class=&quot;headerlink&quot; title=&quot;shell变量 $$&quot;&gt;&lt;/a&gt;shell变量 &lt;code&gt;$$&lt;/code&gt;&lt;/h2&gt;&lt;p&gt;含义：shell本身的PID（ProcessID）&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ cat test.sh&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#!/bin/bash&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;this is %s\n&quot;&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;$$&quot;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ bash test.sh aaa&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;this is 2638&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -396,13 +402,15 @@
     <link href="http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/"/>
     <id>http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/</id>
     <published>2016-01-08T05:56:12.000Z</published>
-    <updated>2017-09-05T02:59:40.000Z</updated>
+    <updated>2017-09-05T04:08:15.000Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>发布新文章到我的github步骤</strong></p>
-<ol>
+    <content type="html"><![CDATA[<h2 id="发布新文章到我的github步骤"><a href="#发布新文章到我的github步骤" class="headerlink" title="发布新文章到我的github步骤"></a>发布新文章到我的github步骤</h2><ol>
 <li><p>新建文章文件</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo new [layout] &lt;title&gt;</div><div class="line"><span class="comment"># or</span></div><div class="line">hexo n [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
 </li>
+</ol>
+<a id="more"></a>
+<ol>
 <li><p>生成静态文件</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo generate</div><div class="line"><span class="comment"># or</span></div><div class="line">hexo g</div></pre></td></tr></table></figure>
 </li>
@@ -410,19 +418,19 @@
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div><div class="line"><span class="comment"># or</span></div><div class="line">hexo d</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p><em>参考</em></p>
-<ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
 <li><a href="https://hexo.io/zh-cn/docs/generating.html" target="_blank" rel="external">hexo官网</a></li>
 <li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT theme</a></li>
-</ol>
+</ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;发布新文章到我的github步骤&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
+      &lt;h2 id=&quot;发布新文章到我的github步骤&quot;&gt;&lt;a href=&quot;#发布新文章到我的github步骤&quot; class=&quot;headerlink&quot; title=&quot;发布新文章到我的github步骤&quot;&gt;&lt;/a&gt;发布新文章到我的github步骤&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;p&gt;新建文章文件&lt;/p&gt;
- &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=
+ &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;hexo new [layout] &amp;lt;title&amp;gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# or&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;hexo n [layout] &amp;lt;title&amp;gt;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -438,15 +446,17 @@
     <link href="http://linpeng13.github.io/2016/01/08/nginx-instal/"/>
     <id>http://linpeng13.github.io/2016/01/08/nginx-instal/</id>
     <published>2016-01-08T04:20:25.000Z</published>
-    <updated>2017-09-05T03:00:14.000Z</updated>
+    <updated>2017-09-05T04:09:31.000Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>环境：OS X Yosemite(10.10.5)</strong></p>
-<ol>
+    <content type="html"><![CDATA[<h2 id="环境：OS-X-Yosemite-10-10-5"><a href="#环境：OS-X-Yosemite-10-10-5" class="headerlink" title="环境：OS X Yosemite(10.10.5)"></a>环境：OS X Yosemite(10.10.5)</h2><ol>
 <li><p>下载<a href="http://www.pcre.org/" target="_blank" rel="external">PCRE</a>和<a href="http://nginx.org/" target="_blank" rel="external">nginx</a></p>
 </li>
 <li><p>安装PCRE</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ tar xvzf pcre-8.5</div><div class="line">$ <span class="built_in">cd</span> pcre-8.5</div><div class="line">$ sudo ./configure --prefix=/usr/<span class="built_in">local</span></div><div class="line">$ sudo make</div><div class="line">$ sudo make install</div></pre></td></tr></table></figure>
 </li>
+</ol>
+<a id="more"></a>
+<ol>
 <li><p>安装nginx</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ tar xvzf nginx-1.6.0.tar.gz</div><div class="line">$ <span class="built_in">cd</span> nginx-1.6.0</div><div class="line">$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/nginx --with-http_ssl_module --with-cc-opt=<span class="string">"-Wno-deprecated-declarations"</span></div><div class="line">$ sudo make</div><div class="line">$ sudo make install</div></pre></td></tr></table></figure>
 </li>
@@ -468,9 +478,13 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;strong&gt;环境：OS X Yosemite(10.10.5)&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;下载&lt;a href=&quot;http://www.pcre.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PCRE&lt;/a&gt;和&lt;a hr
+      &lt;h2 id=&quot;环境：OS-X-Yosemite-10-10-5&quot;&gt;&lt;a href=&quot;#环境：OS-X-Yosemite-10-10-5&quot; class=&quot;headerlink&quot; title=&quot;环境：OS X Yosemite(10.10.5)&quot;&gt;&lt;/a&gt;环境：OS X Yosemite(10.10.5)&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;下载&lt;a href=&quot;http://www.pcre.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;PCRE&lt;/a&gt;和&lt;a href=&quot;http://nginx.org/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;nginx&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装PCRE&lt;/p&gt;
+ &lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ tar xvzf pcre-8.5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; pcre-8.5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ sudo ./configure --prefix=/usr/&lt;span class=&quot;built_in&quot;&gt;local&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ sudo make&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ sudo make install&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     

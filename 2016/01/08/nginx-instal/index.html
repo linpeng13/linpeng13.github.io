@@ -60,13 +60,19 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
 
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -97,18 +103,18 @@
 
 
 
-<meta name="description" content="环境：OS X Yosemite(10.10.5)  下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install  安装nginx  12345$ tar xvzf nginx-1.6.0.tar.gz$">
+<meta name="description" content="环境：OS X Yosemite(10.10.5) 下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install">
 <meta name="keywords" content="nginx,OS X">
 <meta property="og:type" content="article">
 <meta property="og:title" content="nginx install">
 <meta property="og:url" content="http://linpeng13.github.io/2016/01/08/nginx-instal/index.html">
 <meta property="og:site_name" content="木月天空">
-<meta property="og:description" content="环境：OS X Yosemite(10.10.5)  下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install  安装nginx  12345$ tar xvzf nginx-1.6.0.tar.gz$">
+<meta property="og:description" content="环境：OS X Yosemite(10.10.5) 下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-05T03:00:14.000Z">
+<meta property="og:updated_time" content="2017-09-05T04:09:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx install">
-<meta name="twitter:description" content="环境：OS X Yosemite(10.10.5)  下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install  安装nginx  12345$ tar xvzf nginx-1.6.0.tar.gz$">
+<meta name="twitter:description" content="环境：OS X Yosemite(10.10.5) 下载PCRE和nginx  安装PCRE  12345$ tar xvzf pcre-8.5$ cd pcre-8.5$ sudo ./configure --prefix=/usr/local$ sudo make$ sudo make install">
 
 
 
@@ -446,13 +452,15 @@
       
 
       
-        <p><strong>环境：OS X Yosemite(10.10.5)</strong></p>
-<ol>
+        <h2 id="环境：OS-X-Yosemite-10-10-5"><a href="#环境：OS-X-Yosemite-10-10-5" class="headerlink" title="环境：OS X Yosemite(10.10.5)"></a>环境：OS X Yosemite(10.10.5)</h2><ol>
 <li><p>下载<a href="http://www.pcre.org/" target="_blank" rel="external">PCRE</a>和<a href="http://nginx.org/" target="_blank" rel="external">nginx</a></p>
 </li>
 <li><p>安装PCRE</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ tar xvzf pcre-8.5</div><div class="line">$ <span class="built_in">cd</span> pcre-8.5</div><div class="line">$ sudo ./configure --prefix=/usr/<span class="built_in">local</span></div><div class="line">$ sudo make</div><div class="line">$ sudo make install</div></pre></td></tr></table></figure>
 </li>
+</ol>
+<a id="more"></a>
+<ol>
 <li><p>安装nginx</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ tar xvzf nginx-1.6.0.tar.gz</div><div class="line">$ <span class="built_in">cd</span> nginx-1.6.0</div><div class="line">$ sudo ./configure --prefix=/usr/<span class="built_in">local</span>/nginx --with-http_ssl_module --with-cc-opt=<span class="string">"-Wno-deprecated-declarations"</span></div><div class="line">$ sudo make</div><div class="line">$ sudo make install</div></pre></td></tr></table></figure>
 </li>
@@ -608,8 +616,17 @@ var jiathis_config={
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -705,6 +722,22 @@ var jiathis_config={
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境：OS-X-Yosemite-10-10-5"><span class="nav-number">1.</span> <span class="nav-text">环境：OS X Yosemite(10.10.5)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

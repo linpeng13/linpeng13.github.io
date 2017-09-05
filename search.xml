@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[Ubuntu 系统用户和用户组]]></title>
-    <url>%2F2017%2F09%2F05%2FUbuntu-%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%2F</url>
+    <url>%2F2017%2F09%2F05%2Fubuntu-system-user-and-user-groups%2F</url>
     <content type="text"><![CDATA[/etc/passwd查看Ubuntu 系统存在的用户信息，可执行： 1cat /etc/passwd 该文件每行代表一个用户，格式为：用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell 例如：hadoop:x:1000:1000:hadoop-01,,,:/home/hadoop:/bin/bash 用户名：hadoop 口令：x（详见下节 “/etc/shadow”） 用户标识号：1000 组标识号：1000 注释性描述：hadoop-01,,, 主目录：/home/hadoop 登录Shell：/bin/bash /etc/shadowUnix系统最初是用明文保存密码的，后来由于安全的考虑，采用crypt() 算法加密密码并存放在 /etc/passwd 文件。现在，由于计算机处理能力的提高，使密码破解变得越来越容易。/etc/passwd 文件是所有合法用户都可访问的，大家都可互相看到密码的加密字符串，这给系统带来很大的安全威胁。现代的Unix系统使用影子密码系统，它把密码从/etc/passwd 文件中分离出来，真正的密码保存在/etc/shadow 文件中，该文件只能由超级用户访问。这样入侵者就不能获得加密密码串，用于破解。使用shadow 密码文件后，/etc/passwd 文件中所有帐户的password 域的内容为”x”，如果password 域的内容为”*”，则该帐号被停用。 格式为：username:password:last_change:min_change:max_change:warm:failed_expire:expiration:reserved 1sudo cat /etc/shadow 例如：hadoop:$1$dwXYMXgF$4Tqzw9pwsUCsYAWmJEgak/:17381:0:99999:7::: username：hadoop password：$1$dwXYMXgF$4Tqzw9pwsUCsYAWmJEgak/ last_change：17381（最近更改密码的日期，其是以1970年1月1日做为第1天，然后顺次相加） min_change：0（密码不可更改的天数，即如果你不想让某个用户频繁更改密码就可以把这个设成10000） max_change：99999（密码需要重新更改的天数，即密码在多少天内必须得改了） warm：7（密码更改期限前的警告日期） failed_expire：（密码过期的宽限时间） expiration：（账号失效时间） reserved： /etc/group查看Ubuntu 系统存在的组信息，可执行： 1cat /etc/group 该文件每行代表一个组，格式为：groupname:password:gid:members 例如：hadoop:x:1000: groupname：hadoop password：x（同上节 “/etc/shadow”） gid：组标识号 members：组内成员]]></content>
       <categories>
         <category>Linux</category>

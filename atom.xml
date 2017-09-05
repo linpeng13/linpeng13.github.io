@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linpeng13.github.io/"/>
-  <updated>2017-09-05T02:58:08.000Z</updated>
+  <updated>2017-09-05T03:03:39.000Z</updated>
   <id>http://linpeng13.github.io/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Ubuntu 系统用户和用户组</title>
-    <link href="http://linpeng13.github.io/2017/09/05/Ubuntu-%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84/"/>
-    <id>http://linpeng13.github.io/2017/09/05/Ubuntu-系统用户和用户组/</id>
+    <link href="http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/"/>
+    <id>http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/</id>
     <published>2017-09-05T02:55:18.000Z</published>
-    <updated>2017-09-05T02:58:08.000Z</updated>
+    <updated>2017-09-05T03:03:39.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a>/etc/passwd</h1><p>查看Ubuntu 系统存在的用户信息，可执行：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/passwd</div></pre></td></tr></table></figure>
@@ -35,6 +35,7 @@
 <li>主目录：/home/hadoop</li>
 <li>登录Shell：/bin/bash</li>
 </ul>
+<a id="more"></a>
 <h1 id="etc-shadow"><a href="#etc-shadow" class="headerlink" title="/etc/shadow"></a>/etc/shadow</h1><p>Unix系统最初是用明文保存密码的，后来由于安全的考虑，采用crypt() 算法加密密码并存放在 <code>/etc/passwd</code> 文件。现在，由于计算机处理能力的提高，使密码破解变得越来越容易。<code>/etc/passwd</code> 文件是所有合法用户都可访问的，大家都可互相看到密码的加密字符串，这给系统带来很大的安全威胁。现代的Unix系统使用影子密码系统，它把密码从<code>/etc/passwd</code> 文件中分离出来，真正的密码保存在<code>/etc/shadow</code> 文件中，该文件只能由超级用户访问。这样入侵者就不能获得加密密码串，用于破解。使用shadow 密码文件后，<code>/etc/passwd</code> 文件中所有帐户的password 域的内容为”x”，如果password 域的内容为”*”，则该帐号被停用。</p>
 <p>格式为：<em>username:password:last_change:min_change:max_change:warm:failed_expire:expiration:reserved</em></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo cat /etc/shadow</div></pre></td></tr></table></figure>
@@ -65,7 +66,18 @@
     <summary type="html">
     
       &lt;h1 id=&quot;etc-passwd&quot;&gt;&lt;a href=&quot;#etc-passwd&quot; class=&quot;headerlink&quot; title=&quot;/etc/passwd&quot;&gt;&lt;/a&gt;/etc/passwd&lt;/h1&gt;&lt;p&gt;查看Ubuntu 系统存在的用户信息，可执行：&lt;/p&gt;
-&lt;figure 
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;cat /etc/passwd&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;该文件每行代表一个用户，格式为：&lt;em&gt;用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;例如：&lt;code&gt;hadoop:x:1000:1000:hadoop-01,,,:/home/hadoop:/bin/bash&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户名：hadoop&lt;/li&gt;
+&lt;li&gt;口令：x（详见下节 “/etc/shadow”）&lt;/li&gt;
+&lt;li&gt;用户标识号：1000&lt;/li&gt;
+&lt;li&gt;组标识号：1000&lt;/li&gt;
+&lt;li&gt;注释性描述：hadoop-01,,,&lt;/li&gt;
+&lt;li&gt;主目录：/home/hadoop&lt;/li&gt;
+&lt;li&gt;登录Shell：/bin/bash&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     

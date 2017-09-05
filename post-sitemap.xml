@@ -7,48 +7,8 @@
     </url>
 
     <url>
-        <loc>http://linpeng13.github.io/2016/01/08/nginx-instal/</loc>
-        <lastmod>2017-09-05T04:09:31.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://linpeng13.github.io/2016/05/19/linux-iptables-setings/</loc>
-        <lastmod>2017-09-05T04:08:57.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/</loc>
-        <lastmod>2017-09-05T04:08:33.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://linpeng13.github.io/2017/09/03/some-hexo-next-set-the-page-header-foter./</loc>
-        <lastmod>2017-09-05T04:08:15.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/</loc>
-        <lastmod>2017-09-05T04:08:15.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://linpeng13.github.io/2016/03/22/%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server/</loc>
-        <lastmod>2017-09-05T04:08:15.000Z</lastmod>
+        <lastmod>2017-09-05T04:11:56.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -56,7 +16,7 @@
 
     <url>
         <loc>http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/</loc>
-        <lastmod>2017-09-05T04:06:40.000Z</lastmod>
+        <lastmod>2017-09-05T04:09:52.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -64,7 +24,47 @@
 
     <url>
         <loc>http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/</loc>
-        <lastmod>2017-09-05T04:02:51.000Z</lastmod>
+        <lastmod>2017-09-05T04:09:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://linpeng13.github.io/2016/05/19/linux-iptables-setings/</loc>
+        <lastmod>2017-09-05T04:09:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/</loc>
+        <lastmod>2017-09-05T04:09:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/</loc>
+        <lastmod>2017-09-05T04:09:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://linpeng13.github.io/2016/01/08/nginx-instal/</loc>
+        <lastmod>2017-09-05T04:09:52.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://linpeng13.github.io/2016/03/22/%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server/</loc>
+        <lastmod>2017-09-05T04:09:52.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

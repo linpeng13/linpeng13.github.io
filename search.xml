@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ubuntu 系统用户和用户组]]></title>
+    <url>%2F2017%2F09%2F05%2FUbuntu-%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84%2F</url>
+    <content type="text"><![CDATA[/etc/passwd查看Ubuntu 系统存在的用户信息，可执行： 1cat /etc/passwd 该文件每行代表一个用户，格式为：用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell 例如：hadoop:x:1000:1000:hadoop-01,,,:/home/hadoop:/bin/bash 用户名：hadoop 口令：x（详见下节 “/etc/shadow”） 用户标识号：1000 组标识号：1000 注释性描述：hadoop-01,,, 主目录：/home/hadoop 登录Shell：/bin/bash /etc/shadowUnix系统最初是用明文保存密码的，后来由于安全的考虑，采用crypt() 算法加密密码并存放在 /etc/passwd 文件。现在，由于计算机处理能力的提高，使密码破解变得越来越容易。/etc/passwd 文件是所有合法用户都可访问的，大家都可互相看到密码的加密字符串，这给系统带来很大的安全威胁。现代的Unix系统使用影子密码系统，它把密码从/etc/passwd 文件中分离出来，真正的密码保存在/etc/shadow 文件中，该文件只能由超级用户访问。这样入侵者就不能获得加密密码串，用于破解。使用shadow 密码文件后，/etc/passwd 文件中所有帐户的password 域的内容为”x”，如果password 域的内容为”*”，则该帐号被停用。 格式为：username:password:last_change:min_change:max_change:warm:failed_expire:expiration:reserved 1sudo cat /etc/shadow 例如：hadoop:$1$dwXYMXgF$4Tqzw9pwsUCsYAWmJEgak/:17381:0:99999:7::: username：hadoop password：$1$dwXYMXgF$4Tqzw9pwsUCsYAWmJEgak/ last_change：17381（最近更改密码的日期，其是以1970年1月1日做为第1天，然后顺次相加） min_change：0（密码不可更改的天数，即如果你不想让某个用户频繁更改密码就可以把这个设成10000） max_change：99999（密码需要重新更改的天数，即密码在多少天内必须得改了） warm：7（密码更改期限前的警告日期） failed_expire：（密码过期的宽限时间） expiration：（账号失效时间） reserved： /etc/group查看Ubuntu 系统存在的组信息，可执行： 1cat /etc/group 该文件每行代表一个组，格式为：groupname:password:gid:members 例如：hadoop:x:1000: groupname：hadoop password：x（同上节 “/etc/shadow”） gid：组标识号 members：组内成员]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo NexT主题文章页头页尾的一些设置]]></title>
     <url>%2F2017%2F09%2F03%2Fsome-hexo-next-set-the-page-header-foter.%2F</url>
     <content type="text"><![CDATA[页头NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。 阅读次数增加【阅读次数】信息，需要用到第三方的服务LeanCloud ，且需要修改主题配置文件themes/next/_config.yml 。详细的操作可参考这篇博文《leanCloud,实现文章阅读量统计》。 字数统计和阅读时长增加【字数统计】和【阅读时长】信息，需安装插件hexo-wordcount ，安装方法相对简单： 1234$ npm i --save hexo-wordcount## Node 版本7.6.0之前,请安装 2.x 版本 (Node.js v7.6.0 and previous)$ npm install hexo-wordcount@2 --save 然后在主题配置文件themes/next/_config.yml 中，找到字段 post_wordcount ，其设置块内容默认是： 12345678# Post wordcount display settings# Dependencies: https://github.com/willin/hexo-wordcountpost_wordcount: item_text: true wordcount: false min2read: false totalcount: false separated_meta: true 字段wordcount 是文章的字数统计，字段min2read是文章的阅读时长预估值，这两个值默认显示在文章开头（如图）。字段totalcount是整站的字数统计，默认显示在站点页面最下方。按需要将false 修改为true即可。 但默认开启的【字数统计】和【阅读时长】信息，是不包含单位的，故有强迫症的朋友，可以修订文件themes/next/layout/_macro/post.swig ，在wordcount(post.content) 所在行加(字) ，在min2read(post.content) 所在行加(分) 。 12345678910111213141516171819202122232425262728293031323334&#123;% if theme.post_wordcount.wordcount or theme.post_wordcount.min2read %&#125; &lt;div class="post-wordcount"&gt; &#123;% if theme.post_wordcount.wordcount %&#125; &#123;% if not theme.post_wordcount.separated_meta %&#125; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt; &#123;% endif %&#125; &lt;span class="post-meta-item-icon"&gt; &lt;i class="fa fa-file-word-o"&gt;&lt;/i&gt; &lt;/span&gt; &#123;% if theme.post_wordcount.item_text %&#125; &lt;span class="post-meta-item-text"&gt;&#123;&#123; __('post.wordcount') &#125;&#125;&amp;#58;&lt;/span&gt; &#123;% endif %&#125; &lt;span title="&#123;&#123; __('post.wordcount') &#125;&#125;"&gt; &#123;&#123; wordcount(post.content) &#125;&#125;(字) &lt;/span&gt; &#123;% endif %&#125; &#123;% if theme.post_wordcount.wordcount and theme.post_wordcount.min2read %&#125; &lt;span class="post-meta-divider"&gt;|&lt;/span&gt; &#123;% endif %&#125; &#123;% if theme.post_wordcount.min2read %&#125; &lt;span class="post-meta-item-icon"&gt; &lt;i class="fa fa-clock-o"&gt;&lt;/i&gt; &lt;/span&gt; &#123;% if theme.post_wordcount.item_text %&#125; &lt;span class="post-meta-item-text"&gt;&#123;&#123; __('post.min2read') &#125;&#125; &amp;asymp;&lt;/span&gt; &#123;% endif %&#125; &lt;span title="&#123;&#123; __('post.min2read') &#125;&#125;"&gt; &#123;&#123; min2read(post.content) &#125;&#125;(分) &lt;/span&gt; &#123;% endif %&#125; &lt;/div&gt;&#123;% endif %&#125; 页尾NexT 主题的文章页面，想要在页尾增加文章的版权信息，如图： 在主题配置文件themes/next/_config.yml 中，找到字段post_copyright ，将enable 设置为true 即可。 其他从上述设置，不难发现NexT 主题文章页面设置的几个重要文件，即： _layout.swig -themes/next/layout/_layout.swig ，全局性的页面布局代码； post.swig -themes/next/layout/post.swig ，文章类型页面框架布局代码，其中调用了_macro/post.swig ； _macro/post.swig - themes/next/layout/_macro/post.swig` ，文章类型页面实际布局代码；]]></content>
@@ -22,8 +34,8 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>github</tag>
         <tag>NexT</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -31,10 +43,10 @@
     <url>%2F2016%2F05%2F19%2Flinux-iptables-setings%2F</url>
     <content type="text"><![CDATA[屏蔽指定IP以屏蔽IP： 192.168.184.13 为例 方法1：命令行1sudo iptables -I INPUT -s 192.168.184.13 -j DROP 说明：该方法临时修改防火墙配置，iptables服务重启后失效 方法2：修改 iptables 文件 打开 /etc/sysconfig/iptables 文件 增加一行 -A INPUT -s 192.168.184.13/32 -j DROP 说明：该方法永久有效]]></content>
       <categories>
-        <category>linux</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>linux</tag>
+        <tag>Linux</tag>
         <tag>iptables</tag>
       </tags>
   </entry>
@@ -43,10 +55,10 @@
     <url>%2F2016%2F03%2F22%2F%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server%2F</url>
     <content type="text"><![CDATA[慕课网-在Ubuntu Server下搭建LAMP环境课程链接 2-1 性感的Ubuntu Server操作系统 LTS:Long Term Support(长期支持版本) 该课程使用Ubuntu Server环境版本是 LTS 12.04 4-1 使用apt-get工具安装Apache PHP MySQL Ubuntu 使用 apt-get 命令获取并安装软件安装包 检查Apache是否已加载php5_module模块，执行命令 1cat /etc/apache2/mods-enabled/php5.load 如果出现如下提示，说明已加载 1LoadModule php5_module /usr/lib/apache2/modules/libphp5.so 检查PHP是否已安装加载MYSQL.so扩展，执行命令 1cat /etc/php5/conf.d/mysql.ini 若存在该文件，且显示如下提示，说明已加载 1extension=mysql.so 4-3 给PHP添加常用扩展 安装了GD库和CURL（需了解是什么） 5-3 LAMP环境配置文件详解 Apache 配置文件加载流程通过 apache.conf 加载：conf.d/httpd.confports.confmods-enabled/sites-enabled/* MySQL 核心配置文件 my.cnf PHP 核心配置文件 php.ini 5-7 在Apache中配置虚拟主机在Ubuntu Server操作系统中，有一些软件的敏感操作受到 apparmore 的约束（apparmore是系统安全应用），apparmore关于mysql安全操作的配置文件路径是： 1/etc/apparmore.d/usr.sbin.mysqld 5-8 MySQL数据存储目录迁移默认情况下，mysql的数据存储目录是 /var/lib/mysql 5-11 开启MySQL的remote access软件： navicat]]></content>
       <categories>
-        <category>linux</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>linux</tag>
+        <tag>Linux</tag>
         <tag>Ubuntu</tag>
         <tag>Apache</tag>
         <tag>MySQL</tag>
@@ -59,10 +71,10 @@
     <url>%2F2016%2F03%2F18%2Fthe-meaning-of-the-shel-variable-in-linux%2F</url>
     <content type="text"><![CDATA[shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf "this is %s\n" "$$"$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 123456789$ cat test.sh#!/bin/bash#printf "this is %s\n" "$@"$ bash test.sh aaa bbb cccthis is aaathis is bbbthis is ccc shell变量 $*含义：所有参数列表。如果”$*”用引号(“”)括起来的情况、以”$1 $2 … $n” 的形式输出所有参数 1234567$ cat test.sh#!/bin/bash#printf "this is %s\n" "$*"$ bash test.sh aaa bbb cccthis is aaa bbb ccc shell变量 $#含义：shell参数个数 1234567$ cat test.sh#!/bin/bash#printf "this is %s\n" "$#"$ bash test.sh aaa bbb cccthis is 3]]></content>
       <categories>
-        <category>linux</category>
+        <category>Linux</category>
       </categories>
       <tags>
-        <tag>linux</tag>
+        <tag>Linux</tag>
         <tag>shell</tag>
       </tags>
   </entry>

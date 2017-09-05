@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linpeng13.github.io/"/>
-  <updated>2017-09-05T04:09:52.000Z</updated>
+  <updated>2017-09-05T06:16:11.000Z</updated>
   <id>http://linpeng13.github.io/</id>
   
   <author>
@@ -16,11 +16,67 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Ubuntu 系统用户登录调用的文件（或环境变量）</title>
+    <link href="http://linpeng13.github.io/2017/09/05/Ubuntu-%E7%B3%BB%E7%BB%9F%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E8%B0%83%E7%94%A8%E7%9A%84%E6%96%87%E4%BB%B6%EF%BC%88%E6%88%96%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%EF%BC%89/"/>
+    <id>http://linpeng13.github.io/2017/09/05/Ubuntu-系统用户登录调用的文件（或环境变量）/</id>
+    <published>2017-09-05T06:14:35.000Z</published>
+    <updated>2017-09-05T06:16:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="调用顺序"><a href="#调用顺序" class="headerlink" title="调用顺序"></a>调用顺序</h2><p>普通用户登录Ubuntu 系统一般会依次调用如下配置文件：</p>
+<ol>
+<li><strong>/etc/environment</strong>：在登录时操作系统使用的<strong>第一</strong>个文件，设置系统默认的环境变量；</li>
+<li><strong>/etc/profile</strong>：在登录时操作系统定制用户环境时使用的<strong>第二个</strong>文件，此文件为系统的每个用户设置默认的变量，当用户第一次登录时，该文件被执行；</li>
+<li><strong>~/.bash_profile</strong>：登录用户的环境变量设置；</li>
+<li><strong>~/.profile</strong>：登录用户环境变量设置（若不存在 <code>~/.bash_profile</code> 文件时执行）；</li>
+</ol>
+<a id="more"></a>
+<h2 id="etc-environment"><a href="#etc-environment" class="headerlink" title="/etc/environment"></a>/etc/environment</h2><p>该文件默认的内容如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PATH=<span class="string">"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"</span></div></pre></td></tr></table></figure>
+<p>若需要配置系统用户均需要用到的环境变量，例如JAVA 相关，可增加如下内容：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">JAVA_HOME=<span class="string">"/usr/jdk1.8.0_144"</span></div><div class="line">JRE_HOME=<span class="string">"/usr/jdk1.8.0_144/jre"</span></div></pre></td></tr></table></figure>
+<h2 id="etc-profile"><a href="#etc-profile" class="headerlink" title="/etc/profile"></a>/etc/profile</h2><p>该文件默认的内容如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># /etc/profile: system-wide .profile file for the Bourne shell (sh(1))</span></div><div class="line"><span class="comment"># and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).</span></div><div class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$PS1</span>"</span> ]; <span class="keyword">then</span></div><div class="line">  <span class="keyword">if</span> [ <span class="string">"<span class="variable">$BASH</span>"</span> ] &amp;&amp; [ <span class="string">"<span class="variable">$BASH</span>"</span> != <span class="string">"/bin/sh"</span> ]; <span class="keyword">then</span></div><div class="line">    <span class="comment"># The file bash.bashrc already sets the default PS1.</span></div><div class="line">    <span class="comment"># PS1='\h:\w\$ '</span></div><div class="line">    <span class="keyword">if</span> [ -f /etc/bash.bashrc ]; <span class="keyword">then</span></div><div class="line">      . /etc/bash.bashrc</div><div class="line">    <span class="keyword">fi</span></div><div class="line">  <span class="keyword">else</span></div><div class="line">    <span class="keyword">if</span> [ <span class="string">"`id -u`"</span> -eq 0 ]; <span class="keyword">then</span></div><div class="line">      PS1=<span class="string">'# '</span></div><div class="line">    <span class="keyword">else</span></div><div class="line">      PS1=<span class="string">'$ '</span></div><div class="line">    <span class="keyword">fi</span></div><div class="line">  <span class="keyword">fi</span></div><div class="line"><span class="keyword">fi</span></div><div class="line"><span class="keyword">if</span> [ -d /etc/profile.d ]; <span class="keyword">then</span></div><div class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> /etc/profile.d/*.sh; <span class="keyword">do</span></div><div class="line">    <span class="keyword">if</span> [ -r <span class="variable">$i</span> ]; <span class="keyword">then</span></div><div class="line">      . <span class="variable">$i</span></div><div class="line">    <span class="keyword">fi</span></div><div class="line">  <span class="keyword">done</span></div><div class="line">  <span class="built_in">unset</span> i</div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+<p>该文件关键点分析如下：</p>
+<ol>
+<li>若环境变量 <code>BASH</code> 存在且非 <code>/bin/sh</code> ，则执行配置文件 <code>/etc/bash.bashrc</code> ；</li>
+<li>若不满足第1点，则按照<code>root</code> 用户为<code>#</code> ，其他用户为<code>$</code> 设置提示符；</li>
+<li>依次执行目录 <code>/etc/profile.d</code> 下的配置文件；</li>
+</ol>
+<h2 id="profile"><a href="#profile" class="headerlink" title="~/.profile"></a>~/.profile</h2><p>该文件默认的内容如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ~/.profile: executed by the command interpreter for login shells.</span></div><div class="line"><span class="comment"># This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login</span></div><div class="line"><span class="comment"># exists.</span></div><div class="line"><span class="comment"># see /usr/share/doc/bash/examples/startup-files for examples.</span></div><div class="line"><span class="comment"># the files are located in the bash-doc package.</span></div><div class="line"></div><div class="line"><span class="comment"># the default umask is set in /etc/profile; for setting the umask</span></div><div class="line"><span class="comment"># for ssh logins, install and configure the libpam-umask package.</span></div><div class="line"><span class="comment">#umask 022</span></div><div class="line"></div><div class="line"><span class="comment"># if running bash</span></div><div class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BASH_VERSION</span>"</span> ]; <span class="keyword">then</span></div><div class="line">    <span class="comment"># include .bashrc if it exists</span></div><div class="line">    <span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span> ]; <span class="keyword">then</span></div><div class="line">        . <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span></div><div class="line">    <span class="keyword">fi</span></div><div class="line"><span class="keyword">fi</span></div><div class="line"></div><div class="line"><span class="comment"># set PATH so it includes user's private bin directories</span></div><div class="line">PATH=<span class="string">"<span class="variable">$HOME</span>/bin:<span class="variable">$HOME</span>/.local/bin:<span class="variable">$PATH</span>"</span></div></pre></td></tr></table></figure>
+<p>注意如下说明：</p>
+<blockquote>
+<p>This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login exists.</p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;调用顺序&quot;&gt;&lt;a href=&quot;#调用顺序&quot; class=&quot;headerlink&quot; title=&quot;调用顺序&quot;&gt;&lt;/a&gt;调用顺序&lt;/h2&gt;&lt;p&gt;普通用户登录Ubuntu 系统一般会依次调用如下配置文件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;/etc/environment&lt;/strong&gt;：在登录时操作系统使用的&lt;strong&gt;第一&lt;/strong&gt;个文件，设置系统默认的环境变量；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;/etc/profile&lt;/strong&gt;：在登录时操作系统定制用户环境时使用的&lt;strong&gt;第二个&lt;/strong&gt;文件，此文件为系统的每个用户设置默认的变量，当用户第一次登录时，该文件被执行；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;~/.bash_profile&lt;/strong&gt;：登录用户的环境变量设置；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;~/.profile&lt;/strong&gt;：登录用户环境变量设置（若不存在 &lt;code&gt;~/.bash_profile&lt;/code&gt; 文件时执行）；&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://linpeng13.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
+    
+      <category term="Ubuntu" scheme="http://linpeng13.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Ubuntu 系统用户和用户组</title>
     <link href="http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/"/>
     <id>http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/</id>
     <published>2017-09-05T02:55:18.000Z</published>
-    <updated>2017-09-05T04:09:52.000Z</updated>
+    <updated>2017-09-05T04:12:45.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a>/etc/passwd</h2><p>查看Ubuntu 系统存在的用户信息，可执行：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/passwd</div></pre></td></tr></table></figure>
@@ -84,9 +140,9 @@
       <category term="Linux" scheme="http://linpeng13.github.io/categories/Linux/"/>
     
     
-      <category term="Ubuntu" scheme="http://linpeng13.github.io/tags/Ubuntu/"/>
-    
       <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
+    
+      <category term="Ubuntu" scheme="http://linpeng13.github.io/tags/Ubuntu/"/>
     
   </entry>
   
@@ -95,7 +151,7 @@
     <link href="http://linpeng13.github.io/2017/09/03/some-hexo-next-set-the-page-header-foter./"/>
     <id>http://linpeng13.github.io/2017/09/03/some-hexo-next-set-the-page-header-foter./</id>
     <published>2017-09-03T09:51:17.000Z</published>
-    <updated>2017-09-05T04:11:56.000Z</updated>
+    <updated>2017-09-05T04:12:45.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h2><p><img src="/uploads/2017-09-03/header.png" alt="页头"><br>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。</p>
 <h3 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h3><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="external">leanCloud,实现文章阅读量统计</a>》。</p>
@@ -140,7 +196,7 @@
     <link href="http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/"/>
     <id>http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/</id>
     <published>2017-09-02T13:29:20.000Z</published>
-    <updated>2017-09-05T04:09:52.000Z</updated>
+    <updated>2017-09-05T04:12:45.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/uploads/2017-09-02/hexo-home.png" alt="Hexo"><br>Hexo 是一个快速、简洁且高效的博客框架，基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，并且只需一条指令即可部署到 GitHub Pages（或Heroku 等其他网站）。</p>
 <p>使用Hexo+Github 搭建个人博客，简单来说分两步：</p>
@@ -257,9 +313,9 @@
     
       <category term="hexo" scheme="http://linpeng13.github.io/tags/hexo/"/>
     
-      <category term="github" scheme="http://linpeng13.github.io/tags/github/"/>
-    
       <category term="NexT" scheme="http://linpeng13.github.io/tags/NexT/"/>
+    
+      <category term="github" scheme="http://linpeng13.github.io/tags/github/"/>
     
   </entry>
   
@@ -268,7 +324,7 @@
     <link href="http://linpeng13.github.io/2016/05/19/linux-iptables-setings/"/>
     <id>http://linpeng13.github.io/2016/05/19/linux-iptables-setings/</id>
     <published>2016-05-19T00:30:21.000Z</published>
-    <updated>2017-09-05T04:09:52.000Z</updated>
+    <updated>2017-09-05T04:12:45.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="屏蔽指定IP"><a href="#屏蔽指定IP" class="headerlink" title="屏蔽指定IP"></a>屏蔽指定IP</h2><p>以屏蔽IP： 192.168.184.13 为例 </p>
 <h3 id="方法1：命令行"><a href="#方法1：命令行" class="headerlink" title="方法1：命令行"></a>方法1：命令行</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo iptables -I INPUT -s 192.168.184.13 -j DROP</div></pre></td></tr></table></figure>
@@ -301,7 +357,7 @@
     <link href="http://linpeng13.github.io/2016/03/22/%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server/"/>
     <id>http://linpeng13.github.io/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/</id>
     <published>2016-03-22T06:47:55.000Z</published>
-    <updated>2017-09-05T04:09:52.000Z</updated>
+    <updated>2017-09-05T04:12:45.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="慕课网-在Ubuntu-Server下搭建LAMP环境"><a href="#慕课网-在Ubuntu-Server下搭建LAMP环境" class="headerlink" title="慕课网-在Ubuntu Server下搭建LAMP环境"></a>慕课网-在Ubuntu Server下搭建LAMP环境</h2><p><a href="http://www.imooc.com/learn/170" target="_blank" rel="external">课程链接</a></p>
 <h3 id="2-1-性感的Ubuntu-Server操作系统"><a href="#2-1-性感的Ubuntu-Server操作系统" class="headerlink" title="2-1 性感的Ubuntu Server操作系统"></a>2-1 性感的Ubuntu Server操作系统</h3><ul>
@@ -349,9 +405,9 @@
       <category term="Linux" scheme="http://linpeng13.github.io/categories/Linux/"/>
     
     
-      <category term="Ubuntu" scheme="http://linpeng13.github.io/tags/Ubuntu/"/>
-    
       <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
+    
+      <category term="Ubuntu" scheme="http://linpeng13.github.io/tags/Ubuntu/"/>
     
       <category term="Apache" scheme="http://linpeng13.github.io/tags/Apache/"/>
     
@@ -368,7 +424,7 @@
     <link href="http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/"/>
     <id>http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/</id>
     <published>2016-03-18T11:26:07.000Z</published>
-    <updated>2017-09-05T04:09:52.000Z</updated>
+    <updated>2017-09-05T04:12:45.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h2><p>含义：shell本身的PID（ProcessID）</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$$"</span></div><div class="line">$ bash test.sh aaa</div><div class="line">this is 2638</div></pre></td></tr></table></figure>
@@ -402,7 +458,7 @@
     <link href="http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/"/>
     <id>http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/</id>
     <published>2016-01-08T05:56:12.000Z</published>
-    <updated>2017-09-05T04:09:52.000Z</updated>
+    <updated>2017-09-05T04:12:45.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="发布新文章到我的github步骤"><a href="#发布新文章到我的github步骤" class="headerlink" title="发布新文章到我的github步骤"></a>发布新文章到我的github步骤</h2><ol>
 <li><p>新建文章文件</p>
@@ -446,7 +502,7 @@
     <link href="http://linpeng13.github.io/2016/01/08/nginx-instal/"/>
     <id>http://linpeng13.github.io/2016/01/08/nginx-instal/</id>
     <published>2016-01-08T04:20:25.000Z</published>
-    <updated>2017-09-05T04:09:52.000Z</updated>
+    <updated>2017-09-05T04:12:45.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="环境：OS-X-Yosemite-10-10-5"><a href="#环境：OS-X-Yosemite-10-10-5" class="headerlink" title="环境：OS X Yosemite(10.10.5)"></a>环境：OS X Yosemite(10.10.5)</h2><ol>
 <li><p>下载<a href="http://www.pcre.org/" target="_blank" rel="external">PCRE</a>和<a href="http://nginx.org/" target="_blank" rel="external">nginx</a></p>

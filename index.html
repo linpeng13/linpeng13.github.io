@@ -320,6 +320,212 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://linpeng13.github.io/2017/09/15/python-built-in-data-structures/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/author.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木月天空">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/09/15/python-built-in-data-structures/" itemprop="url">Python built-in data structures</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-15T17:23:32+08:00">
+                2017-09-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/15/python-built-in-data-structures/" class="leancloud_visitors" data-flag-title="Python built-in data structures">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  688(字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  4(分)
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h2><blockquote><p>There are four built-in data structures in Python - <em>list</em>, <em>tuple</em>, <em>dictionary</em> and <em>set</em>.</p>
+<footer><strong>Swaroop C H</strong><cite>A Byte of Python</cite></footer></blockquote>
+<h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><blockquote><p>A <code>list</code> is a data structure that holds an ordered collection of items</p>
+<footer><strong>Swaroop C H</strong><cite>A Byte of Python</cite></footer></blockquote>
+<p>Example (save as <code>ds_using_list.py</code> ):</p>
+<figure class="highlight python"><figcaption><span>ds_using_list.py</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># This is my shopping list</span></div><div class="line">shoplist = [<span class="string">'apple'</span>, <span class="string">'mango'</span>, <span class="string">'carrot'</span>, <span class="string">'banana'</span>]</div><div class="line"></div><div class="line">print(<span class="string">'I have'</span>, len(shoplist), <span class="string">'items to purchase.'</span>)</div><div class="line"></div><div class="line">print(<span class="string">'These items are:'</span>, end=<span class="string">' '</span>)</div><div class="line"><span class="keyword">for</span> item <span class="keyword">in</span> shoplist:</div><div class="line">    print(item, end=<span class="string">' '</span>)</div><div class="line"></div><div class="line">print(<span class="string">'\nI also have to buy rice.'</span>)</div><div class="line">shoplist.append(<span class="string">'rice'</span>)</div><div class="line">print(<span class="string">'My shopping list is now'</span>, shoplist)</div><div class="line"></div><div class="line">print(<span class="string">'I will sort my list now'</span>)</div><div class="line">shoplist.sort()</div><div class="line">print(<span class="string">'Sorted shopping list is'</span>, shoplist)</div><div class="line"></div><div class="line">print(<span class="string">'The first item I will buy is'</span>, shoplist[<span class="number">0</span>])</div><div class="line">olditem = shoplist[<span class="number">0</span>]</div><div class="line"><span class="keyword">del</span> shoplist[<span class="number">0</span>]</div><div class="line">print(<span class="string">'I bought the'</span>, olditem)</div><div class="line">print(<span class="string">'My shopping list is now'</span>, shoplist)</div></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ python ds_using_list.py</div><div class="line">I have 4 items to purchase.</div><div class="line">These items are: apple mango carrot banana</div><div class="line">I also have to buy rice.</div><div class="line">My shopping list is now [<span class="string">'apple'</span>, <span class="string">'mango'</span>, <span class="string">'carrot'</span>, <span class="string">'banana'</span>, <span class="string">'rice'</span>]</div><div class="line">I will sort my list now</div><div class="line">Sorted shopping list is [<span class="string">'apple'</span>, <span class="string">'banana'</span>, <span class="string">'carrot'</span>, <span class="string">'mango'</span>, <span class="string">'rice'</span>]</div><div class="line">The first item I will buy is apple</div><div class="line">I bought the apple</div><div class="line">My shopping list is now [<span class="string">'banana'</span>, <span class="string">'carrot'</span>, <span class="string">'mango'</span>, <span class="string">'rice'</span>]</div></pre></td></tr></table></figure>
+<h2 id="Tuple"><a href="#Tuple" class="headerlink" title="Tuple"></a>Tuple</h2><blockquote><p>Tuples are used to hold together multiple objects. Think of them as similar to lists, but without the extensive functionality that the list class gives you. One major feature of tuples is that they are <em>immutable</em> like strings i.e. you cannot modify tuples.</p>
+<footer><strong>Swaroop C H</strong><cite>A Byte of Python</cite></footer></blockquote>
+<p>Example (save as <code>ds_using_tuple.py</code> ):</p>
+<figure class="highlight python"><figcaption><span>ds_using_tuple.py</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># I would recommend always using parentheses</span></div><div class="line"><span class="comment"># to indicate start and end of tuple</span></div><div class="line"><span class="comment"># even though parentheses are optional.</span></div><div class="line"><span class="comment"># Explicit is better than implicit.</span></div><div class="line">zoo = (<span class="string">'python'</span>, <span class="string">'elephant'</span>, <span class="string">'penguin'</span>)</div><div class="line">print(<span class="string">'Number of animals in the zoo is'</span>, len(zoo))</div><div class="line"></div><div class="line">new_zoo = <span class="string">'monkey'</span>, <span class="string">'camel'</span>, zoo</div><div class="line">print(<span class="string">'Number of cages in the new zoo is'</span>, len(new_zoo))</div><div class="line">print(<span class="string">'All animals in new zoo are'</span>, new_zoo)</div><div class="line">print(<span class="string">'Animals brought from old zoo are'</span>, new_zoo[<span class="number">2</span>])</div><div class="line">print(<span class="string">'Last animal brought from old zoo is'</span>, new_zoo[<span class="number">2</span>][<span class="number">2</span>])</div><div class="line">print(<span class="string">'Number of animals in the new zoo is'</span>, len(new_zoo)<span class="number">-1</span>+len(new_zoo[<span class="number">2</span>]))</div></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ python ds_using_tuple.py </div><div class="line">Number of animals <span class="keyword">in</span> the zoo is 3 </div><div class="line">Number of cages <span class="keyword">in</span> the new zoo is 3 </div><div class="line">All animals <span class="keyword">in</span> new zoo are (<span class="string">'monkey'</span>, <span class="string">'camel'</span>, (<span class="string">'python'</span>, <span class="string">'elephant'</span>, <span class="string">'penguin'</span>)) </div><div class="line">Animals brought from old zoo are (<span class="string">'python'</span>, <span class="string">'elephant'</span>, <span class="string">'penguin'</span>) </div><div class="line">Last animal brought from old zoo is penguin </div><div class="line">Number of animals <span class="keyword">in</span> the new zoo is 5</div></pre></td></tr></table></figure>
+<h2 id="Dictionary"><a href="#Dictionary" class="headerlink" title="Dictionary"></a>Dictionary</h2><blockquote><p>A dictionary is like an address-book where you can find the address or contact details of a person by knowing only his/her name i.e. we associate <em>keys</em> (name) with <em>values</em> (details). Note that the key must be unique just like you cannot find out the correct information if you have two persons with the exact same name.</p>
+<footer><strong>Swaroop C H</strong><cite>A Byte of Python</cite></footer></blockquote>
+<p>Example (save as <code>ds_using_dict.py</code> ):</p>
+<figure class="highlight python"><figcaption><span>ds_using_dict.py</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 'ab' is short for 'a'ddress'b'ook </span></div><div class="line"></div><div class="line">ab = &#123; </div><div class="line">    <span class="string">'Swaroop'</span>: <span class="string">'swaroop@swaroopch.com'</span>, </div><div class="line">    <span class="string">'Larry'</span>: <span class="string">'larry@wall.org'</span>, </div><div class="line">    <span class="string">'Matsumoto'</span>: <span class="string">'matz@ruby-lang.org'</span>, </div><div class="line">    <span class="string">'Spammer'</span>: <span class="string">'spammer@hotmail.com'</span> </div><div class="line">&#125; </div><div class="line"></div><div class="line">print(<span class="string">"Swaroop's address is"</span>, ab[<span class="string">'Swaroop'</span>]) </div><div class="line"></div><div class="line"><span class="comment"># Deleting a key-value pair </span></div><div class="line"><span class="keyword">del</span> ab[<span class="string">'Spammer'</span>] </div><div class="line"></div><div class="line">print(<span class="string">'\nThere are &#123;&#125; contacts in the address-book\n'</span>.format(len(ab))) </div><div class="line"></div><div class="line"><span class="keyword">for</span> name, address <span class="keyword">in</span> ab.items(): </div><div class="line">    print(<span class="string">'Contact &#123;&#125; at &#123;&#125;'</span>.format(name, address)) </div><div class="line"></div><div class="line"><span class="comment"># Adding a key-value pair </span></div><div class="line">ab[<span class="string">'Guido'</span>] = <span class="string">'guido@python.org'</span> </div><div class="line"></div><div class="line"><span class="keyword">if</span> <span class="string">'Guido'</span> <span class="keyword">in</span> ab: </div><div class="line">    print(<span class="string">"\nGuido's address is"</span>, ab[<span class="string">'Guido'</span>])</div></pre></td></tr></table></figure>
+<p>Output:</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$ python ds_using_dict.py </div><div class="line">Swaroop<span class="string">'s address is swaroop@swaroopch.com </span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">There are 3 contacts in the address-book </span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">Contact Swaroop at swaroop@swaroopch.com </span></div><div class="line"><span class="string">Contact Matsumoto at matz@ruby-lang.org </span></div><div class="line"><span class="string">Contact Larry at larry@wall.org </span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">Guido'</span>s address is guido@python.org</div></pre></td></tr></table></figure>
+<h2 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h2><blockquote><p>Sets are <em>unordered</em> collections of simple objects. These are used when the existence of an object in a collection is more important than the order or how many times it occurs.</p>
+<footer><strong>Swaroop C H</strong><cite>A Byte of Python</cite></footer></blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>bri = set([<span class="string">'brazil'</span>, <span class="string">'russia'</span>, <span class="string">'india'</span>]) </div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'india'</span> <span class="keyword">in</span> bri </div><div class="line"><span class="keyword">True</span> </div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="string">'usa'</span> <span class="keyword">in</span> bri </div><div class="line"><span class="keyword">False</span> </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>bric = bri.copy() </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>bric.add(<span class="string">'china'</span>) </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>bric.issuperset(bri) </div><div class="line"><span class="keyword">True</span> </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>bri.remove(<span class="string">'russia'</span>) </div><div class="line"><span class="meta">&gt;&gt;&gt; </span>bri &amp; bric <span class="comment"># OR bri.intersection(bric) </span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>&#123;<span class="string">'brazil'</span>, <span class="string">'india'</span>&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://linpeng13.github.io/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2091,7 +2297,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2102,7 +2308,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2113,7 +2319,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

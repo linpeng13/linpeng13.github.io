@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://linpeng13.github.io/"/>
-  <updated>2017-09-17T02:45:28.000Z</updated>
+  <updated>2017-09-17T04:56:06.000Z</updated>
   <id>http://linpeng13.github.io/</id>
   
   <author>
@@ -17,12 +17,13 @@
   
   <entry>
     <title>The Python Standard Library</title>
-    <link href="http://linpeng13.github.io/2017/09/17/The-Python-Standard-Library/"/>
-    <id>http://linpeng13.github.io/2017/09/17/The-Python-Standard-Library/</id>
+    <link href="http://linpeng13.github.io/2017/09/17/the-python-standard-library/"/>
+    <id>http://linpeng13.github.io/2017/09/17/the-python-standard-library/</id>
     <published>2017-09-17T02:38:22.000Z</published>
-    <updated>2017-09-17T02:45:28.000Z</updated>
+    <updated>2017-09-17T04:56:06.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="sys-module"><a href="#sys-module" class="headerlink" title="sys module"></a>sys module</h2><p>The <code>sys</code> module contains system-specific functionality.</p>
+    <content type="html"><![CDATA[<p>《A Byte of Python》学习笔记</p>
+<h2 id="sys-module"><a href="#sys-module" class="headerlink" title="sys module"></a>sys module</h2><p>The <code>sys</code> module contains system-specific functionality.</p>
 <h2 id="os-module"><a href="#os-module" class="headerlink" title="os module"></a>os module</h2><p>The <code>os</code> module is used for interacting with the operating system.</p>
 <p><code>os.path.join()</code> this function will ensure the full location matches the format expected by the operating system.</p>
 <h2 id="platform-module"><a href="#platform-module" class="headerlink" title="platform module"></a>platform module</h2><p>The <code>platform</code> module is used for information about the platform i.e. the operating system.</p>
@@ -31,7 +32,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;sys-module&quot;&gt;&lt;a href=&quot;#sys-module&quot; class=&quot;headerlink&quot; title=&quot;sys module&quot;&gt;&lt;/a&gt;sys module&lt;/h2&gt;&lt;p&gt;The &lt;code&gt;sys&lt;/code&gt; module contains s
+      &lt;p&gt;《A Byte of Python》学习笔记&lt;/p&gt;
+&lt;h2 id=&quot;sys-module&quot;&gt;&lt;a href=&quot;#sys-module&quot; class=&quot;headerlink&quot; title=&quot;sys module&quot;&gt;&lt;/a&gt;sys module&lt;/h2&gt;&lt;p&gt;The &lt;cod
     
     </summary>
     
@@ -47,9 +49,10 @@
     <link href="http://linpeng13.github.io/2017/09/15/python-built-in-data-structures/"/>
     <id>http://linpeng13.github.io/2017/09/15/python-built-in-data-structures/</id>
     <published>2017-09-15T09:23:32.000Z</published>
-    <updated>2017-09-15T10:00:03.000Z</updated>
+    <updated>2017-09-17T04:56:14.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h2><blockquote><p>There are four built-in data structures in Python - <em>list</em>, <em>tuple</em>, <em>dictionary</em> and <em>set</em>.</p>
+    <content type="html"><![CDATA[<p>《A Byte of Python》学习笔记</p>
+<h2 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h2><blockquote><p>There are four built-in data structures in Python - <em>list</em>, <em>tuple</em>, <em>dictionary</em> and <em>set</em>.</p>
 <footer><strong>Swaroop C H</strong><cite>A Byte of Python</cite></footer></blockquote>
 <h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><blockquote><p>A <code>list</code> is a data structure that holds an ordered collection of items</p>
 <footer><strong>Swaroop C H</strong><cite>A Byte of Python</cite></footer></blockquote>
@@ -76,7 +79,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;Data-Structures&quot;&gt;&lt;a href=&quot;#Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;Data Structures&quot;&gt;&lt;/a&gt;Data Structures&lt;/h2&gt;&lt;blockquote&gt;&lt;p&gt;There 
+      &lt;p&gt;《A Byte of Python》学习笔记&lt;/p&gt;
+&lt;h2 id=&quot;Data-Structures&quot;&gt;&lt;a href=&quot;#Data-Structures&quot; class=&quot;headerlink&quot; title=&quot;Data Structures&quot;&gt;&lt;/a&gt;Data Struct
     
     </summary>
     

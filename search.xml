@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Setting Custom domain]]></title>
+    <url>%2F2017%2F09%2F23%2Fseting-custom-domain%2F</url>
+    <content type="text"><![CDATA[我在阿里云上注册了一个域名 linziye.com ，希望能指向我的Github Pages 博客 linpeng13.github.io ，操作步骤如下： ping linpeng13.github.io 得到一个IP 修改阿里云上域名解析记录，添加一个A记录，用得到的IP 登录http://github.com &gt;进入linpeng13.github.io 项目&gt;Settings &gt;Custom domain &gt;输入域名linziye.com &gt;Save]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[The Python Standard Library]]></title>
     <url>%2F2017%2F09%2F17%2Fthe-python-standard-library%2F</url>
     <content type="text"><![CDATA[《A Byte of Python》学习笔记 sys moduleThe sys module contains system-specific functionality. os moduleThe os module is used for interacting with the operating system. os.path.join() this function will ensure the full location matches the format expected by the operating system. platform moduleThe platform module is used for information about the platform i.e. the operating system. logging moduleThe logging module is used for logging information.]]></content>
@@ -31,8 +42,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -43,8 +54,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -68,9 +79,9 @@
         <category>hexo</category>
       </categories>
       <tags>
+        <tag>github</tag>
         <tag>hexo</tag>
         <tag>NexT</tag>
-        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -93,8 +104,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
         <tag>Ubuntu</tag>
+        <tag>Linux</tag>
         <tag>Apache</tag>
         <tag>MySQL</tag>
         <tag>PHP</tag>
@@ -109,8 +120,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>shell</tag>
         <tag>Linux</tag>
+        <tag>shell</tag>
       </tags>
   </entry>
   <entry>

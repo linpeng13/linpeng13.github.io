@@ -4,9 +4,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://linpeng13.github.io/"/>
-  <updated>2017-09-24T08:37:29.000Z</updated>
-  <id>http://linpeng13.github.io/</id>
+  <link href="linziye.com/"/>
+  <updated>2017-09-24T08:38:38.000Z</updated>
+  <id>linziye.com/</id>
   
   <author>
     <name>sky</name>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>Setting Custom domain</title>
-    <link href="http://linpeng13.github.io/2017/09/23/seting-custom-domain/"/>
-    <id>http://linpeng13.github.io/2017/09/23/seting-custom-domain/</id>
+    <link href="linziye.com/2017/09/23/seting-custom-domain/"/>
+    <id>linziye.com/2017/09/23/seting-custom-domain/</id>
     <published>2017-09-23T15:29:47.000Z</published>
-    <updated>2017-09-24T08:37:29.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<p>我在阿里云上注册了一个域名 <code>linziye.com</code> ，希望能指向我的Github Pages 博客 <code>linpeng13.github.io</code> ，操作步骤如下：</p>
 <ol>
@@ -58,19 +58,19 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://linpeng13.github.io/categories/hexo/"/>
+      <category term="hexo" scheme="linziye.com/categories/hexo/"/>
     
     
-      <category term="github" scheme="http://linpeng13.github.io/tags/github/"/>
+      <category term="github" scheme="linziye.com/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>The Python Standard Library</title>
-    <link href="http://linpeng13.github.io/2017/09/17/the-python-standard-library/"/>
-    <id>http://linpeng13.github.io/2017/09/17/the-python-standard-library/</id>
+    <link href="linziye.com/2017/09/17/the-python-standard-library/"/>
+    <id>linziye.com/2017/09/17/the-python-standard-library/</id>
     <published>2017-09-17T02:38:22.000Z</published>
-    <updated>2017-09-24T08:29:59.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<p>《A Byte of Python》学习笔记</p>
 <h2 id="sys-module"><a href="#sys-module" class="headerlink" title="sys module"></a>sys module</h2><p>The <code>sys</code> module contains system-specific functionality.</p>
@@ -87,19 +87,19 @@
     
     </summary>
     
-      <category term="Python" scheme="http://linpeng13.github.io/categories/Python/"/>
+      <category term="Python" scheme="linziye.com/categories/Python/"/>
     
     
-      <category term="Python" scheme="http://linpeng13.github.io/tags/Python/"/>
+      <category term="Python" scheme="linziye.com/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Python built-in data structures</title>
-    <link href="http://linpeng13.github.io/2017/09/15/python-built-in-data-structures/"/>
-    <id>http://linpeng13.github.io/2017/09/15/python-built-in-data-structures/</id>
+    <link href="linziye.com/2017/09/15/python-built-in-data-structures/"/>
+    <id>linziye.com/2017/09/15/python-built-in-data-structures/</id>
     <published>2017-09-15T09:23:32.000Z</published>
-    <updated>2017-09-24T08:29:59.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<p>《A Byte of Python》学习笔记</p>
 <h2 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h2><blockquote><p>There are four built-in data structures in Python - <em>list</em>, <em>tuple</em>, <em>dictionary</em> and <em>set</em>.</p>
@@ -134,21 +134,21 @@
     
     </summary>
     
-      <category term="Python" scheme="http://linpeng13.github.io/categories/Python/"/>
+      <category term="Python" scheme="linziye.com/categories/Python/"/>
     
     
-      <category term="Python" scheme="http://linpeng13.github.io/tags/Python/"/>
+      <category term="Python" scheme="linziye.com/tags/Python/"/>
     
-      <category term="shell" scheme="http://linpeng13.github.io/tags/shell/"/>
+      <category term="shell" scheme="linziye.com/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>Ubuntu 系统用户登录调用的文件（或环境变量）</title>
-    <link href="http://linpeng13.github.io/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/"/>
-    <id>http://linpeng13.github.io/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/</id>
+    <link href="linziye.com/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/"/>
+    <id>linziye.com/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/</id>
     <published>2017-09-05T06:14:35.000Z</published>
-    <updated>2017-09-24T08:29:59.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="调用顺序"><a href="#调用顺序" class="headerlink" title="调用顺序"></a>调用顺序</h2><p>普通用户登录Ubuntu 系统一般会依次调用如下配置文件：</p>
 <ol>
@@ -190,21 +190,21 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://linpeng13.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="linziye.com/categories/Linux/"/>
     
     
-      <category term="Ubuntu" scheme="http://linpeng13.github.io/tags/Ubuntu/"/>
+      <category term="Linux" scheme="linziye.com/tags/Linux/"/>
     
-      <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
+      <category term="Ubuntu" scheme="linziye.com/tags/Ubuntu/"/>
     
   </entry>
   
   <entry>
     <title>Ubuntu 系统用户和用户组</title>
-    <link href="http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/"/>
-    <id>http://linpeng13.github.io/2017/09/05/ubuntu-system-user-and-user-groups/</id>
+    <link href="linziye.com/2017/09/05/ubuntu-system-user-and-user-groups/"/>
+    <id>linziye.com/2017/09/05/ubuntu-system-user-and-user-groups/</id>
     <published>2017-09-05T02:55:18.000Z</published>
-    <updated>2017-09-24T08:29:59.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a>/etc/passwd</h2><p>查看Ubuntu 系统存在的用户信息，可执行：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/passwd</div></pre></td></tr></table></figure>
@@ -265,21 +265,21 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://linpeng13.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="linziye.com/categories/Linux/"/>
     
     
-      <category term="Ubuntu" scheme="http://linpeng13.github.io/tags/Ubuntu/"/>
+      <category term="Linux" scheme="linziye.com/tags/Linux/"/>
     
-      <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
+      <category term="Ubuntu" scheme="linziye.com/tags/Ubuntu/"/>
     
   </entry>
   
   <entry>
     <title>Hexo NexT主题文章页头页尾的一些设置</title>
-    <link href="http://linpeng13.github.io/2017/09/03/some-hexo-next-set-the-page-header-foter./"/>
-    <id>http://linpeng13.github.io/2017/09/03/some-hexo-next-set-the-page-header-foter./</id>
+    <link href="linziye.com/2017/09/03/some-hexo-next-set-the-page-header-foter./"/>
+    <id>linziye.com/2017/09/03/some-hexo-next-set-the-page-header-foter./</id>
     <published>2017-09-03T09:51:17.000Z</published>
-    <updated>2017-09-24T08:29:59.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h2><p><img src="/uploads/2017-09-03/header.png" alt="页头"><br>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。</p>
 <h3 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h3><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="external">leanCloud,实现文章阅读量统计</a>》。</p>
@@ -308,23 +308,23 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://linpeng13.github.io/categories/hexo/"/>
+      <category term="hexo" scheme="linziye.com/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://linpeng13.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="linziye.com/tags/hexo/"/>
     
-      <category term="NexT" scheme="http://linpeng13.github.io/tags/NexT/"/>
+      <category term="NexT" scheme="linziye.com/tags/NexT/"/>
     
-      <category term="LeanCloud" scheme="http://linpeng13.github.io/tags/LeanCloud/"/>
+      <category term="LeanCloud" scheme="linziye.com/tags/LeanCloud/"/>
     
   </entry>
   
   <entry>
     <title>Hexo+Github 搭建个人博客</title>
-    <link href="http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/"/>
-    <id>http://linpeng13.github.io/2017/09/02/hexo-github-build-personal-blog/</id>
+    <link href="linziye.com/2017/09/02/hexo-github-build-personal-blog/"/>
+    <id>linziye.com/2017/09/02/hexo-github-build-personal-blog/</id>
     <published>2017-09-02T13:29:20.000Z</published>
-    <updated>2017-09-24T08:29:59.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/uploads/2017-09-02/hexo-home.png" alt="Hexo"><br>Hexo 是一个快速、简洁且高效的博客框架，基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，并且只需一条指令即可部署到 GitHub Pages（或Heroku 等其他网站）。</p>
 <p>使用Hexo+Github 搭建个人博客，简单来说分两步：</p>
@@ -436,23 +436,23 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://linpeng13.github.io/categories/hexo/"/>
+      <category term="hexo" scheme="linziye.com/categories/hexo/"/>
     
     
-      <category term="github" scheme="http://linpeng13.github.io/tags/github/"/>
+      <category term="github" scheme="linziye.com/tags/github/"/>
     
-      <category term="hexo" scheme="http://linpeng13.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="linziye.com/tags/hexo/"/>
     
-      <category term="NexT" scheme="http://linpeng13.github.io/tags/NexT/"/>
+      <category term="NexT" scheme="linziye.com/tags/NexT/"/>
     
   </entry>
   
   <entry>
     <title>Linux iptables设置</title>
-    <link href="http://linpeng13.github.io/2016/05/19/linux-iptables-setings/"/>
-    <id>http://linpeng13.github.io/2016/05/19/linux-iptables-setings/</id>
+    <link href="linziye.com/2016/05/19/linux-iptables-setings/"/>
+    <id>linziye.com/2016/05/19/linux-iptables-setings/</id>
     <published>2016-05-19T00:30:21.000Z</published>
-    <updated>2017-09-24T08:29:59.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="屏蔽指定IP"><a href="#屏蔽指定IP" class="headerlink" title="屏蔽指定IP"></a>屏蔽指定IP</h2><p>以屏蔽IP： 192.168.184.13 为例 </p>
 <h3 id="方法1：命令行"><a href="#方法1：命令行" class="headerlink" title="方法1：命令行"></a>方法1：命令行</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo iptables -I INPUT -s 192.168.184.13 -j DROP</div></pre></td></tr></table></figure>
@@ -471,21 +471,21 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://linpeng13.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="linziye.com/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="linziye.com/tags/Linux/"/>
     
-      <category term="iptables" scheme="http://linpeng13.github.io/tags/iptables/"/>
+      <category term="iptables" scheme="linziye.com/tags/iptables/"/>
     
   </entry>
   
   <entry>
     <title>【学习】慕课网-在Ubuntu Server下搭建LAMP环境</title>
-    <link href="http://linpeng13.github.io/2016/03/22/%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server/"/>
-    <id>http://linpeng13.github.io/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/</id>
+    <link href="linziye.com/2016/03/22/%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server/"/>
+    <id>linziye.com/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/</id>
     <published>2016-03-22T06:47:55.000Z</published>
-    <updated>2017-09-24T08:29:59.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="慕课网-在Ubuntu-Server下搭建LAMP环境"><a href="#慕课网-在Ubuntu-Server下搭建LAMP环境" class="headerlink" title="慕课网-在Ubuntu Server下搭建LAMP环境"></a>慕课网-在Ubuntu Server下搭建LAMP环境</h2><p><a href="http://www.imooc.com/learn/170" target="_blank" rel="external">课程链接</a></p>
 <h3 id="2-1-性感的Ubuntu-Server操作系统"><a href="#2-1-性感的Ubuntu-Server操作系统" class="headerlink" title="2-1 性感的Ubuntu Server操作系统"></a>2-1 性感的Ubuntu Server操作系统</h3><ul>
@@ -530,29 +530,29 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://linpeng13.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="linziye.com/categories/Linux/"/>
     
     
-      <category term="Ubuntu" scheme="http://linpeng13.github.io/tags/Ubuntu/"/>
+      <category term="Linux" scheme="linziye.com/tags/Linux/"/>
     
-      <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
+      <category term="Ubuntu" scheme="linziye.com/tags/Ubuntu/"/>
     
-      <category term="Apache" scheme="http://linpeng13.github.io/tags/Apache/"/>
+      <category term="Apache" scheme="linziye.com/tags/Apache/"/>
     
-      <category term="MySQL" scheme="http://linpeng13.github.io/tags/MySQL/"/>
+      <category term="MySQL" scheme="linziye.com/tags/MySQL/"/>
     
-      <category term="PHP" scheme="http://linpeng13.github.io/tags/PHP/"/>
+      <category term="PHP" scheme="linziye.com/tags/PHP/"/>
     
-      <category term="慕课网" scheme="http://linpeng13.github.io/tags/%E6%85%95%E8%AF%BE%E7%BD%91/"/>
+      <category term="慕课网" scheme="linziye.com/tags/%E6%85%95%E8%AF%BE%E7%BD%91/"/>
     
   </entry>
   
   <entry>
     <title>linux中shell变量含义</title>
-    <link href="http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/"/>
-    <id>http://linpeng13.github.io/2016/03/18/the-meaning-of-the-shel-variable-in-linux/</id>
+    <link href="linziye.com/2016/03/18/the-meaning-of-the-shel-variable-in-linux/"/>
+    <id>linziye.com/2016/03/18/the-meaning-of-the-shel-variable-in-linux/</id>
     <published>2016-03-18T11:26:07.000Z</published>
-    <updated>2017-09-24T08:29:59.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h2><p>含义：shell本身的PID（ProcessID）</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$$"</span></div><div class="line">$ bash test.sh aaa</div><div class="line">this is 2638</div></pre></td></tr></table></figure>
@@ -572,21 +572,21 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://linpeng13.github.io/categories/Linux/"/>
+      <category term="Linux" scheme="linziye.com/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="http://linpeng13.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="linziye.com/tags/Linux/"/>
     
-      <category term="shell" scheme="http://linpeng13.github.io/tags/shell/"/>
+      <category term="shell" scheme="linziye.com/tags/shell/"/>
     
   </entry>
   
   <entry>
     <title>hexo发布新文章</title>
-    <link href="http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/"/>
-    <id>http://linpeng13.github.io/2016/01/08/hexo-releases-new-articles/</id>
+    <link href="linziye.com/2016/01/08/hexo-releases-new-articles/"/>
+    <id>linziye.com/2016/01/08/hexo-releases-new-articles/</id>
     <published>2016-01-08T05:56:12.000Z</published>
-    <updated>2017-09-24T08:29:59.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="发布新文章到我的github步骤"><a href="#发布新文章到我的github步骤" class="headerlink" title="发布新文章到我的github步骤"></a>发布新文章到我的github步骤</h2><ol>
 <li><p>新建文章文件</p>
@@ -618,19 +618,19 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://linpeng13.github.io/categories/hexo/"/>
+      <category term="hexo" scheme="linziye.com/categories/hexo/"/>
     
     
-      <category term="hexo" scheme="http://linpeng13.github.io/tags/hexo/"/>
+      <category term="hexo" scheme="linziye.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title>nginx install</title>
-    <link href="http://linpeng13.github.io/2016/01/08/nginx-instal/"/>
-    <id>http://linpeng13.github.io/2016/01/08/nginx-instal/</id>
+    <link href="linziye.com/2016/01/08/nginx-instal/"/>
+    <id>linziye.com/2016/01/08/nginx-instal/</id>
     <published>2016-01-08T04:20:25.000Z</published>
-    <updated>2017-09-24T08:29:59.000Z</updated>
+    <updated>2017-09-24T08:38:38.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="环境：OS-X-Yosemite-10-10-5"><a href="#环境：OS-X-Yosemite-10-10-5" class="headerlink" title="环境：OS X Yosemite(10.10.5)"></a>环境：OS X Yosemite(10.10.5)</h2><ol>
 <li><p>下载<a href="http://www.pcre.org/" target="_blank" rel="external">PCRE</a>和<a href="http://nginx.org/" target="_blank" rel="external">nginx</a></p>
@@ -672,12 +672,12 @@
     
     </summary>
     
-      <category term="nginx" scheme="http://linpeng13.github.io/categories/nginx/"/>
+      <category term="nginx" scheme="linziye.com/categories/nginx/"/>
     
     
-      <category term="nginx" scheme="http://linpeng13.github.io/tags/nginx/"/>
+      <category term="nginx" scheme="linziye.com/tags/nginx/"/>
     
-      <category term="OS X" scheme="http://linpeng13.github.io/tags/OS-X/"/>
+      <category term="OS X" scheme="linziye.com/tags/OS-X/"/>
     
   </entry>
   

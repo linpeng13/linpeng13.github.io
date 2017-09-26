@@ -416,7 +416,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  93(字)
+                  405(字)
                 </span>
               
 
@@ -432,7 +432,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1(分)
+                  2(分)
                 </span>
               
             </div>
@@ -455,11 +455,13 @@
       
         
           <p>我在阿里云上注册了一个域名 <code>linziye.com</code> ，希望能指向我的Github Pages 博客 <code>linpeng13.github.io</code> ，操作步骤如下：</p>
-<ol>
-<li><p><code>ping linpeng13.github.io</code> 得到一个IP</p>
-<img src="/2017/09/23/seting-custom-domain/1.png" alt="1.png" title="">
-
-<br>
+<blockquote>
+<p>劳资的域名 <code>linpeng.com</code> 已被注册，只好先用儿子的了 -_-!!!</p>
+</blockquote>
+<p>第1步：创建CNAME 文件</p>
+<p>我的Github Pages 博客采用Hexo 框架，故需要在<code>source</code> 目录下创建CNAME 文件。本质上就是在站点（推送到Github Pages 的博客站点）根目录下创建CNAME 文件。</p>
+<p>CNAME 文件内容是<code>linziye.com</code><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cat CNAME</div><div class="line">linziye.com</div></pre></td></tr></table></figure></p>
+<p>Github Pages 服务器读取<code>CNAME</code> 之后，会设置<code>linziye.com</code> 为主域名（Custom domain），然后将<code>linpeng13.github.io</code> 重定向到<code>linziye.com</code> 。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/09/23/seting-custom-domain/#more" rel="contents">

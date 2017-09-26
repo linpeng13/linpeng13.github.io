@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="linziye.com/"/>
-  <updated>2017-09-24T08:38:38.000Z</updated>
+  <updated>2017-09-26T01:19:53.000Z</updated>
   <id>linziye.com/</id>
   
   <author>
@@ -20,41 +20,39 @@
     <link href="linziye.com/2017/09/23/seting-custom-domain/"/>
     <id>linziye.com/2017/09/23/seting-custom-domain/</id>
     <published>2017-09-23T15:29:47.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-26T01:19:53.000Z</updated>
     
     <content type="html"><![CDATA[<p>我在阿里云上注册了一个域名 <code>linziye.com</code> ，希望能指向我的Github Pages 博客 <code>linpeng13.github.io</code> ，操作步骤如下：</p>
-<ol>
-<li><p><code>ping linpeng13.github.io</code> 得到一个IP</p>
-<img src="/2017/09/23/seting-custom-domain/1.png" alt="1.png" title="">
-
-<br>
-
+<blockquote>
+<p>劳资的域名 <code>linpeng.com</code> 已被注册，只好先用儿子的了 -_-!!!</p>
+</blockquote>
+<p>第1步：创建CNAME 文件</p>
+<p>我的Github Pages 博客采用Hexo 框架，故需要在<code>source</code> 目录下创建CNAME 文件。本质上就是在站点（推送到Github Pages 的博客站点）根目录下创建CNAME 文件。</p>
+<p>CNAME 文件内容是<code>linziye.com</code><br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cat CNAME</div><div class="line">linziye.com</div></pre></td></tr></table></figure></p>
+<p>Github Pages 服务器读取<code>CNAME</code> 之后，会设置<code>linziye.com</code> 为主域名（Custom domain），然后将<code>linpeng13.github.io</code> 重定向到<code>linziye.com</code> 。</p>
 <a id="more"></a>
-</li>
-<li><p>修改阿里云上域名解析记录，添加一个A记录，用得到的IP</p>
-<img src="/2017/09/23/seting-custom-domain/2.png" alt="2.png" title="">
-
-<br>
-
-</li>
-<li><p>登录<code>http://github.com</code> &gt;进入<code>linpeng13.github.io</code> 项目&gt;Settings &gt;Custom domain &gt;输入域名<code>linziye.com</code> &gt;Save</p>
-<img src="/2017/09/23/seting-custom-domain/3.png" alt="3.png" title="">
-
-<br>
-
-<img src="/2017/09/23/seting-custom-domain/4.png" alt="4.png" title="">
-</li>
+<p>第2步：域名解析</p>
+<p>登录阿里云-&gt;管理控制台-&gt;域名，在<code>linziye.com</code> 域名解析设置中增加3条记录，即：<br><img src="/2017/09/23/seting-custom-domain/1.png" alt="1.png" title=""></p>
+<p>在域名解析中，A 记录就是直接指定一个IP ，CNAME 就是重命名，指向另一个域名。</p>
+<ol>
+<li>在阿里云控制台，设置记录类型为<code>A</code> ，主机记录为<code>@</code> ，记录值是IP <code>192.30.252.153</code> ，其中<code>192.30.252.153</code> 是Github Pages 服务器指定的IP地址，访问该IP地址即表示访问Github Pages ；</li>
+<li>在阿里云控制台，设置记录类型为<code>A</code> ，主机记录为<code>@</code> ，记录值是IP <code>192.30.252.154</code> ，原理同上；</li>
+<li>在阿里云控制台，设置记录类型为<code>CNAME</code> ，主机记录为<code>www</code> ，记录值是<code>linpeng13.github.io.</code> ，注意记录值中<code>.io</code> <strong>后面还有一个点<code>.</code> </strong></li>
 </ol>
+<p>第3步：等待DNS 配置生效</p>
+<p>对DNS 的配置不是立即生效的，过10分钟再去访问域名 <code>linziye.com</code> ，看看是否配置成功</p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;我在阿里云上注册了一个域名 &lt;code&gt;linziye.com&lt;/code&gt; ，希望能指向我的Github Pages 博客 &lt;code&gt;linpeng13.github.io&lt;/code&gt; ，操作步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;code&gt;ping linpeng13.github.io&lt;/code&gt; 得到一个IP&lt;/p&gt;
-&lt;img src=&quot;/2017/09/23/seting-custom-domain/1.png&quot; alt=&quot;1.png&quot; title=&quot;&quot;&gt;
-
-&lt;br&gt;
+&lt;blockquote&gt;
+&lt;p&gt;劳资的域名 &lt;code&gt;linpeng.com&lt;/code&gt; 已被注册，只好先用儿子的了 -_-!!!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;第1步：创建CNAME 文件&lt;/p&gt;
+&lt;p&gt;我的Github Pages 博客采用Hexo 框架，故需要在&lt;code&gt;source&lt;/code&gt; 目录下创建CNAME 文件。本质上就是在站点（推送到Github Pages 的博客站点）根目录下创建CNAME 文件。&lt;/p&gt;
+&lt;p&gt;CNAME 文件内容是&lt;code&gt;linziye.com&lt;/code&gt;&lt;br&gt;&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ cat CNAME&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;linziye.com&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;Github Pages 服务器读取&lt;code&gt;CNAME&lt;/code&gt; 之后，会设置&lt;code&gt;linziye.com&lt;/code&gt; 为主域名（Custom domain），然后将&lt;code&gt;linpeng13.github.io&lt;/code&gt; 重定向到&lt;code&gt;linziye.com&lt;/code&gt; 。&lt;/p&gt;
     
     </summary>
     
@@ -70,7 +68,7 @@
     <link href="linziye.com/2017/09/17/the-python-standard-library/"/>
     <id>linziye.com/2017/09/17/the-python-standard-library/</id>
     <published>2017-09-17T02:38:22.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-25T00:01:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>《A Byte of Python》学习笔记</p>
 <h2 id="sys-module"><a href="#sys-module" class="headerlink" title="sys module"></a>sys module</h2><p>The <code>sys</code> module contains system-specific functionality.</p>
@@ -99,7 +97,7 @@
     <link href="linziye.com/2017/09/15/python-built-in-data-structures/"/>
     <id>linziye.com/2017/09/15/python-built-in-data-structures/</id>
     <published>2017-09-15T09:23:32.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-25T00:01:56.000Z</updated>
     
     <content type="html"><![CDATA[<p>《A Byte of Python》学习笔记</p>
 <h2 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h2><blockquote><p>There are four built-in data structures in Python - <em>list</em>, <em>tuple</em>, <em>dictionary</em> and <em>set</em>.</p>
@@ -148,7 +146,7 @@
     <link href="linziye.com/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/"/>
     <id>linziye.com/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/</id>
     <published>2017-09-05T06:14:35.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-25T00:01:56.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="调用顺序"><a href="#调用顺序" class="headerlink" title="调用顺序"></a>调用顺序</h2><p>普通用户登录Ubuntu 系统一般会依次调用如下配置文件：</p>
 <ol>
@@ -193,9 +191,9 @@
       <category term="Linux" scheme="linziye.com/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="linziye.com/tags/Linux/"/>
-    
       <category term="Ubuntu" scheme="linziye.com/tags/Ubuntu/"/>
+    
+      <category term="Linux" scheme="linziye.com/tags/Linux/"/>
     
   </entry>
   
@@ -204,7 +202,7 @@
     <link href="linziye.com/2017/09/05/ubuntu-system-user-and-user-groups/"/>
     <id>linziye.com/2017/09/05/ubuntu-system-user-and-user-groups/</id>
     <published>2017-09-05T02:55:18.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-25T00:01:56.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a>/etc/passwd</h2><p>查看Ubuntu 系统存在的用户信息，可执行：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/passwd</div></pre></td></tr></table></figure>
@@ -268,9 +266,9 @@
       <category term="Linux" scheme="linziye.com/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="linziye.com/tags/Linux/"/>
-    
       <category term="Ubuntu" scheme="linziye.com/tags/Ubuntu/"/>
+    
+      <category term="Linux" scheme="linziye.com/tags/Linux/"/>
     
   </entry>
   
@@ -279,7 +277,7 @@
     <link href="linziye.com/2017/09/03/some-hexo-next-set-the-page-header-foter./"/>
     <id>linziye.com/2017/09/03/some-hexo-next-set-the-page-header-foter./</id>
     <published>2017-09-03T09:51:17.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-25T00:01:56.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h2><p><img src="/uploads/2017-09-03/header.png" alt="页头"><br>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。</p>
 <h3 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h3><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="external">leanCloud,实现文章阅读量统计</a>》。</p>
@@ -324,7 +322,7 @@
     <link href="linziye.com/2017/09/02/hexo-github-build-personal-blog/"/>
     <id>linziye.com/2017/09/02/hexo-github-build-personal-blog/</id>
     <published>2017-09-02T13:29:20.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-25T00:01:56.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="/uploads/2017-09-02/hexo-home.png" alt="Hexo"><br>Hexo 是一个快速、简洁且高效的博客框架，基于Node.js ，使用 Markdown（或其他渲染引擎）解析文章，并且只需一条指令即可部署到 GitHub Pages（或Heroku 等其他网站）。</p>
 <p>使用Hexo+Github 搭建个人博客，简单来说分两步：</p>
@@ -452,7 +450,7 @@
     <link href="linziye.com/2016/05/19/linux-iptables-setings/"/>
     <id>linziye.com/2016/05/19/linux-iptables-setings/</id>
     <published>2016-05-19T00:30:21.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-25T00:01:56.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="屏蔽指定IP"><a href="#屏蔽指定IP" class="headerlink" title="屏蔽指定IP"></a>屏蔽指定IP</h2><p>以屏蔽IP： 192.168.184.13 为例 </p>
 <h3 id="方法1：命令行"><a href="#方法1：命令行" class="headerlink" title="方法1：命令行"></a>方法1：命令行</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo iptables -I INPUT -s 192.168.184.13 -j DROP</div></pre></td></tr></table></figure>
@@ -485,7 +483,7 @@
     <link href="linziye.com/2016/03/22/%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server/"/>
     <id>linziye.com/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/</id>
     <published>2016-03-22T06:47:55.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-25T00:01:56.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="慕课网-在Ubuntu-Server下搭建LAMP环境"><a href="#慕课网-在Ubuntu-Server下搭建LAMP环境" class="headerlink" title="慕课网-在Ubuntu Server下搭建LAMP环境"></a>慕课网-在Ubuntu Server下搭建LAMP环境</h2><p><a href="http://www.imooc.com/learn/170" target="_blank" rel="external">课程链接</a></p>
 <h3 id="2-1-性感的Ubuntu-Server操作系统"><a href="#2-1-性感的Ubuntu-Server操作系统" class="headerlink" title="2-1 性感的Ubuntu Server操作系统"></a>2-1 性感的Ubuntu Server操作系统</h3><ul>
@@ -533,9 +531,9 @@
       <category term="Linux" scheme="linziye.com/categories/Linux/"/>
     
     
-      <category term="Linux" scheme="linziye.com/tags/Linux/"/>
-    
       <category term="Ubuntu" scheme="linziye.com/tags/Ubuntu/"/>
+    
+      <category term="Linux" scheme="linziye.com/tags/Linux/"/>
     
       <category term="Apache" scheme="linziye.com/tags/Apache/"/>
     
@@ -552,7 +550,7 @@
     <link href="linziye.com/2016/03/18/the-meaning-of-the-shel-variable-in-linux/"/>
     <id>linziye.com/2016/03/18/the-meaning-of-the-shel-variable-in-linux/</id>
     <published>2016-03-18T11:26:07.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-25T00:01:56.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="shell变量"><a href="#shell变量" class="headerlink" title="shell变量 $$"></a>shell变量 <code>$$</code></h2><p>含义：shell本身的PID（ProcessID）</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ cat test.sh</div><div class="line"><span class="meta">#!/bin/bash</span></div><div class="line"><span class="comment">#</span></div><div class="line"></div><div class="line"><span class="built_in">printf</span> <span class="string">"this is %s\n"</span> <span class="string">"$$"</span></div><div class="line">$ bash test.sh aaa</div><div class="line">this is 2638</div></pre></td></tr></table></figure>
@@ -586,7 +584,7 @@
     <link href="linziye.com/2016/01/08/hexo-releases-new-articles/"/>
     <id>linziye.com/2016/01/08/hexo-releases-new-articles/</id>
     <published>2016-01-08T05:56:12.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-25T00:01:56.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="发布新文章到我的github步骤"><a href="#发布新文章到我的github步骤" class="headerlink" title="发布新文章到我的github步骤"></a>发布新文章到我的github步骤</h2><ol>
 <li><p>新建文章文件</p>
@@ -630,7 +628,7 @@
     <link href="linziye.com/2016/01/08/nginx-instal/"/>
     <id>linziye.com/2016/01/08/nginx-instal/</id>
     <published>2016-01-08T04:20:25.000Z</published>
-    <updated>2017-09-24T08:38:38.000Z</updated>
+    <updated>2017-09-25T00:01:56.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="环境：OS-X-Yosemite-10-10-5"><a href="#环境：OS-X-Yosemite-10-10-5" class="headerlink" title="环境：OS X Yosemite(10.10.5)"></a>环境：OS X Yosemite(10.10.5)</h2><ol>
 <li><p>下载<a href="http://www.pcre.org/" target="_blank" rel="external">PCRE</a>和<a href="http://nginx.org/" target="_blank" rel="external">nginx</a></p>

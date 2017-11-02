@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Anaconda 官方源下载慢的解决方案]]></title>
+    <url>%2F2017%2F11%2F02%2FAnaconda-%E5%AE%98%E6%96%B9%E6%BA%90%E4%B8%8B%E8%BD%BD%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%2F</url>
+    <content type="text"><![CDATA[下载安装Anaconda 后，需要下载pandas 等包，发现默认的官方源下载慢。搜索解决方案，发现TUNA 提供了Anaconda 仓库的镜像。按照指示步骤操作如下：12conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/conda config --set show_channel_urls yes 经测试，果然快了许多！ 上述2 行命令的效果，即修改文件～/.condarc 。该文件原内容是：123channels: - defaultsssl_verify: true 修改后（即执行命令后）内容是：12345channels: - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ - defaultsssl_verify: trueshow_channel_urls: true]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Anaconda</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Setting Custom domain]]></title>
     <url>%2F2017%2F09%2F23%2Fseting-custom-domain%2F</url>
     <content type="text"><![CDATA[我在阿里云上注册了一个域名 linziye.com ，希望能指向我的Github Pages 博客 linpeng13.github.io ，操作步骤如下： 劳资的域名 linpeng.com 已被注册，只好先用儿子的了 -_-!!! 第1步：创建CNAME 文件 我的Github Pages 博客采用Hexo 框架，故需要在source 目录下创建CNAME 文件。本质上就是在站点（推送到Github Pages 的博客站点）根目录下创建CNAME 文件。 CNAME 文件内容是linziye.com12$ cat CNAMElinziye.com Github Pages 服务器读取CNAME 之后，会设置linziye.com 为主域名（Custom domain），然后将linpeng13.github.io 重定向到linziye.com 。 第2步：域名解析 登录阿里云-&gt;管理控制台-&gt;域名，在linziye.com 域名解析设置中增加3条记录，即： 在域名解析中，A 记录就是直接指定一个IP ，CNAME 就是重命名，指向另一个域名。 在阿里云控制台，设置记录类型为A ，主机记录为@ ，记录值是IP 192.30.252.153 ，其中192.30.252.153 是Github Pages 服务器指定的IP地址，访问该IP地址即表示访问Github Pages ； 在阿里云控制台，设置记录类型为A ，主机记录为@ ，记录值是IP 192.30.252.154 ，原理同上； 在阿里云控制台，设置记录类型为CNAME ，主机记录为www ，记录值是linpeng13.github.io. ，注意记录值中.io 后面还有一个点. 第3步：等待DNS 配置生效 对DNS 的配置不是立即生效的，过10分钟再去访问域名 linziye.com ，看看是否配置成功]]></content>

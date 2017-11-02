@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="linziye.com/"/>
-  <updated>2017-11-02T08:45:46.000Z</updated>
+  <updated>2017-11-02T13:28:59.000Z</updated>
   <id>linziye.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="linziye.com/2017/11/02/introduction-to-conda-operations-(comonly-used-comands)/"/>
     <id>linziye.com/2017/11/02/introduction-to-conda-operations-(comonly-used-comands)/</id>
     <published>2017-11-02T06:54:22.000Z</published>
-    <updated>2017-11-02T08:45:46.000Z</updated>
+    <updated>2017-11-02T13:28:59.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.</p>
@@ -38,7 +38,7 @@
 </li>
 </ol>
 <a id="more"></a>
-<h2 id="Managing-environments"><a href="#Managing-environments" class="headerlink" title="Managing environments"></a>Managing environments</h2><ol>
+<h2 id="Managing-environments"><a href="#Managing-environments" class="headerlink" title="Managing environments"></a><a name="Managing-environments">Managing environments</a></h2><ol>
 <li><p>创建运行环境</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ conda create --name snowflakes biopython</div><div class="line"><span class="comment">## or</span></div><div class="line">$ conda create -n snowflakes biopython</div></pre></td></tr></table></figure>
 <p> 说明：上述指令创建一个名为<code>snowflakes</code> 的运行环境，并安装包<code>biopython</code> 。该运行环境默认下载存放到conda 安装目录的<code>envs</code> 目录下</p>
@@ -65,11 +65,11 @@
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda remove --name flowers --all</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<h2 id="Managing-Python"><a href="#Managing-Python" class="headerlink" title="Managing Python"></a>Managing Python</h2><ol>
+<h2 id="Managing-Python"><a href="#Managing-Python" class="headerlink" title="Managing Python"></a>Managing Python</h2><p>Conda 处理Python 和处理其他程序包是一样的，故大部分指令和章节<a href="#Managing-environments">Managing environments</a> 是一样的。</p>
+<ol>
 <li>列出可用的Python 版本 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda search --full-name python</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>Conda 处理Python 和处理其他程序包是一样的，故其他指令和章节<a href="#Managing environments">Managing environments</a> 是一样的。</p>
 <h2 id="Managing-packages"><a href="#Managing-packages" class="headerlink" title="Managing packages"></a>Managing packages</h2><ol>
 <li><p>列出当前运行环境下已安装的程序包</p>
  <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda list</div></pre></td></tr></table></figure>

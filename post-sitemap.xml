@@ -7,24 +7,24 @@
     </url>
 
     <url>
-        <loc>linziye.com/2017/11/02/Anaconda-%E5%AE%98%E6%96%B9%E6%BA%90%E4%B8%8B%E8%BD%BD%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
-        <lastmod>2017-11-02T00:18:23.000Z</lastmod>
+        <loc>linziye.com/2017/11/02/Conda-%E5%85%A5%E9%97%A8%EF%BC%88%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%EF%BC%89/</loc>
+        <lastmod>2017-11-02T08:44:26.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>linziye.com/2017/09/05/ubuntu-system-user-and-user-groups/</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
+        <loc>linziye.com/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/</loc>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>linziye.com/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
+        <loc>linziye.com/2017/09/05/ubuntu-system-user-and-user-group/</loc>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -32,7 +32,7 @@
 
     <url>
         <loc>linziye.com/2017/09/15/python-built-in-data-structures/</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -40,7 +40,15 @@
 
     <url>
         <loc>linziye.com/2017/09/17/the-python-standard-library/</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>linziye.com/2017/11/02/anaconda-oficial-source-download-slow-solution/</loc>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -48,15 +56,7 @@
 
     <url>
         <loc>linziye.com/2017/09/23/seting-custom-domain/</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>linziye.com/2017/09/02/hexo-github-build-personal-blog/</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -64,15 +64,7 @@
 
     <url>
         <loc>linziye.com/2017/09/03/some-hexo-next-set-the-page-header-foter./</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>linziye.com/2016/01/08/hexo-releases-new-articles/</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -80,15 +72,31 @@
 
     <url>
         <loc>linziye.com/2016/05/19/linux-iptables-setings/</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>linziye.com/2016/03/18/the-meaning-of-the-shel-variable-in-linux/</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
+        <loc>linziye.com/2017/09/02/hexo-github-build-personal-blog/</loc>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>linziye.com/2016/01/08/hexo-releases-new-articles/</loc>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>linziye.com/2016/03/18/the-meaning-of-shel-variable-in-linux/</loc>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -96,15 +104,15 @@
 
     <url>
         <loc>linziye.com/2016/01/08/nginx-instal/</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>linziye.com/2016/03/22/%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server/</loc>
-        <lastmod>2017-09-26T01:20:38.000Z</lastmod>
+        <loc>linziye.com/2016/03/22/%5Blearning%5D-mo-net-to-build-a-lamp-environment-in-ubuntu-server/</loc>
+        <lastmod>2017-11-02T00:18:42.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

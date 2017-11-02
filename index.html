@@ -320,7 +320,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="linziye.com/2017/11/02/Anaconda-官方源下载慢的解决方案/">
+    <link itemprop="mainEntityOfPage" href="linziye.com/2017/11/02/Conda-入门（常用命令）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sky">
@@ -339,7 +339,250 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/02/Anaconda-官方源下载慢的解决方案/" itemprop="url">Anaconda 官方源下载慢的解决方案</a></h1>
+                <a class="post-title-link" href="/2017/11/02/Conda-入门（常用命令）/" itemprop="url">Conda 操作入门（常用命令）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-02T14:54:22+08:00">
+                2017-11-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/11/02/Conda-入门（常用命令）/" class="leancloud_visitors" data-flag-title="Conda 操作入门（常用命令）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  574(字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2(分)
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.</p>
+</blockquote>
+<p>Anaconda 基于Conda ，Conda 的入门操作参考<a href="https://conda.io/docs/user-guide/getting-started.html" target="_blank" rel="external">Conda Getting started</a></p>
+<h2 id="Managing-conda"><a href="#Managing-conda" class="headerlink" title="Managing conda"></a>Managing conda</h2><ol>
+<li><p>获取Conda 版本</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda --version</div></pre></td></tr></table></figure>
+</li>
+<li><p>更新Conda 版本</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda update conda</div></pre></td></tr></table></figure>
+</li>
+<li><p>帮助</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">conda --<span class="built_in">help</span></div><div class="line"><span class="comment">## or</span></div><div class="line">conda -h</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Managing-environments"><a href="#Managing-environments" class="headerlink" title="Managing environments"></a>Managing environments</h2><ol>
+<li><p>创建运行环境</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ conda create --name snowflakes biopython</div><div class="line"><span class="comment">## or</span></div><div class="line">$ conda create -n snowflakes biopython</div></pre></td></tr></table></figure>
+<p> 说明：上述指令创建一个名为<code>snowflakes</code> 的运行环境，并安装包<code>biopython</code> 。该运行环境默认下载存放到conda 安装目录的<code>envs</code> 目录下</p>
+<p> 若希望安装制定的Python版本，则执行命令如下：</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda create --name bunnies python=3.5 astroid babel</div></pre></td></tr></table></figure>
+<p> 说明：上述指令创建一个名为<code>bunnies</code> 的运行环境，并安装<code>python3.5</code> 、<code>astroid</code> 和<code>babel</code> 。注意需要 <strong>一次性安装所有程序包</strong>，否则一个个单独安装可能导致依赖冲突。</p>
+</li>
+<li><p>激活使用运行环境<br> 希望激活使用某个指定的运行环境，或者从现有运行环境切换到指定的运行环境，采用如下命令：</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">source</span> activate snowflakes</div></pre></td></tr></table></figure>
+<p> 说明：上述指令运行于<code>Linux</code> 和<code>macOS</code> ，若是<code>Windows</code> ，则是指令<code>activate snowflakes</code></p>
+</li>
+<li><p>展现运行环境列表</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda info --envs</div></pre></td></tr></table></figure>
+</li>
+<li><p>退出指定运行环境（退回到 root）</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">source</span> deactivate</div></pre></td></tr></table></figure>
+<p> 说明：上述指令运行于<code>Linux</code> 和<code>macOS</code> ，若是<code>Windows</code> 操作系统，则是指令<code>deactivate</code></p>
+</li>
+<li><p>运行环境克隆</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda create --name flowers --<span class="built_in">clone</span> snowflakes</div></pre></td></tr></table></figure>
+<p> 说明：上述指令克隆运行环境<code>snowflakes</code> ，生成新的运行环境<code>flowers</code></p>
+</li>
+<li><p>删除运行环境</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda remove --name flowers --all</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Managing-Python"><a href="#Managing-Python" class="headerlink" title="Managing Python"></a>Managing Python</h2><ol>
+<li>列出可用的Python 版本 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda search --full-name python</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Conda 处理Python 和处理其他程序包是一样的，故其他指令和章节<a href="#Managing environments">Managing environments</a> 是一样的。</p>
+<h2 id="Managing-packages"><a href="#Managing-packages" class="headerlink" title="Managing packages"></a>Managing packages</h2><ol>
+<li><p>列出当前运行环境下已安装的程序包</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda list</div></pre></td></tr></table></figure>
+</li>
+<li><p>列出仓库源中指定程序包的信息</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda search beautifulsoup4</div></pre></td></tr></table></figure>
+<p> 说明：<code>beautifulsoup4</code> 是程序包名</p>
+</li>
+<li><p>安装指定程序包</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda install --name bunnies beautifulsoup4</div></pre></td></tr></table></figure>
+<p> 说明：该指令安装程序包<code>beautifulsoup4</code> 到运行环境<code>bunnies</code> 中；若不包含<code>--name bunnies</code> ，则安装<code>beautifulsoup4</code> 到当前运行环境</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="linziye.com/2017/11/02/anaconda-oficial-source-download-slow-solution/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/author.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木月天空">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/02/anaconda-oficial-source-download-slow-solution/" itemprop="url">Anaconda 官方源下载慢的解决方案</a></h1>
         
 
         <div class="post-meta">
@@ -391,7 +634,7 @@
 
           
           
-             <span id="/2017/11/02/Anaconda-官方源下载慢的解决方案/" class="leancloud_visitors" data-flag-title="Anaconda 官方源下载慢的解决方案">
+             <span id="/2017/11/02/anaconda-oficial-source-download-slow-solution/" class="leancloud_visitors" data-flag-title="Anaconda 官方源下载慢的解决方案">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -458,7 +701,7 @@
 <p>经测试，果然快了许多！</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/02/Anaconda-官方源下载慢的解决方案/#more" rel="contents">
+            <a class="btn" href="/2017/11/02/anaconda-oficial-source-download-slow-solution/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1100,7 +1343,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="linziye.com/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/">
+    <link itemprop="mainEntityOfPage" href="linziye.com/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sky">
@@ -1119,7 +1362,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/" itemprop="url">Ubuntu 系统用户登录调用的文件（或环境变量）</a></h1>
+                <a class="post-title-link" href="/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/" itemprop="url">Ubuntu 系统用户登录调用的文件（或环境变量）</a></h1>
         
 
         <div class="post-meta">
@@ -1171,7 +1414,7 @@
 
           
           
-             <span id="/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/" class="leancloud_visitors" data-flag-title="Ubuntu 系统用户登录调用的文件（或环境变量）">
+             <span id="/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/" class="leancloud_visitors" data-flag-title="Ubuntu 系统用户登录调用的文件（或环境变量）">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1243,7 +1486,7 @@
 </ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/09/05/the-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled/#more" rel="contents">
+            <a class="btn" href="/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1294,7 +1537,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="linziye.com/2017/09/05/ubuntu-system-user-and-user-groups/">
+    <link itemprop="mainEntityOfPage" href="linziye.com/2017/09/05/ubuntu-system-user-and-user-group/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sky">
@@ -1313,7 +1556,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/05/ubuntu-system-user-and-user-groups/" itemprop="url">Ubuntu 系统用户和用户组</a></h1>
+                <a class="post-title-link" href="/2017/09/05/ubuntu-system-user-and-user-group/" itemprop="url">Ubuntu 系统用户和用户组</a></h1>
         
 
         <div class="post-meta">
@@ -1365,7 +1608,7 @@
 
           
           
-             <span id="/2017/09/05/ubuntu-system-user-and-user-groups/" class="leancloud_visitors" data-flag-title="Ubuntu 系统用户和用户组">
+             <span id="/2017/09/05/ubuntu-system-user-and-user-group/" class="leancloud_visitors" data-flag-title="Ubuntu 系统用户和用户组">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -1443,7 +1686,7 @@
 </ul>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/09/05/ubuntu-system-user-and-user-groups/#more" rel="contents">
+            <a class="btn" href="/2017/09/05/ubuntu-system-user-and-user-group/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2055,198 +2298,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="linziye.com/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sky">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/author.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="木月天空">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/" itemprop="url">【学习】慕课网-在Ubuntu Server下搭建LAMP环境</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-03-22T14:47:55+08:00">
-                2016-03-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/" class="leancloud_visitors" data-flag-title="【学习】慕课网-在Ubuntu Server下搭建LAMP环境">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  350(字)
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1(分)
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="慕课网-在Ubuntu-Server下搭建LAMP环境"><a href="#慕课网-在Ubuntu-Server下搭建LAMP环境" class="headerlink" title="慕课网-在Ubuntu Server下搭建LAMP环境"></a>慕课网-在Ubuntu Server下搭建LAMP环境</h2><p><a href="http://www.imooc.com/learn/170" target="_blank" rel="external">课程链接</a></p>
-<h3 id="2-1-性感的Ubuntu-Server操作系统"><a href="#2-1-性感的Ubuntu-Server操作系统" class="headerlink" title="2-1 性感的Ubuntu Server操作系统"></a>2-1 性感的Ubuntu Server操作系统</h3><ul>
-<li>LTS:Long Term Support(长期支持版本)</li>
-<li>该课程使用Ubuntu Server环境版本是 <em>LTS 12.04</em></li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2016/03/22/[study]-mu-course-network-build-a-lamp-environment-in-ubuntu-server/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2300,7 +2351,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2322,7 +2373,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

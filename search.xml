@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Conda 操作入门（常用命令）]]></title>
+    <url>%2F2017%2F11%2F02%2FConda-%E5%85%A5%E9%97%A8%EF%BC%88%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language. Anaconda 基于Conda ，Conda 的入门操作参考Conda Getting started Managing conda 获取Conda 版本 1$ conda --version 更新Conda 版本 1$ conda update conda 帮助 123conda --help## orconda -h Managing environments 创建运行环境 123$ conda create --name snowflakes biopython## or$ conda create -n snowflakes biopython 说明：上述指令创建一个名为snowflakes 的运行环境，并安装包biopython 。该运行环境默认下载存放到conda 安装目录的envs 目录下 若希望安装制定的Python版本，则执行命令如下： 1conda create --name bunnies python=3.5 astroid babel 说明：上述指令创建一个名为bunnies 的运行环境，并安装python3.5 、astroid 和babel 。注意需要 一次性安装所有程序包，否则一个个单独安装可能导致依赖冲突。 激活使用运行环境 希望激活使用某个指定的运行环境，或者从现有运行环境切换到指定的运行环境，采用如下命令： 1$ source activate snowflakes 说明：上述指令运行于Linux 和macOS ，若是Windows ，则是指令activate snowflakes 展现运行环境列表 1$ conda info --envs 退出指定运行环境（退回到 root） 1$ source deactivate 说明：上述指令运行于Linux 和macOS ，若是Windows 操作系统，则是指令deactivate 运行环境克隆 1$ conda create --name flowers --clone snowflakes 说明：上述指令克隆运行环境snowflakes ，生成新的运行环境flowers 删除运行环境 1$ conda remove --name flowers --all Managing Python 列出可用的Python 版本 1$ conda search --full-name python Conda 处理Python 和处理其他程序包是一样的，故其他指令和章节Managing environments 是一样的。 Managing packages 列出当前运行环境下已安装的程序包 1$ conda list 列出仓库源中指定程序包的信息 1$ conda search beautifulsoup4 说明：beautifulsoup4 是程序包名 安装指定程序包 1$ conda install --name bunnies beautifulsoup4 说明：该指令安装程序包beautifulsoup4 到运行环境bunnies 中；若不包含--name bunnies ，则安装beautifulsoup4 到当前运行环境]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Conda</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Anaconda 官方源下载慢的解决方案]]></title>
-    <url>%2F2017%2F11%2F02%2FAnaconda-%E5%AE%98%E6%96%B9%E6%BA%90%E4%B8%8B%E8%BD%BD%E6%85%A2%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%2F</url>
+    <url>%2F2017%2F11%2F02%2Fanaconda-oficial-source-download-slow-solution%2F</url>
     <content type="text"><![CDATA[下载安装Anaconda 后，需要下载pandas 等包，发现默认的官方源下载慢。搜索解决方案，发现TUNA 提供了Anaconda 仓库的镜像。按照指示步骤操作如下：12conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/conda config --set show_channel_urls yes 经测试，果然快了许多！ 上述2 行命令的效果，即修改文件～/.condarc 。该文件原内容是：123channels: - defaultsssl_verify: true 修改后（即执行命令后）内容是：12345channels: - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ - defaultsssl_verify: trueshow_channel_urls: true]]></content>
       <categories>
         <category>Python</category>
@@ -48,26 +60,26 @@
   </entry>
   <entry>
     <title><![CDATA[Ubuntu 系统用户登录调用的文件（或环境变量）]]></title>
-    <url>%2F2017%2F09%2F05%2Fthe-ubuntu-system-user-logs-in-the-files-(or-environment-variables)-that-are-caled%2F</url>
+    <url>%2F2017%2F09%2F05%2Fthe-ubuntu-system-cal-user-login-file-(or-environment-variables)%2F</url>
     <content type="text"><![CDATA[调用顺序普通用户登录Ubuntu 系统一般会依次调用如下配置文件： /etc/environment：在登录时操作系统使用的第一个文件，设置系统默认的环境变量； /etc/profile：在登录时操作系统定制用户环境时使用的第二个文件，此文件为系统的每个用户设置默认的变量，当用户第一次登录时，该文件被执行； ~/.bash_profile：登录用户的环境变量设置； ~/.profile：登录用户环境变量设置（若不存在 ~/.bash_profile 文件时执行）； /etc/environment该文件默认的内容如下： 1PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games" 若需要配置系统用户均需要用到的环境变量，例如JAVA 相关，可增加如下内容： 12JAVA_HOME="/usr/jdk1.8.0_144"JRE_HOME="/usr/jdk1.8.0_144/jre" /etc/profile该文件默认的内容如下： 12345678910111213141516171819202122232425# /etc/profile: system-wide .profile file for the Bourne shell (sh(1))# and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).if [ "$PS1" ]; then if [ "$BASH" ] &amp;&amp; [ "$BASH" != "/bin/sh" ]; then # The file bash.bashrc already sets the default PS1. # PS1='\h:\w\$ ' if [ -f /etc/bash.bashrc ]; then . /etc/bash.bashrc fi else if [ "`id -u`" -eq 0 ]; then PS1='# ' else PS1='$ ' fi fifiif [ -d /etc/profile.d ]; then for i in /etc/profile.d/*.sh; do if [ -r $i ]; then . $i fi done unset ifi 该文件关键点分析如下： 若环境变量 BASH 存在且非 /bin/sh ，则执行配置文件 /etc/bash.bashrc ； 若不满足第1点，则按照root 用户为# ，其他用户为$ 设置提示符； 依次执行目录 /etc/profile.d 下的配置文件； ~/.profile该文件默认的内容如下： 1234567891011121314151617181920# ~/.profile: executed by the command interpreter for login shells.# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login# exists.# see /usr/share/doc/bash/examples/startup-files for examples.# the files are located in the bash-doc package.# the default umask is set in /etc/profile; for setting the umask# for ssh logins, install and configure the libpam-umask package.#umask 022# if running bashif [ -n "$BASH_VERSION" ]; then # include .bashrc if it exists if [ -f "$HOME/.bashrc" ]; then . "$HOME/.bashrc" fifi# set PATH so it includes user's private bin directoriesPATH="$HOME/bin:$HOME/.local/bin:$PATH" 注意如下说明： This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login exists.]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[Ubuntu 系统用户和用户组]]></title>
-    <url>%2F2017%2F09%2F05%2Fubuntu-system-user-and-user-groups%2F</url>
+    <url>%2F2017%2F09%2F05%2Fubuntu-system-user-and-user-group%2F</url>
     <content type="text"><![CDATA[/etc/passwd查看Ubuntu 系统存在的用户信息，可执行： 1cat /etc/passwd 该文件每行代表一个用户，格式为：用户名:口令:用户标识号:组标识号:注释性描述:主目录:登录Shell 例如：hadoop:x:1000:1000:hadoop-01,,,:/home/hadoop:/bin/bash 用户名：hadoop 口令：x（详见下节 “/etc/shadow”） 用户标识号：1000 组标识号：1000 注释性描述：hadoop-01,,, 主目录：/home/hadoop 登录Shell：/bin/bash /etc/shadowUnix系统最初是用明文保存密码的，后来由于安全的考虑，采用crypt() 算法加密密码并存放在 /etc/passwd 文件。现在，由于计算机处理能力的提高，使密码破解变得越来越容易。/etc/passwd 文件是所有合法用户都可访问的，大家都可互相看到密码的加密字符串，这给系统带来很大的安全威胁。现代的Unix系统使用影子密码系统，它把密码从/etc/passwd 文件中分离出来，真正的密码保存在/etc/shadow 文件中，该文件只能由超级用户访问。这样入侵者就不能获得加密密码串，用于破解。使用shadow 密码文件后，/etc/passwd 文件中所有帐户的password 域的内容为”x”，如果password 域的内容为”*”，则该帐号被停用。 格式为：username:password:last_change:min_change:max_change:warm:failed_expire:expiration:reserved 1sudo cat /etc/shadow 例如：hadoop:$1$dwXYMXgF$4Tqzw9pwsUCsYAWmJEgak/:17381:0:99999:7::: username：hadoop password：$1$dwXYMXgF$4Tqzw9pwsUCsYAWmJEgak/ last_change：17381（最近更改密码的日期，其是以1970年1月1日做为第1天，然后顺次相加） min_change：0（密码不可更改的天数，即如果你不想让某个用户频繁更改密码就可以把这个设成10000） max_change：99999（密码需要重新更改的天数，即密码在多少天内必须得改了） warm：7（密码更改期限前的警告日期） failed_expire：（密码过期的宽限时间） expiration：（账号失效时间） reserved： /etc/group查看Ubuntu 系统存在的组信息，可执行： 1cat /etc/group 该文件每行代表一个组，格式为：groupname:password:gid:members 例如：hadoop:x:1000: groupname：hadoop password：x（同上节 “/etc/shadow”） gid：组标识号 members：组内成员]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -110,14 +122,14 @@
   </entry>
   <entry>
     <title><![CDATA[【学习】慕课网-在Ubuntu Server下搭建LAMP环境]]></title>
-    <url>%2F2016%2F03%2F22%2F%5Bstudy%5D-mu-course-network-build-a-lamp-environment-in-ubuntu-server%2F</url>
+    <url>%2F2016%2F03%2F22%2F%5Blearning%5D-mo-net-to-build-a-lamp-environment-in-ubuntu-server%2F</url>
     <content type="text"><![CDATA[慕课网-在Ubuntu Server下搭建LAMP环境课程链接 2-1 性感的Ubuntu Server操作系统 LTS:Long Term Support(长期支持版本) 该课程使用Ubuntu Server环境版本是 LTS 12.04 4-1 使用apt-get工具安装Apache PHP MySQL Ubuntu 使用 apt-get 命令获取并安装软件安装包 检查Apache是否已加载php5_module模块，执行命令 1cat /etc/apache2/mods-enabled/php5.load 如果出现如下提示，说明已加载 1LoadModule php5_module /usr/lib/apache2/modules/libphp5.so 检查PHP是否已安装加载MYSQL.so扩展，执行命令 1cat /etc/php5/conf.d/mysql.ini 若存在该文件，且显示如下提示，说明已加载 1extension=mysql.so 4-3 给PHP添加常用扩展 安装了GD库和CURL（需了解是什么） 5-3 LAMP环境配置文件详解 Apache 配置文件加载流程通过 apache.conf 加载：conf.d/httpd.confports.confmods-enabled/sites-enabled/* MySQL 核心配置文件 my.cnf PHP 核心配置文件 php.ini 5-7 在Apache中配置虚拟主机在Ubuntu Server操作系统中，有一些软件的敏感操作受到 apparmore 的约束（apparmore是系统安全应用），apparmore关于mysql安全操作的配置文件路径是： 1/etc/apparmore.d/usr.sbin.mysqld 5-8 MySQL数据存储目录迁移默认情况下，mysql的数据存储目录是 /var/lib/mysql 5-11 开启MySQL的remote access软件： navicat]]></content>
       <categories>
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Ubuntu</tag>
         <tag>Apache</tag>
         <tag>MySQL</tag>
         <tag>PHP</tag>
@@ -126,7 +138,7 @@
   </entry>
   <entry>
     <title><![CDATA[linux中shell变量含义]]></title>
-    <url>%2F2016%2F03%2F18%2Fthe-meaning-of-the-shel-variable-in-linux%2F</url>
+    <url>%2F2016%2F03%2F18%2Fthe-meaning-of-shel-variable-in-linux%2F</url>
     <content type="text"><![CDATA[shell变量 $$含义：shell本身的PID（ProcessID） 1234567$ cat test.sh#!/bin/bash#printf "this is %s\n" "$$"$ bash test.sh aaathis is 2638 shell变量 $@含义：所有参数列表。如果”$@”用引号(“”)括起来的情况、以”$1” “$2” … “$n” 的形式输出所有参数 123456789$ cat test.sh#!/bin/bash#printf "this is %s\n" "$@"$ bash test.sh aaa bbb cccthis is aaathis is bbbthis is ccc shell变量 $*含义：所有参数列表。如果”$*”用引号(“”)括起来的情况、以”$1 $2 … $n” 的形式输出所有参数 1234567$ cat test.sh#!/bin/bash#printf "this is %s\n" "$*"$ bash test.sh aaa bbb cccthis is aaa bbb ccc shell变量 $#含义：shell参数个数 1234567$ cat test.sh#!/bin/bash#printf "this is %s\n" "$#"$ bash test.sh aaa bbb cccthis is 3]]></content>
       <categories>
         <category>Linux</category>

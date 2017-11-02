@@ -85,7 +85,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux,Ubuntu," />
 
 
 
@@ -103,17 +103,18 @@
 
 
 
-<meta name="description" content="我2007届福大本科，专注金融支付8年，技术停滞，琐事太多，辞了工作，和朋友做点小生意，被老婆包养。 工作经历 福建升腾资讯 2009/04 - 2015/05 厦门东南融通 2007/07 - 2009/03  技术 融通前期负责Diebold（迪堡） ATM软件，OS/2环境，本质C语言编程； 融通后期从ATMC切到ATMP，升腾前4年吃了老本，做电话POS的金融前置平台。谋生的本领是 Lin">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About me">
-<meta property="og:url" content="linziye.com/about/index.html">
+<meta name="description" content="调用顺序普通用户登录Ubuntu 系统一般会依次调用如下配置文件：  /etc/environment：在登录时操作系统使用的第一个文件，设置系统默认的环境变量； /etc/profile：在登录时操作系统定制用户环境时使用的第二个文件，此文件为系统的每个用户设置默认的变量，当用户第一次登录时，该文件被执行； ~/.bash_profile：登录用户的环境变量设置； ~/.profile：登录用户">
+<meta name="keywords" content="Linux,Ubuntu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu 系统用户登录调用的文件（或环境变量）">
+<meta property="og:url" content="linziye.com/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/index.html">
 <meta property="og:site_name" content="木月天空">
-<meta property="og:description" content="我2007届福大本科，专注金融支付8年，技术停滞，琐事太多，辞了工作，和朋友做点小生意，被老婆包养。 工作经历 福建升腾资讯 2009/04 - 2015/05 厦门东南融通 2007/07 - 2009/03  技术 融通前期负责Diebold（迪堡） ATM软件，OS/2环境，本质C语言编程； 融通后期从ATMC切到ATMP，升腾前4年吃了老本，做电话POS的金融前置平台。谋生的本领是 Lin">
+<meta property="og:description" content="调用顺序普通用户登录Ubuntu 系统一般会依次调用如下配置文件：  /etc/environment：在登录时操作系统使用的第一个文件，设置系统默认的环境变量； /etc/profile：在登录时操作系统定制用户环境时使用的第二个文件，此文件为系统的每个用户设置默认的变量，当用户第一次登录时，该文件被执行； ~/.bash_profile：登录用户的环境变量设置； ~/.profile：登录用户">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2015-05-18T08:39:23.000Z">
+<meta property="og:updated_time" content="2017-11-02T00:18:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About me">
-<meta name="twitter:description" content="我2007届福大本科，专注金融支付8年，技术停滞，琐事太多，辞了工作，和朋友做点小生意，被老婆包养。 工作经历 福建升腾资讯 2009/04 - 2015/05 厦门东南融通 2007/07 - 2009/03  技术 融通前期负责Diebold（迪堡） ATM软件，OS/2环境，本质C语言编程； 融通后期从ATMC切到ATMP，升腾前4年吃了老本，做电话POS的金融前置平台。谋生的本领是 Lin">
+<meta name="twitter:title" content="Ubuntu 系统用户登录调用的文件（或环境变量）">
+<meta name="twitter:description" content="调用顺序普通用户登录Ubuntu 系统一般会依次调用如下配置文件：  /etc/environment：在登录时操作系统使用的第一个文件，设置系统默认的环境变量； /etc/profile：在登录时操作系统定制用户环境时使用的第二个文件，此文件为系统的每个用户设置默认的变量，当用户第一次登录时，该文件被执行； ~/.bash_profile：登录用户的环境变量设置； ~/.profile：登录用户">
 
 
 
@@ -143,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="linziye.com/about/"/>
+  <link rel="canonical" href="linziye.com/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/"/>
 
 
 
 
 
-  <title>About me | 木月天空</title>
+  <title>Ubuntu 系统用户登录调用的文件（或环境变量） | 木月天空</title>
   
 
 
@@ -308,50 +309,283 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="linziye.com/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/author.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木月天空">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">About me</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h1 id="我"><a href="#我" class="headerlink" title="我"></a>我</h1><p>2007届福大本科，专注金融支付8年，技术停滞，琐事太多，辞了工作，和朋友做点小生意，被老婆包养。</p>
-<h1 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h1><ul>
-<li>福建升腾资讯 2009/04 - 2015/05</li>
-<li>厦门东南融通 2007/07 - 2009/03</li>
-</ul>
-<h1 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h1><ol>
-<li>融通前期负责Diebold（迪堡） ATM软件，OS/2环境，本质<strong>C语言编程</strong>；</li>
-<li>融通后期从ATMC切到ATMP，升腾前4年吃了老本，做电话POS的金融前置平台。谋生的本领是 <strong>Linux/Unix C</strong>，UE coding源码和Makefile文件，ftp上传PC服务器/小型机，gcc编译，shell脚本部署/运行；使用的数据库包括：DB2、informix、oracle等；</li>
-<li>升腾后2年开始接触<strong>Android</strong>，但仅停留在基础阶段，例如改改sdk，输出演示/生产辅助用的小工具等；</li>
+          <h1 class="post-title" itemprop="name headline">Ubuntu 系统用户登录调用的文件（或环境变量）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-05T14:14:35+08:00">
+                2017-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/" class="leancloud_visitors" data-flag-title="Ubuntu 系统用户登录调用的文件（或环境变量）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  529(字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3(分)
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="调用顺序"><a href="#调用顺序" class="headerlink" title="调用顺序"></a>调用顺序</h2><p>普通用户登录Ubuntu 系统一般会依次调用如下配置文件：</p>
+<ol>
+<li><strong>/etc/environment</strong>：在登录时操作系统使用的<strong>第一</strong>个文件，设置系统默认的环境变量；</li>
+<li><strong>/etc/profile</strong>：在登录时操作系统定制用户环境时使用的<strong>第二个</strong>文件，此文件为系统的每个用户设置默认的变量，当用户第一次登录时，该文件被执行；</li>
+<li><strong>~/.bash_profile</strong>：登录用户的环境变量设置；</li>
+<li><strong>~/.profile</strong>：登录用户环境变量设置（若不存在 <code>~/.bash_profile</code> 文件时执行）；</li>
 </ol>
-<h1 id="主要项目经验"><a href="#主要项目经验" class="headerlink" title="主要项目经验"></a>主要项目经验</h1><ol>
-<li>2014年~2015年5月，5个mPOS项目，担任项目经理，其中4个出货，1个半死不活；</li>
-<li>2013年，1个智能POS项目(I/II期)， 担任项目经理，完成出货；</li>
-<li>2009年~2012年，1个电话POS前置平台项目，一期主程，二、三期兼项目经理；</li>
+<a id="more"></a>
+<h2 id="etc-environment"><a href="#etc-environment" class="headerlink" title="/etc/environment"></a>/etc/environment</h2><p>该文件默认的内容如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PATH=<span class="string">"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"</span></div></pre></td></tr></table></figure>
+<p>若需要配置系统用户均需要用到的环境变量，例如JAVA 相关，可增加如下内容：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">JAVA_HOME=<span class="string">"/usr/jdk1.8.0_144"</span></div><div class="line">JRE_HOME=<span class="string">"/usr/jdk1.8.0_144/jre"</span></div></pre></td></tr></table></figure>
+<h2 id="etc-profile"><a href="#etc-profile" class="headerlink" title="/etc/profile"></a>/etc/profile</h2><p>该文件默认的内容如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># /etc/profile: system-wide .profile file for the Bourne shell (sh(1))</span></div><div class="line"><span class="comment"># and Bourne compatible shells (bash(1), ksh(1), ash(1), ...).</span></div><div class="line"><span class="keyword">if</span> [ <span class="string">"<span class="variable">$PS1</span>"</span> ]; <span class="keyword">then</span></div><div class="line">  <span class="keyword">if</span> [ <span class="string">"<span class="variable">$BASH</span>"</span> ] &amp;&amp; [ <span class="string">"<span class="variable">$BASH</span>"</span> != <span class="string">"/bin/sh"</span> ]; <span class="keyword">then</span></div><div class="line">    <span class="comment"># The file bash.bashrc already sets the default PS1.</span></div><div class="line">    <span class="comment"># PS1='\h:\w\$ '</span></div><div class="line">    <span class="keyword">if</span> [ -f /etc/bash.bashrc ]; <span class="keyword">then</span></div><div class="line">      . /etc/bash.bashrc</div><div class="line">    <span class="keyword">fi</span></div><div class="line">  <span class="keyword">else</span></div><div class="line">    <span class="keyword">if</span> [ <span class="string">"`id -u`"</span> -eq 0 ]; <span class="keyword">then</span></div><div class="line">      PS1=<span class="string">'# '</span></div><div class="line">    <span class="keyword">else</span></div><div class="line">      PS1=<span class="string">'$ '</span></div><div class="line">    <span class="keyword">fi</span></div><div class="line">  <span class="keyword">fi</span></div><div class="line"><span class="keyword">fi</span></div><div class="line"><span class="keyword">if</span> [ -d /etc/profile.d ]; <span class="keyword">then</span></div><div class="line">  <span class="keyword">for</span> i <span class="keyword">in</span> /etc/profile.d/*.sh; <span class="keyword">do</span></div><div class="line">    <span class="keyword">if</span> [ -r <span class="variable">$i</span> ]; <span class="keyword">then</span></div><div class="line">      . <span class="variable">$i</span></div><div class="line">    <span class="keyword">fi</span></div><div class="line">  <span class="keyword">done</span></div><div class="line">  <span class="built_in">unset</span> i</div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+<p>该文件关键点分析如下：</p>
+<ol>
+<li>若环境变量 <code>BASH</code> 存在且非 <code>/bin/sh</code> ，则执行配置文件 <code>/etc/bash.bashrc</code> ；</li>
+<li>若不满足第1点，则按照<code>root</code> 用户为<code>#</code> ，其他用户为<code>$</code> 设置提示符；</li>
+<li>依次执行目录 <code>/etc/profile.d</code> 下的配置文件；</li>
 </ol>
-<h1 id="兴趣"><a href="#兴趣" class="headerlink" title="兴趣"></a>兴趣</h1><p>足球、看书</p>
-<h1 id="写在最后很关键"><a href="#写在最后很关键" class="headerlink" title="写在最后很关键"></a>写在最后很关键</h1><p>爱生活，爱米兰！</p>
+<h2 id="profile"><a href="#profile" class="headerlink" title="~/.profile"></a>~/.profile</h2><p>该文件默认的内容如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># ~/.profile: executed by the command interpreter for login shells.</span></div><div class="line"><span class="comment"># This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login</span></div><div class="line"><span class="comment"># exists.</span></div><div class="line"><span class="comment"># see /usr/share/doc/bash/examples/startup-files for examples.</span></div><div class="line"><span class="comment"># the files are located in the bash-doc package.</span></div><div class="line"></div><div class="line"><span class="comment"># the default umask is set in /etc/profile; for setting the umask</span></div><div class="line"><span class="comment"># for ssh logins, install and configure the libpam-umask package.</span></div><div class="line"><span class="comment">#umask 022</span></div><div class="line"></div><div class="line"><span class="comment"># if running bash</span></div><div class="line"><span class="keyword">if</span> [ -n <span class="string">"<span class="variable">$BASH_VERSION</span>"</span> ]; <span class="keyword">then</span></div><div class="line">    <span class="comment"># include .bashrc if it exists</span></div><div class="line">    <span class="keyword">if</span> [ -f <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span> ]; <span class="keyword">then</span></div><div class="line">        . <span class="string">"<span class="variable">$HOME</span>/.bashrc"</span></div><div class="line">    <span class="keyword">fi</span></div><div class="line"><span class="keyword">fi</span></div><div class="line"></div><div class="line"><span class="comment"># set PATH so it includes user's private bin directories</span></div><div class="line">PATH=<span class="string">"<span class="variable">$HOME</span>/bin:<span class="variable">$HOME</span>/.local/bin:<span class="variable">$PATH</span>"</span></div></pre></td></tr></table></figure>
+<p>注意如下说明：</p>
+<blockquote>
+<p>This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login exists.</p>
+</blockquote>
 
-        
-      </div>
-      
-      
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    sky
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="linziye.com/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/" title="Ubuntu 系统用户登录调用的文件（或环境变量）">linziye.com/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/Ubuntu/" rel="tag"># Ubuntu</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/05/ubuntu-system-user-and-user-group/" rel="next" title="Ubuntu 系统用户和用户组">
+                <i class="fa fa-chevron-left"></i> Ubuntu 系统用户和用户组
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/15/python-built-in-data-structures/" rel="prev" title="Python built-in data structures">
+                Python built-in data structures <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微薄</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
   </div>
 
 
@@ -502,7 +736,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#我"><span class="nav-number">1.</span> <span class="nav-text">我</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工作经历"><span class="nav-number">2.</span> <span class="nav-text">工作经历</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术"><span class="nav-number">3.</span> <span class="nav-text">技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主要项目经验"><span class="nav-number">4.</span> <span class="nav-text">主要项目经验</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#兴趣"><span class="nav-number">5.</span> <span class="nav-text">兴趣</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在最后很关键"><span class="nav-number">6.</span> <span class="nav-text">写在最后很关键</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#调用顺序"><span class="nav-number">1.</span> <span class="nav-text">调用顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-environment"><span class="nav-number">2.</span> <span class="nav-text">/etc/environment</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-profile"><span class="nav-number">3.</span> <span class="nav-text">/etc/profile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#profile"><span class="nav-number">4.</span> <span class="nav-text">~/.profile</span></a></li></ol></div>
             
 
           </div>
@@ -644,6 +878,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 

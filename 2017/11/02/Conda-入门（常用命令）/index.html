@@ -85,7 +85,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Python,Conda," />
 
 
 
@@ -103,17 +103,18 @@
 
 
 
-<meta name="description" content="我2007届福大本科，专注金融支付8年，技术停滞，琐事太多，辞了工作，和朋友做点小生意，被老婆包养。 工作经历 福建升腾资讯 2009/04 - 2015/05 厦门东南融通 2007/07 - 2009/03  技术 融通前期负责Diebold（迪堡） ATM软件，OS/2环境，本质C语言编程； 融通后期从ATMC切到ATMP，升腾前4年吃了老本，做电话POS的金融前置平台。谋生的本领是 Lin">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About me">
-<meta property="og:url" content="linziye.com/about/index.html">
+<meta name="description" content="Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Co">
+<meta name="keywords" content="Python,Conda">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Conda 操作入门（常用命令）">
+<meta property="og:url" content="linziye.com/2017/11/02/Conda-入门（常用命令）/index.html">
 <meta property="og:site_name" content="木月天空">
-<meta property="og:description" content="我2007届福大本科，专注金融支付8年，技术停滞，琐事太多，辞了工作，和朋友做点小生意，被老婆包养。 工作经历 福建升腾资讯 2009/04 - 2015/05 厦门东南融通 2007/07 - 2009/03  技术 融通前期负责Diebold（迪堡） ATM软件，OS/2环境，本质C语言编程； 融通后期从ATMC切到ATMP，升腾前4年吃了老本，做电话POS的金融前置平台。谋生的本领是 Lin">
+<meta property="og:description" content="Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Co">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2015-05-18T08:39:23.000Z">
+<meta property="og:updated_time" content="2017-11-02T08:44:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About me">
-<meta name="twitter:description" content="我2007届福大本科，专注金融支付8年，技术停滞，琐事太多，辞了工作，和朋友做点小生意，被老婆包养。 工作经历 福建升腾资讯 2009/04 - 2015/05 厦门东南融通 2007/07 - 2009/03  技术 融通前期负责Diebold（迪堡） ATM软件，OS/2环境，本质C语言编程； 融通后期从ATMC切到ATMP，升腾前4年吃了老本，做电话POS的金融前置平台。谋生的本领是 Lin">
+<meta name="twitter:title" content="Conda 操作入门（常用命令）">
+<meta name="twitter:description" content="Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Co">
 
 
 
@@ -143,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="linziye.com/about/"/>
+  <link rel="canonical" href="linziye.com/2017/11/02/Conda-入门（常用命令）/"/>
 
 
 
 
 
-  <title>About me | 木月天空</title>
+  <title>Conda 操作入门（常用命令） | 木月天空</title>
   
 
 
@@ -308,50 +309,313 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="linziye.com/2017/11/02/Conda-入门（常用命令）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/author.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木月天空">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">About me</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h1 id="我"><a href="#我" class="headerlink" title="我"></a>我</h1><p>2007届福大本科，专注金融支付8年，技术停滞，琐事太多，辞了工作，和朋友做点小生意，被老婆包养。</p>
-<h1 id="工作经历"><a href="#工作经历" class="headerlink" title="工作经历"></a>工作经历</h1><ul>
-<li>福建升腾资讯 2009/04 - 2015/05</li>
-<li>厦门东南融通 2007/07 - 2009/03</li>
-</ul>
-<h1 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h1><ol>
-<li>融通前期负责Diebold（迪堡） ATM软件，OS/2环境，本质<strong>C语言编程</strong>；</li>
-<li>融通后期从ATMC切到ATMP，升腾前4年吃了老本，做电话POS的金融前置平台。谋生的本领是 <strong>Linux/Unix C</strong>，UE coding源码和Makefile文件，ftp上传PC服务器/小型机，gcc编译，shell脚本部署/运行；使用的数据库包括：DB2、informix、oracle等；</li>
-<li>升腾后2年开始接触<strong>Android</strong>，但仅停留在基础阶段，例如改改sdk，输出演示/生产辅助用的小工具等；</li>
+          <h1 class="post-title" itemprop="name headline">Conda 操作入门（常用命令）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-02T14:54:22+08:00">
+                2017-11-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/11/02/Conda-入门（常用命令）/" class="leancloud_visitors" data-flag-title="Conda 操作入门（常用命令）">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  574(字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2(分)
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.</p>
+</blockquote>
+<p>Anaconda 基于Conda ，Conda 的入门操作参考<a href="https://conda.io/docs/user-guide/getting-started.html" target="_blank" rel="external">Conda Getting started</a></p>
+<h2 id="Managing-conda"><a href="#Managing-conda" class="headerlink" title="Managing conda"></a>Managing conda</h2><ol>
+<li><p>获取Conda 版本</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda --version</div></pre></td></tr></table></figure>
+</li>
+<li><p>更新Conda 版本</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda update conda</div></pre></td></tr></table></figure>
+</li>
+<li><p>帮助</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">conda --<span class="built_in">help</span></div><div class="line"><span class="comment">## or</span></div><div class="line">conda -h</div></pre></td></tr></table></figure>
+</li>
 </ol>
-<h1 id="主要项目经验"><a href="#主要项目经验" class="headerlink" title="主要项目经验"></a>主要项目经验</h1><ol>
-<li>2014年~2015年5月，5个mPOS项目，担任项目经理，其中4个出货，1个半死不活；</li>
-<li>2013年，1个智能POS项目(I/II期)， 担任项目经理，完成出货；</li>
-<li>2009年~2012年，1个电话POS前置平台项目，一期主程，二、三期兼项目经理；</li>
+<h2 id="Managing-environments"><a href="#Managing-environments" class="headerlink" title="Managing environments"></a>Managing environments</h2><ol>
+<li><p>创建运行环境</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ conda create --name snowflakes biopython</div><div class="line"><span class="comment">## or</span></div><div class="line">$ conda create -n snowflakes biopython</div></pre></td></tr></table></figure>
+<p> 说明：上述指令创建一个名为<code>snowflakes</code> 的运行环境，并安装包<code>biopython</code> 。该运行环境默认下载存放到conda 安装目录的<code>envs</code> 目录下</p>
+<p> 若希望安装制定的Python版本，则执行命令如下：</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda create --name bunnies python=3.5 astroid babel</div></pre></td></tr></table></figure>
+<p> 说明：上述指令创建一个名为<code>bunnies</code> 的运行环境，并安装<code>python3.5</code> 、<code>astroid</code> 和<code>babel</code> 。注意需要 <strong>一次性安装所有程序包</strong>，否则一个个单独安装可能导致依赖冲突。</p>
+</li>
+<li><p>激活使用运行环境<br> 希望激活使用某个指定的运行环境，或者从现有运行环境切换到指定的运行环境，采用如下命令：</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">source</span> activate snowflakes</div></pre></td></tr></table></figure>
+<p> 说明：上述指令运行于<code>Linux</code> 和<code>macOS</code> ，若是<code>Windows</code> ，则是指令<code>activate snowflakes</code></p>
+</li>
+<li><p>展现运行环境列表</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda info --envs</div></pre></td></tr></table></figure>
+</li>
+<li><p>退出指定运行环境（退回到 root）</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">source</span> deactivate</div></pre></td></tr></table></figure>
+<p> 说明：上述指令运行于<code>Linux</code> 和<code>macOS</code> ，若是<code>Windows</code> 操作系统，则是指令<code>deactivate</code></p>
+</li>
+<li><p>运行环境克隆</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda create --name flowers --<span class="built_in">clone</span> snowflakes</div></pre></td></tr></table></figure>
+<p> 说明：上述指令克隆运行环境<code>snowflakes</code> ，生成新的运行环境<code>flowers</code></p>
+</li>
+<li><p>删除运行环境</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda remove --name flowers --all</div></pre></td></tr></table></figure>
+</li>
 </ol>
-<h1 id="兴趣"><a href="#兴趣" class="headerlink" title="兴趣"></a>兴趣</h1><p>足球、看书</p>
-<h1 id="写在最后很关键"><a href="#写在最后很关键" class="headerlink" title="写在最后很关键"></a>写在最后很关键</h1><p>爱生活，爱米兰！</p>
+<h2 id="Managing-Python"><a href="#Managing-Python" class="headerlink" title="Managing Python"></a>Managing Python</h2><ol>
+<li>列出可用的Python 版本 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda search --full-name python</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Conda 处理Python 和处理其他程序包是一样的，故其他指令和章节<a href="#Managing environments">Managing environments</a> 是一样的。</p>
+<h2 id="Managing-packages"><a href="#Managing-packages" class="headerlink" title="Managing packages"></a>Managing packages</h2><ol>
+<li><p>列出当前运行环境下已安装的程序包</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda list</div></pre></td></tr></table></figure>
+</li>
+<li><p>列出仓库源中指定程序包的信息</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda search beautifulsoup4</div></pre></td></tr></table></figure>
+<p> 说明：<code>beautifulsoup4</code> 是程序包名</p>
+</li>
+<li><p>安装指定程序包</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda install --name bunnies beautifulsoup4</div></pre></td></tr></table></figure>
+<p> 说明：该指令安装程序包<code>beautifulsoup4</code> 到运行环境<code>bunnies</code> 中；若不包含<code>--name bunnies</code> ，则安装<code>beautifulsoup4</code> 到当前运行环境</p>
+</li>
+</ol>
 
-        
-      </div>
-      
-      
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    sky
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="linziye.com/2017/11/02/Conda-入门（常用命令）/" title="Conda 操作入门（常用命令）">linziye.com/2017/11/02/Conda-入门（常用命令）/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Python/" rel="tag"># Python</a>
+          
+            <a href="/tags/Conda/" rel="tag"># Conda</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/02/anaconda-oficial-source-download-slow-solution/" rel="next" title="Anaconda 官方源下载慢的解决方案">
+                <i class="fa fa-chevron-left"></i> Anaconda 官方源下载慢的解决方案
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+<span class="jiathis_txt">分享到：</span>
+<a class="jiathis_button_fav">收藏夹</a>
+<a class="jiathis_button_copy">复制网址</a>
+<a class="jiathis_button_email">邮件</a>
+<a class="jiathis_button_weixin">微信</a>
+<a class="jiathis_button_qzone">QQ空间</a>
+<a class="jiathis_button_tqq">腾讯微薄</a>
+<a class="jiathis_button_douban">豆瓣</a>
+<a class="jiathis_button_share">一键分享</a>
+
+<a href="http://www.jiathis.com/share?uid=2140465" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  shortUrl:false,
+  hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+      
+    </div>
   </div>
 
 
@@ -502,7 +766,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#我"><span class="nav-number">1.</span> <span class="nav-text">我</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#工作经历"><span class="nav-number">2.</span> <span class="nav-text">工作经历</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#技术"><span class="nav-number">3.</span> <span class="nav-text">技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主要项目经验"><span class="nav-number">4.</span> <span class="nav-text">主要项目经验</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#兴趣"><span class="nav-number">5.</span> <span class="nav-text">兴趣</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#写在最后很关键"><span class="nav-number">6.</span> <span class="nav-text">写在最后很关键</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Managing-conda"><span class="nav-number">1.</span> <span class="nav-text">Managing conda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Managing-environments"><span class="nav-number">2.</span> <span class="nav-text">Managing environments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Managing-Python"><span class="nav-number">3.</span> <span class="nav-text">Managing Python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Managing-packages"><span class="nav-number">4.</span> <span class="nav-text">Managing packages</span></a></li></ol></div>
             
 
           </div>
@@ -644,6 +908,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 

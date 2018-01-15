@@ -112,7 +112,7 @@
 <meta property="og:description" content="我在阿里云上注册了一个域名 linziye.com ，希望能指向我的Github Pages 博客 linpeng13.github.io ，操作步骤如下：  劳资的域名 linpeng.com 已被注册，只好先用儿子的了 -_-!!!  第1步：创建CNAME 文件 我的Github Pages 博客采用Hexo 框架，故需要在source 目录下创建CNAME 文件。本质上就是在站点（推送到G">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/2017/09/23/seting-custom-domain/1.png">
-<meta property="og:updated_time" content="2017-11-02T00:18:42.000Z">
+<meta property="og:updated_time" content="2017-11-02T08:44:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Setting Custom domain">
 <meta name="twitter:description" content="我在阿里云上注册了一个域名 linziye.com ，希望能指向我的Github Pages 博客 linpeng13.github.io ，操作步骤如下：  劳资的域名 linpeng.com 已被注册，只好先用儿子的了 -_-!!!  第1步：创建CNAME 文件 我的Github Pages 博客采用Hexo 框架，故需要在source 目录下创建CNAME 文件。本质上就是在站点（推送到G">
@@ -464,7 +464,7 @@
 <p>Github Pages 服务器读取<code>CNAME</code> 之后，会设置<code>linziye.com</code> 为主域名（Custom domain），然后将<code>linpeng13.github.io</code> 重定向到<code>linziye.com</code> 。</p>
 <a id="more"></a>
 <p>第2步：域名解析</p>
-<p>登录阿里云-&gt;管理控制台-&gt;域名，在<code>linziye.com</code> 域名解析设置中增加3条记录，即：<br><img src="/2017/09/23/seting-custom-domain/1.png" alt="1.png" title=""></p>
+<p>登录阿里云-&gt;管理控制台-&gt;域名，在<code>linziye.com</code> 域名解析设置中增加3条记录，即：<br><img src="/2017/09/23/seting-custom-domain/1.png"></p>
 <p>在域名解析中，A 记录就是直接指定一个IP ，CNAME 就是重命名，指向另一个域名。</p>
 <ol>
 <li>在阿里云控制台，设置记录类型为<code>A</code> ，主机记录为<code>@</code> ，记录值是IP <code>192.30.252.153</code> ，其中<code>192.30.252.153</code> 是Github Pages 服务器指定的IP地址，访问该IP地址即表示访问Github Pages ；</li>

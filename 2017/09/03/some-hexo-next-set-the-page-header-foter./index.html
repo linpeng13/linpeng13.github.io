@@ -113,7 +113,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/uploads/2017-09-03/header.png">
 <meta property="og:image" content="/uploads/2017-09-03/footer.png">
-<meta property="og:updated_time" content="2017-11-02T00:18:42.000Z">
+<meta property="og:updated_time" content="2017-11-02T08:44:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo NexT主题文章页头页尾的一些设置">
 <meta name="twitter:description" content="页头NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。 阅读次数增加【阅读次数】信息，需要用到第三方的服务LeanCloud ，且需要修改主题配置文件themes/next/_config.yml 。详细的操作可参考这篇博文《leanCloud,实现文章阅读量统计》。">
@@ -456,9 +456,9 @@
 
       
         <h2 id="页头"><a href="#页头" class="headerlink" title="页头"></a>页头</h2><p><img src="/uploads/2017-09-03/header.png" alt="页头"><br>NexT 主题的文章页面，默认只有【发表时间】和【分类】两项信息。若希望增加其他有意思的信息，得做一些设置。</p>
-<h3 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h3><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="external">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="external">leanCloud,实现文章阅读量统计</a>》。</p>
+<h3 id="阅读次数"><a href="#阅读次数" class="headerlink" title="阅读次数"></a>阅读次数</h3><p>增加【阅读次数】信息，需要用到第三方的服务<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a> ，且需要修改<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 。<br>详细的操作可参考这篇博文《<a href="http://www.joryhe.com/2016-05-29-how_to_create_leancloud_read_Counter.html" target="_blank" rel="noopener">leanCloud,实现文章阅读量统计</a>》。</p>
 <a id="more"></a>
-<h3 id="字数统计和阅读时长"><a href="#字数统计和阅读时长" class="headerlink" title="字数统计和阅读时长"></a>字数统计和阅读时长</h3><p>增加【字数统计】和【阅读时长】信息，需安装插件<a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="external">hexo-wordcount</a> ，安装方法相对简单：</p>
+<h3 id="字数统计和阅读时长"><a href="#字数统计和阅读时长" class="headerlink" title="字数统计和阅读时长"></a>字数统计和阅读时长</h3><p>增加【字数统计】和【阅读时长】信息，需安装插件<a href="https://github.com/willin/hexo-wordcount" target="_blank" rel="noopener">hexo-wordcount</a> ，安装方法相对简单：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ npm i --save hexo-wordcount</div><div class="line"></div><div class="line"><span class="comment">## Node 版本7.6.0之前,请安装 2.x 版本 (Node.js v7.6.0 and previous)</span></div><div class="line">$ npm install hexo-wordcount@2 --save</div></pre></td></tr></table></figure>
 <p>然后在<strong>主题配置文件</strong><code>themes/next/_config.yml</code> 中，找到字段 <code>post_wordcount</code> ，其设置块内容默认是：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Post wordcount display settings</span></div><div class="line"><span class="comment"># Dependencies: https://github.com/willin/hexo-wordcount</span></div><div class="line">post_wordcount:</div><div class="line">  item_text: <span class="literal">true</span></div><div class="line">  wordcount: <span class="literal">false</span></div><div class="line">  min2read: <span class="literal">false</span></div><div class="line">  totalcount: <span class="literal">false</span></div><div class="line">  separated_meta: <span class="literal">true</span></div></pre></td></tr></table></figure>

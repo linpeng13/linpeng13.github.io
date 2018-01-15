@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="木月天空">
 <meta property="og:description" content="下载安装Anaconda 后，需要下载pandas 等包，发现默认的官方源下载慢。搜索解决方案，发现TUNA 提供了Anaconda 仓库的镜像。按照指示步骤操作如下：12conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/conda config --set show_channe">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-02T00:18:42.000Z">
+<meta property="og:updated_time" content="2017-11-02T08:44:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Anaconda 官方源下载慢的解决方案">
 <meta name="twitter:description" content="下载安装Anaconda 后，需要下载pandas 等包，发现默认的官方源下载慢。搜索解决方案，发现TUNA 提供了Anaconda 仓库的镜像。按照指示步骤操作如下：12conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/conda config --set show_channe">
@@ -452,7 +452,7 @@
       
 
       
-        <p>下载安装Anaconda 后，需要下载pandas 等包，发现默认的官方源下载慢。<br>搜索解决方案，发现<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="external">TUNA</a> 提供了Anaconda 仓库的镜像。按照指示步骤操作如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</div><div class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</div></pre></td></tr></table></figure></p>
+        <p>下载安装Anaconda 后，需要下载pandas 等包，发现默认的官方源下载慢。<br>搜索解决方案，发现<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/" target="_blank" rel="noopener">TUNA</a> 提供了Anaconda 仓库的镜像。按照指示步骤操作如下：<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</div><div class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</div></pre></td></tr></table></figure></p>
 <p>经测试，果然快了许多！</p>
 <a id="more"></a>
 <p>上述2 行命令的效果，即修改文件<code>～/.condarc</code> 。<br>该文件原内容是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">channels:</div><div class="line">  - defaults</div><div class="line">ssl_verify: true</div></pre></td></tr></table></figure></p>

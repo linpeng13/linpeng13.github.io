@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[win+python+atom 环境搭建备忘]]></title>
+    <url>%2F2018%2F01%2F17%2Fmake-dev-env-with-win-python-atom%2F</url>
+    <content type="text"><![CDATA[目的在win7 平台安装Python3.6 开发环境，并使用Atom 作为IDE工具。 搭建顺序 win7 sp1 和 KB2999226 补丁包 Python3.6 Atom 将python 和 atom 加入环境变量PATH 常用插件 汉化（不推荐） simplified-chinese-menu 脚本运行工具 atom-runner python 代码自动补全 autocomplete-python python 语法检查 linter-flake8 python 定义跳转 python-tools Atom 快捷键 调出命令框 ctrl+shift+p 文件类型设置 ctrl+shift+l 问题丢失“api-ms-win-crt-runtime-l1-1-0.dll” 错误提示 问题描述：Python3.6 安装完成，运行时报错api-ms-win-crt-runtime-l1-1-0.dll丢失 解决方案：安装KB2999226 补丁包（注意win系统是32位还是64位） Atom 安装package 时报错“connect ETIMEDOUT 54.197.251.22:443” 问题描述：在Atom 中install package 时，报错“connect ETIMEDOUT 54.197.251.22:443” 解决方案：在cmd 中执行语句apm config set strict-ssl false (参考链接) Python 安装后找不到pip 问题描述：Python 安装后在Scripts 目录下找不到pip 解决方案：在cmd 中执行语句python -m ensurepip (参考链接)。执行成功，在Scripts 目录下出现3个可执行文件easy_install-3.6.exe 、pip3.6.exe 和pip3.exe]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Win</tag>
+        <tag>Atom</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Conda 操作入门（常用命令）]]></title>
     <url>%2F2017%2F11%2F02%2Fintroduction-to-conda-operations-(comonly-used-comands)%2F</url>
     <content type="text"><![CDATA[Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language. Anaconda 基于Conda ，Conda 的入门操作参考Conda Getting started Managing conda 获取Conda 版本 1$ conda --version 更新Conda 版本 1$ conda update conda 帮助 123conda --help## orconda -h Managing environments 创建运行环境 123$ conda create --name snowflakes biopython## or$ conda create -n snowflakes biopython 说明：上述指令创建一个名为snowflakes 的运行环境，并安装包biopython 。该运行环境默认下载存放到conda 安装目录的envs 目录下 若希望安装制定的Python版本，则执行命令如下： 1conda create --name bunnies python=3.5 astroid babel 说明：上述指令创建一个名为bunnies 的运行环境，并安装python3.5 、astroid 和babel 。注意需要 一次性安装所有程序包，否则一个个单独安装可能导致依赖冲突。 激活使用运行环境 希望激活使用某个指定的运行环境，或者从现有运行环境切换到指定的运行环境，采用如下命令： 1$ source activate snowflakes 说明：上述指令运行于Linux 和macOS ，若是Windows ，则是指令activate snowflakes 展现运行环境列表 1$ conda info --envs 退出指定运行环境（退回到 root） 1$ source deactivate 说明：上述指令运行于Linux 和macOS ，若是Windows 操作系统，则是指令deactivate 运行环境克隆 1$ conda create --name flowers --clone snowflakes 说明：上述指令克隆运行环境snowflakes ，生成新的运行环境flowers 删除运行环境 1$ conda remove --name flowers --all Managing PythonConda 处理Python 和处理其他程序包是一样的，故大部分指令和章节Managing environments 是一样的。 列出可用的Python 版本 1$ conda search --full-name python Managing packages 列出当前运行环境下已安装的程序包 1$ conda list 列出仓库源中指定程序包的信息 1$ conda search beautifulsoup4 说明：beautifulsoup4 是程序包名 安装指定程序包 1$ conda install --name bunnies beautifulsoup4 说明：该指令安装程序包beautifulsoup4 到运行环境bunnies 中；若不包含--name bunnies ，则安装beautifulsoup4 到当前运行环境]]></content>

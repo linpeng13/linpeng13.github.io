@@ -320,6 +320,219 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="linziye.com/2018/01/17/make-dev-env-with-win-python-atom/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="sky">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/author.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木月天空">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/17/make-dev-env-with-win-python-atom/" itemprop="url">win+python+atom 环境搭建备忘</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-17T09:14:26+08:00">
+                2018-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/01/17/make-dev-env-with-win-python-atom/" class="leancloud_visitors" data-flag-title="win+python+atom 环境搭建备忘">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  303(字)
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1(分)
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>在win7 平台安装Python3.6 开发环境，并使用Atom 作为IDE工具。</p>
+<h2 id="搭建顺序"><a href="#搭建顺序" class="headerlink" title="搭建顺序"></a>搭建顺序</h2><ol>
+<li>win7 sp1 和 <a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=49093" target="_blank" rel="noopener">KB2999226 补丁包</a></li>
+<li><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">Python3.6</a></li>
+<li><a href="https://atom.io/" target="_blank" rel="noopener">Atom</a></li>
+<li>将python 和 atom 加入环境变量PATH</li>
+</ol>
+<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><ul>
+<li>汉化（不推荐） <a href="https://atom.io/packages/simplified-chinese-menu" target="_blank" rel="noopener">simplified-chinese-menu</a></li>
+<li>脚本运行工具 <a href="https://atom.io/packages/atom-runner" target="_blank" rel="noopener">atom-runner</a></li>
+<li>python 代码自动补全 <a href="https://atom.io/packages/autocomplete-python" target="_blank" rel="noopener">autocomplete-python</a></li>
+<li>python 语法检查 <a href="https://atom.io/packages/linter-flake8" target="_blank" rel="noopener">linter-flake8</a></li>
+<li>python 定义跳转 <a href="https://atom.io/packages/python-tools" target="_blank" rel="noopener">python-tools</a></li>
+</ul>
+<h2 id="Atom-快捷键"><a href="#Atom-快捷键" class="headerlink" title="Atom 快捷键"></a>Atom 快捷键</h2><ul>
+<li>调出命令框 <code>ctrl+shift+p</code></li>
+<li>文件类型设置 <code>ctrl+shift+l</code></li>
+</ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="丢失“api-ms-win-crt-runtime-l1-1-0-dll”-错误提示"><a href="#丢失“api-ms-win-crt-runtime-l1-1-0-dll”-错误提示" class="headerlink" title="丢失“api-ms-win-crt-runtime-l1-1-0.dll” 错误提示"></a>丢失“api-ms-win-crt-runtime-l1-1-0.dll” 错误提示</h3><ul>
+<li>问题描述：Python3.6 安装完成，运行时报错<code>api-ms-win-crt-runtime-l1-1-0.dll</code>丢失  </li>
+<li>解决方案：安装KB2999226 补丁包（注意win系统是32位还是64位）  </li>
+</ul>
+<h3 id="Atom-安装package-时报错“connect-ETIMEDOUT-54-197-251-22-443”"><a href="#Atom-安装package-时报错“connect-ETIMEDOUT-54-197-251-22-443”" class="headerlink" title="Atom 安装package 时报错“connect ETIMEDOUT 54.197.251.22:443”"></a>Atom 安装package 时报错“connect ETIMEDOUT 54.197.251.22:443”</h3><ul>
+<li>问题描述：在Atom 中<code>install package</code> 时，报错“connect ETIMEDOUT 54.197.251.22:443”  </li>
+<li>解决方案：在cmd 中执行语句<code>apm config set strict-ssl false</code> (<a href="http://flight-manual.atom.io/getting-started/sections/installing-atom/" target="_blank" rel="noopener">参考链接</a>)  </li>
+</ul>
+<h3 id="Python-安装后找不到pip"><a href="#Python-安装后找不到pip" class="headerlink" title="Python 安装后找不到pip"></a>Python 安装后找不到pip</h3><ul>
+<li>问题描述：Python 安装后在<code>Scripts</code> 目录下找不到<code>pip</code></li>
+<li>解决方案：在cmd 中执行语句<code>python -m ensurepip</code> (<a href="https://docs.python.org/3/library/ensurepip.html" target="_blank" rel="noopener">参考链接</a>)。执行成功，在<code>Scripts</code> 目录下出现3个可执行文件<code>easy_install-3.6.exe</code> 、<code>pip3.6.exe</code> 和<code>pip3.exe</code></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="linziye.com/2017/11/02/introduction-to-conda-operations-(comonly-used-comands)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -2066,197 +2279,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="linziye.com/2016/05/19/linux-iptables-setings/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="sky">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/author.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="木月天空">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2016/05/19/linux-iptables-setings/" itemprop="url">Linux iptables设置</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-05-19T08:30:21+08:00">
-                2016-05-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2016/05/19/linux-iptables-setings/" class="leancloud_visitors" data-flag-title="Linux iptables设置">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  95(字)
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  1(分)
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="屏蔽指定IP"><a href="#屏蔽指定IP" class="headerlink" title="屏蔽指定IP"></a>屏蔽指定IP</h2><p>以屏蔽IP： 192.168.184.13 为例 </p>
-<h3 id="方法1：命令行"><a href="#方法1：命令行" class="headerlink" title="方法1：命令行"></a>方法1：命令行</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo iptables -I INPUT -s 192.168.184.13 -j DROP</div></pre></td></tr></table></figure>
-<p>说明：该方法临时修改防火墙配置，iptables服务重启后失效 </p>
-<h3 id="方法2：修改-iptables-文件"><a href="#方法2：修改-iptables-文件" class="headerlink" title="方法2：修改 iptables 文件"></a>方法2：修改 iptables 文件</h3><ol>
-<li>打开 <code>/etc/sysconfig/iptables</code> 文件</li>
-<li>增加一行 <code>-A INPUT -s 192.168.184.13/32 -j DROP</code> </li>
-</ol>
-<p>说明：该方法永久有效 </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2310,7 +2332,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2332,7 +2354,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

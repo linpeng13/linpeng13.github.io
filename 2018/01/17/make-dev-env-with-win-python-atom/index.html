@@ -85,7 +85,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Python,Conda," />
+  <meta name="keywords" content="Python,Win,Atom," />
 
 
 
@@ -103,18 +103,18 @@
 
 
 
-<meta name="description" content="Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Co">
-<meta name="keywords" content="Python,Conda">
+<meta name="description" content="目的在win7 平台安装Python3.6 开发环境，并使用Atom 作为IDE工具。 搭建顺序 win7 sp1 和 KB2999226 补丁包 Python3.6 Atom 将python 和 atom 加入环境变量PATH  常用插件 汉化（不推荐） simplified-chinese-menu 脚本运行工具 atom-runner python 代码自动补全 autocomplete-p">
+<meta name="keywords" content="Python,Win,Atom">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Conda 操作入门（常用命令）">
-<meta property="og:url" content="linziye.com/2017/11/02/introduction-to-conda-operations-(comonly-used-comands)/index.html">
+<meta property="og:title" content="win+python+atom 环境搭建备忘">
+<meta property="og:url" content="linziye.com/2018/01/17/make-dev-env-with-win-python-atom/index.html">
 <meta property="og:site_name" content="木月天空">
-<meta property="og:description" content="Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Co">
+<meta property="og:description" content="目的在win7 平台安装Python3.6 开发环境，并使用Atom 作为IDE工具。 搭建顺序 win7 sp1 和 KB2999226 补丁包 Python3.6 Atom 将python 和 atom 加入环境变量PATH  常用插件 汉化（不推荐） simplified-chinese-menu 脚本运行工具 atom-runner python 代码自动补全 autocomplete-p">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-02T13:29:33.000Z">
+<meta property="og:updated_time" content="2018-01-17T01:16:48.890Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Conda 操作入门（常用命令）">
-<meta name="twitter:description" content="Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Co">
+<meta name="twitter:title" content="win+python+atom 环境搭建备忘">
+<meta name="twitter:description" content="目的在win7 平台安装Python3.6 开发环境，并使用Atom 作为IDE工具。 搭建顺序 win7 sp1 和 KB2999226 补丁包 Python3.6 Atom 将python 和 atom 加入环境变量PATH  常用插件 汉化（不推荐） simplified-chinese-menu 脚本运行工具 atom-runner python 代码自动补全 autocomplete-p">
 
 
 
@@ -144,13 +144,13 @@
 
 
 
-  <link rel="canonical" href="linziye.com/2017/11/02/introduction-to-conda-operations-(comonly-used-comands)/"/>
+  <link rel="canonical" href="linziye.com/2018/01/17/make-dev-env-with-win-python-atom/"/>
 
 
 
 
 
-  <title>Conda 操作入门（常用命令） | 木月天空</title>
+  <title>win+python+atom 环境搭建备忘 | 木月天空</title>
   
 
 
@@ -321,7 +321,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="linziye.com/2017/11/02/introduction-to-conda-operations-(comonly-used-comands)/">
+    <link itemprop="mainEntityOfPage" href="linziye.com/2018/01/17/make-dev-env-with-win-python-atom/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="sky">
@@ -338,7 +338,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Conda 操作入门（常用命令）</h1>
+          <h1 class="post-title" itemprop="name headline">win+python+atom 环境搭建备忘</h1>
         
 
         <div class="post-meta">
@@ -350,8 +350,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-02T14:54:22+08:00">
-                2017-11-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-17T09:14:26+08:00">
+                2018-01-17
               </time>
             
 
@@ -390,7 +390,7 @@
 
           
           
-             <span id="/2017/11/02/introduction-to-conda-operations-(comonly-used-comands)/" class="leancloud_visitors" data-flag-title="Conda 操作入门（常用命令）">
+             <span id="/2018/01/17/make-dev-env-with-win-python-atom/" class="leancloud_visitors" data-flag-title="win+python+atom 环境搭建备忘">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -415,7 +415,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  575(字)
+                  303(字)
                 </span>
               
 
@@ -431,7 +431,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2(分)
+                  1(分)
                 </span>
               
             </div>
@@ -452,67 +452,36 @@
       
 
       
-        <blockquote>
-<p>Conda is an open source package management system and environment management system that runs on Windows, macOS and Linux. Conda quickly installs, runs and updates packages and their dependencies. Conda easily creates, saves, loads and switches between environments on your local computer. It was created for Python programs, but it can package and distribute software for any language.</p>
-</blockquote>
-<p>Anaconda 基于Conda ，Conda 的入门操作参考<a href="https://conda.io/docs/user-guide/getting-started.html" target="_blank" rel="noopener">Conda Getting started</a></p>
-<h2 id="Managing-conda"><a href="#Managing-conda" class="headerlink" title="Managing conda"></a>Managing conda</h2><ol>
-<li><p>获取Conda 版本</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda --version</div></pre></td></tr></table></figure>
-</li>
-<li><p>更新Conda 版本</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda update conda</div></pre></td></tr></table></figure>
-</li>
-<li><p>帮助</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">conda --<span class="built_in">help</span></div><div class="line"><span class="comment">## or</span></div><div class="line">conda -h</div></pre></td></tr></table></figure>
-</li>
+        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>在win7 平台安装Python3.6 开发环境，并使用Atom 作为IDE工具。</p>
+<h2 id="搭建顺序"><a href="#搭建顺序" class="headerlink" title="搭建顺序"></a>搭建顺序</h2><ol>
+<li>win7 sp1 和 <a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=49093" target="_blank" rel="noopener">KB2999226 补丁包</a></li>
+<li><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">Python3.6</a></li>
+<li><a href="https://atom.io/" target="_blank" rel="noopener">Atom</a></li>
+<li>将python 和 atom 加入环境变量PATH</li>
 </ol>
-<a id="more"></a>
-<h2 id="Managing-environments"><a href="#Managing-environments" class="headerlink" title="Managing environments"></a><a name="Managing-environments">Managing environments</a></h2><ol>
-<li><p>创建运行环境</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ conda create --name snowflakes biopython</div><div class="line"><span class="comment">## or</span></div><div class="line">$ conda create -n snowflakes biopython</div></pre></td></tr></table></figure>
-<p> 说明：上述指令创建一个名为<code>snowflakes</code> 的运行环境，并安装包<code>biopython</code> 。该运行环境默认下载存放到conda 安装目录的<code>envs</code> 目录下</p>
-<p> 若希望安装制定的Python版本，则执行命令如下：</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">conda create --name bunnies python=3.5 astroid babel</div></pre></td></tr></table></figure>
-<p> 说明：上述指令创建一个名为<code>bunnies</code> 的运行环境，并安装<code>python3.5</code> 、<code>astroid</code> 和<code>babel</code> 。注意需要 <strong>一次性安装所有程序包</strong>，否则一个个单独安装可能导致依赖冲突。</p>
-</li>
-<li><p>激活使用运行环境<br> 希望激活使用某个指定的运行环境，或者从现有运行环境切换到指定的运行环境，采用如下命令：</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">source</span> activate snowflakes</div></pre></td></tr></table></figure>
-<p> 说明：上述指令运行于<code>Linux</code> 和<code>macOS</code> ，若是<code>Windows</code> ，则是指令<code>activate snowflakes</code></p>
-</li>
-<li><p>展现运行环境列表</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda info --envs</div></pre></td></tr></table></figure>
-</li>
-<li><p>退出指定运行环境（退回到 root）</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">source</span> deactivate</div></pre></td></tr></table></figure>
-<p> 说明：上述指令运行于<code>Linux</code> 和<code>macOS</code> ，若是<code>Windows</code> 操作系统，则是指令<code>deactivate</code></p>
-</li>
-<li><p>运行环境克隆</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda create --name flowers --<span class="built_in">clone</span> snowflakes</div></pre></td></tr></table></figure>
-<p> 说明：上述指令克隆运行环境<code>snowflakes</code> ，生成新的运行环境<code>flowers</code></p>
-</li>
-<li><p>删除运行环境</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda remove --name flowers --all</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="Managing-Python"><a href="#Managing-Python" class="headerlink" title="Managing Python"></a>Managing Python</h2><p>Conda 处理Python 和处理其他程序包是一样的，故大部分指令和章节<a href="#Managing-environments">Managing environments</a> 是一样的。</p>
-<ol>
-<li>列出可用的Python 版本 <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda search --full-name python</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="Managing-packages"><a href="#Managing-packages" class="headerlink" title="Managing packages"></a>Managing packages</h2><ol>
-<li><p>列出当前运行环境下已安装的程序包</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda list</div></pre></td></tr></table></figure>
-</li>
-<li><p>列出仓库源中指定程序包的信息</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda search beautifulsoup4</div></pre></td></tr></table></figure>
-<p> 说明：<code>beautifulsoup4</code> 是程序包名</p>
-</li>
-<li><p>安装指定程序包</p>
- <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ conda install --name bunnies beautifulsoup4</div></pre></td></tr></table></figure>
-<p> 说明：该指令安装程序包<code>beautifulsoup4</code> 到运行环境<code>bunnies</code> 中；若不包含<code>--name bunnies</code> ，则安装<code>beautifulsoup4</code> 到当前运行环境</p>
-</li>
-</ol>
+<h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><ul>
+<li>汉化（不推荐） <a href="https://atom.io/packages/simplified-chinese-menu" target="_blank" rel="noopener">simplified-chinese-menu</a></li>
+<li>脚本运行工具 <a href="https://atom.io/packages/atom-runner" target="_blank" rel="noopener">atom-runner</a></li>
+<li>python 代码自动补全 <a href="https://atom.io/packages/autocomplete-python" target="_blank" rel="noopener">autocomplete-python</a></li>
+<li>python 语法检查 <a href="https://atom.io/packages/linter-flake8" target="_blank" rel="noopener">linter-flake8</a></li>
+<li>python 定义跳转 <a href="https://atom.io/packages/python-tools" target="_blank" rel="noopener">python-tools</a></li>
+</ul>
+<h2 id="Atom-快捷键"><a href="#Atom-快捷键" class="headerlink" title="Atom 快捷键"></a>Atom 快捷键</h2><ul>
+<li>调出命令框 <code>ctrl+shift+p</code></li>
+<li>文件类型设置 <code>ctrl+shift+l</code></li>
+</ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="丢失“api-ms-win-crt-runtime-l1-1-0-dll”-错误提示"><a href="#丢失“api-ms-win-crt-runtime-l1-1-0-dll”-错误提示" class="headerlink" title="丢失“api-ms-win-crt-runtime-l1-1-0.dll” 错误提示"></a>丢失“api-ms-win-crt-runtime-l1-1-0.dll” 错误提示</h3><ul>
+<li>问题描述：Python3.6 安装完成，运行时报错<code>api-ms-win-crt-runtime-l1-1-0.dll</code>丢失  </li>
+<li>解决方案：安装KB2999226 补丁包（注意win系统是32位还是64位）  </li>
+</ul>
+<h3 id="Atom-安装package-时报错“connect-ETIMEDOUT-54-197-251-22-443”"><a href="#Atom-安装package-时报错“connect-ETIMEDOUT-54-197-251-22-443”" class="headerlink" title="Atom 安装package 时报错“connect ETIMEDOUT 54.197.251.22:443”"></a>Atom 安装package 时报错“connect ETIMEDOUT 54.197.251.22:443”</h3><ul>
+<li>问题描述：在Atom 中<code>install package</code> 时，报错“connect ETIMEDOUT 54.197.251.22:443”  </li>
+<li>解决方案：在cmd 中执行语句<code>apm config set strict-ssl false</code> (<a href="http://flight-manual.atom.io/getting-started/sections/installing-atom/" target="_blank" rel="noopener">参考链接</a>)  </li>
+</ul>
+<h3 id="Python-安装后找不到pip"><a href="#Python-安装后找不到pip" class="headerlink" title="Python 安装后找不到pip"></a>Python 安装后找不到pip</h3><ul>
+<li>问题描述：Python 安装后在<code>Scripts</code> 目录下找不到<code>pip</code></li>
+<li>解决方案：在cmd 中执行语句<code>python -m ensurepip</code> (<a href="https://docs.python.org/3/library/ensurepip.html" target="_blank" rel="noopener">参考链接</a>)。执行成功，在<code>Scripts</code> 目录下出现3个可执行文件<code>easy_install-3.6.exe</code> 、<code>pip3.6.exe</code> 和<code>pip3.exe</code></li>
+</ul>
 
       
     </div>
@@ -533,7 +502,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="linziye.com/2017/11/02/introduction-to-conda-operations-(comonly-used-comands)/" title="Conda 操作入门（常用命令）">linziye.com/2017/11/02/introduction-to-conda-operations-(comonly-used-comands)/</a>
+    <a href="linziye.com/2018/01/17/make-dev-env-with-win-python-atom/" title="win+python+atom 环境搭建备忘">linziye.com/2018/01/17/make-dev-env-with-win-python-atom/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -550,7 +519,9 @@
           
             <a href="/tags/Python/" rel="tag"># Python</a>
           
-            <a href="/tags/Conda/" rel="tag"># Conda</a>
+            <a href="/tags/Win/" rel="tag"># Win</a>
+          
+            <a href="/tags/Atom/" rel="tag"># Atom</a>
           
         </div>
       
@@ -563,8 +534,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/02/anaconda-oficial-source-download-slow-solution/" rel="next" title="Anaconda 官方源下载慢的解决方案">
-                <i class="fa fa-chevron-left"></i> Anaconda 官方源下载慢的解决方案
+              <a href="/2017/11/02/introduction-to-conda-operations-(comonly-used-comands)/" rel="next" title="Conda 操作入门（常用命令）">
+                <i class="fa fa-chevron-left"></i> Conda 操作入门（常用命令）
               </a>
             
           </div>
@@ -572,10 +543,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/17/make-dev-env-with-win-python-atom/" rel="prev" title="win+python+atom 环境搭建备忘">
-                win+python+atom 环境搭建备忘 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -771,7 +738,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Managing-conda"><span class="nav-number">1.</span> <span class="nav-text">Managing conda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Managing-environments"><span class="nav-number">2.</span> <span class="nav-text">Managing environments</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Managing-Python"><span class="nav-number">3.</span> <span class="nav-text">Managing Python</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Managing-packages"><span class="nav-number">4.</span> <span class="nav-text">Managing packages</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目的"><span class="nav-number">1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建顺序"><span class="nav-number">2.</span> <span class="nav-text">搭建顺序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用插件"><span class="nav-number">3.</span> <span class="nav-text">常用插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Atom-快捷键"><span class="nav-number">4.</span> <span class="nav-text">Atom 快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">5.</span> <span class="nav-text">问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#丢失“api-ms-win-crt-runtime-l1-1-0-dll”-错误提示"><span class="nav-number">5.1.</span> <span class="nav-text">丢失“api-ms-win-crt-runtime-l1-1-0.dll” 错误提示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Atom-安装package-时报错“connect-ETIMEDOUT-54-197-251-22-443”"><span class="nav-number">5.2.</span> <span class="nav-text">Atom 安装package 时报错“connect ETIMEDOUT 54.197.251.22:443”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-安装后找不到pip"><span class="nav-number">5.3.</span> <span class="nav-text">Python 安装后找不到pip</span></a></li></ol></li></ol></div>
             
 
           </div>

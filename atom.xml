@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="linziye.com/"/>
-  <updated>2018-11-09T05:13:09.701Z</updated>
+  <updated>2018-11-09T05:13:09.702Z</updated>
   <id>linziye.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="linziye.com/2018/11/09/%E5%85%B3%E4%BA%8E%E5%AE%B6%E5%BA%AD%E5%89%A7%E9%99%A2%E7%9A%84%E5%87%A0%E4%B8%AA%E8%AE%A4%E7%9F%A5%E5%A4%87%E5%BF%98/"/>
     <id>linziye.com/2018/11/09/关于家庭剧院的几个认知备忘/</id>
     <published>2018-11-09T05:12:08.000Z</published>
-    <updated>2018-11-09T05:13:09.701Z</updated>
+    <updated>2018-11-09T05:13:09.702Z</updated>
     
     <content type="html"><![CDATA[<h2 id="HTPC"><a href="#HTPC" class="headerlink" title="HTPC"></a>HTPC</h2><p>家庭剧院个人电脑，家庭剧院电脑，作为视讯或音频拨放或数位照片浏览的电脑。连接到电视去显示，通常使用遥控器操作，而不是使用键盘或鼠标操作。这类的电脑因为注重影音拨放的效果，所以要求低噪音。虽然具有类似功能的电脑是从20世纪的80年代末期开始，但是HTPC出现在新闻媒体则是大约是从1996年开始。</p><h2 id="KODI"><a href="#KODI" class="headerlink" title="KODI"></a>KODI</h2><p>Kodi是由XBMC基金会开发的开源媒体播放器，原名XBMC，Kodi可以运行在多种操作系统和硬件平台。 它可以让用户播放本地或网络存储设备中的大多数视频、音乐、播客及各种常见数位媒体文件。 它是Windows Media Center的很热门的替代物。</p><p><a href="https://kodi.tv/" target="_blank" rel="noopener">KODI 官网</a><br><a href="http://www.kodiplayer.cn/" target="_blank" rel="noopener">KODI 中文网</a></p><h2 id="Plex"><a href="#Plex" class="headerlink" title="Plex"></a>Plex</h2><p>Plex是一套媒体播放器及媒体服务器软件，让用户整理在设备上的有声书、音乐、播客、图片和视频文件，以供流至移动设备、智能电视和电子媒体播放器上。Plex可用于Windows、Android、Linux、OS X和FreeBSD。</p><p><a href="https://www.plex.tv/" target="_blank" rel="noopener">Plex 官网</a></p><h2 id="OpenELEC"><a href="#OpenELEC" class="headerlink" title="OpenELEC"></a>OpenELEC</h2><p>OpenELEC是一个为家庭剧院个人电脑设计的Linux发行版，基于Kodi媒体播放器。 OpenELEC的设计使得它消耗较少资源并且可以迅速从闪存启动。 OpenELEC也有适用于树莓派的磁盘镜像。</p><p><a href="https://openelec.tv/" target="_blank" rel="noopener">OpenELEC 官网</a></p>]]></content>
     
@@ -44,7 +44,7 @@
     <link href="linziye.com/2018/01/17/make-dev-env-with-win-python-atom/"/>
     <id>linziye.com/2018/01/17/make-dev-env-with-win-python-atom/</id>
     <published>2018-01-17T01:14:26.000Z</published>
-    <updated>2018-01-18T00:43:05.762Z</updated>
+    <updated>2018-01-18T00:43:05.763Z</updated>
     
     <content type="html"><![CDATA[<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>在win7 平台安装Python3.6 开发环境，并使用Atom 作为IDE工具。</p><h2 id="搭建顺序"><a href="#搭建顺序" class="headerlink" title="搭建顺序"></a>搭建顺序</h2><ol><li>win7 sp1 和 <a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=49093" target="_blank" rel="noopener">KB2999226 补丁包</a></li><li><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">Python3.6</a></li><li><a href="https://atom.io/" target="_blank" rel="noopener">Atom</a></li><li>将python 和 atom 加入环境变量PATH</li></ol><a id="more"></a><h2 id="常用插件"><a href="#常用插件" class="headerlink" title="常用插件"></a>常用插件</h2><ul><li>汉化（不推荐） <a href="https://atom.io/packages/simplified-chinese-menu" target="_blank" rel="noopener">simplified-chinese-menu</a></li><li>脚本运行工具 <a href="https://atom.io/packages/atom-runner" target="_blank" rel="noopener">atom-runner</a></li><li>python 代码自动补全 <a href="https://atom.io/packages/autocomplete-python" target="_blank" rel="noopener">autocomplete-python</a></li><li>python 语法检查 <a href="https://atom.io/packages/linter-flake8" target="_blank" rel="noopener">linter-flake8</a></li><li>python 定义跳转 <a href="https://atom.io/packages/python-tools" target="_blank" rel="noopener">python-tools</a></li></ul><h2 id="Atom-快捷键"><a href="#Atom-快捷键" class="headerlink" title="Atom 快捷键"></a>Atom 快捷键</h2><ul><li>调出命令框 <code>ctrl+shift+p</code></li><li>文件类型设置 <code>ctrl+shift+l</code></li></ul><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h4 id="1-丢失“api-ms-win-crt-runtime-l1-1-0-dll”-错误提示"><a href="#1-丢失“api-ms-win-crt-runtime-l1-1-0-dll”-错误提示" class="headerlink" title="1. 丢失“api-ms-win-crt-runtime-l1-1-0.dll” 错误提示"></a>1. 丢失“api-ms-win-crt-runtime-l1-1-0.dll” 错误提示</h4><ul><li>问题描述：Python3.6 安装完成，运行时报错<code>api-ms-win-crt-runtime-l1-1-0.dll</code>丢失  </li><li>解决方案：安装KB2999226 补丁包（注意win系统是32位还是64位）  </li></ul><h4 id="2-Atom-安装package-时报错“connect-ETIMEDOUT-54-197-251-22-443”"><a href="#2-Atom-安装package-时报错“connect-ETIMEDOUT-54-197-251-22-443”" class="headerlink" title="2. Atom 安装package 时报错“connect ETIMEDOUT 54.197.251.22:443”"></a>2. Atom 安装package 时报错“connect ETIMEDOUT 54.197.251.22:443”</h4><ul><li>问题描述：在Atom 中<code>install package</code> 时，报错“connect ETIMEDOUT 54.197.251.22:443”  </li><li>解决方案：在cmd 中执行语句<code>apm config set strict-ssl false</code> (<a href="http://flight-manual.atom.io/getting-started/sections/installing-atom/" target="_blank" rel="noopener">参考链接</a>)  </li></ul><h4 id="3-Python-安装后找不到pip"><a href="#3-Python-安装后找不到pip" class="headerlink" title="3. Python 安装后找不到pip"></a>3. Python 安装后找不到pip</h4><ul><li>问题描述：Python 安装后在<code>Scripts</code> 目录下找不到<code>pip</code></li><li>解决方案：在cmd 中执行语句<code>python -m ensurepip</code> (<a href="https://docs.python.org/3/library/ensurepip.html" target="_blank" rel="noopener">参考链接</a>)。执行成功，在<code>Scripts</code> 目录下出现3个可执行文件<code>easy_install-3.6.exe</code> 、<code>pip3.6.exe</code> 和<code>pip3.exe</code></li></ul>]]></content>
     

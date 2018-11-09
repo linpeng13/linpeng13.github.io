@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Google Cloud Platform 搭建SSR & BBR加速]]></title>
+    <url>%2F2018%2F11%2F09%2FGoogle-Cloud-Platform-%E6%90%AD%E5%BB%BASSR-BBR%E5%8A%A0%E9%80%9F%2F</url>
+    <content type="text"><![CDATA[0. 准备工作 拥有Google Cloud Platform 账号，并创建实例 gcp 实例需生成静态IP 能SSH 访问gcp 实例 1. 修改防火墙规则在实例VPC网络–&gt;防火墙规则中创建防火墙规则 具体防火墙规则参数如图 2. 安装最新内核并开启BBR脚本BBR要求系统内核版本为4.9以上, 本文采用teddysun的脚本, 支持一键自动判断和安装所需内核版本并开启BBR.123456789101112## 切换到root用户$ sudo -i## 下载安装 wget# yum install -y wget## 下载 bbr.sh 脚本到当前目录# wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh## 执行 bbr.sh 脚本# chmod +x bbr.sh# ./bbr.sh 安装完成后，脚本会提示需要重启VPS，输入 y 并回车后重启。重启后验证是否成功安装了最新内核并开启BBR12345678910111213141516## 查看内核版本，如果返回值含有4.13或以上版本, 就表示OK了$ uname -r4.9.0-8-amd64$ sudo sysctl net.ipv4.tcp_available_congestion_controlnet.ipv4.tcp_available_congestion_control = cubic reno$ sudo sysctl net.ipv4.tcp_congestion_controlnet.ipv4.tcp_congestion_control = cubic$ sudo sysctl net.core.default_qdiscnet.core.default_qdisc = pfifo_fast## 返回值有 tcp_bbr 模块即说明bbr已启动$ lsmod | grep bbrtcp_bbr 20480 13 3. 安装SSR本文采用秋水逸冰的Shadowsocks一键安装脚本(四合一)123456789## 切换到root用户$ sudo -i## 下载 shadowsocks-all.sh 脚本# wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh## 执行 shadowsocks-all.sh 脚本# chmod +x shadowsocks-all.sh# ./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log 按照提示步骤选择SSR版本, 设置端口、密码、加密方式等等 参考链接：https://www.wmsoho.com/google-cloud-platform-ssr-bbr-tutorial/https://congcong0806.github.io/2018/04/20/SS/]]></content>
+      <tags>
+        <tag>gcp</tag>
+        <tag>ssr</tag>
+        <tag>bbr</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[关于家庭剧院的几个认知备忘]]></title>
     <url>%2F2018%2F11%2F09%2F%E5%85%B3%E4%BA%8E%E5%AE%B6%E5%BA%AD%E5%89%A7%E9%99%A2%E7%9A%84%E5%87%A0%E4%B8%AA%E8%AE%A4%E7%9F%A5%E5%A4%87%E5%BF%98%2F</url>
     <content type="text"><![CDATA[HTPC家庭剧院个人电脑，家庭剧院电脑，作为视讯或音频拨放或数位照片浏览的电脑。连接到电视去显示，通常使用遥控器操作，而不是使用键盘或鼠标操作。这类的电脑因为注重影音拨放的效果，所以要求低噪音。虽然具有类似功能的电脑是从20世纪的80年代末期开始，但是HTPC出现在新闻媒体则是大约是从1996年开始。 KODIKodi是由XBMC基金会开发的开源媒体播放器，原名XBMC，Kodi可以运行在多种操作系统和硬件平台。 它可以让用户播放本地或网络存储设备中的大多数视频、音乐、播客及各种常见数位媒体文件。 它是Windows Media Center的很热门的替代物。 KODI 官网KODI 中文网 PlexPlex是一套媒体播放器及媒体服务器软件，让用户整理在设备上的有声书、音乐、播客、图片和视频文件，以供流至移动设备、智能电视和电子媒体播放器上。Plex可用于Windows、Android、Linux、OS X和FreeBSD。 Plex 官网 OpenELECOpenELEC是一个为家庭剧院个人电脑设计的Linux发行版，基于Kodi媒体播放器。 OpenELEC的设计使得它消耗较少资源并且可以迅速从闪存启动。 OpenELEC也有适用于树莓派的磁盘镜像。 OpenELEC 官网]]></content>

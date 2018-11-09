@@ -32,7 +32,7 @@
     </url>
 
     <url>
-        <loc>linziye.com/2017/09/05/ubuntu-system-user-and-user-group/</loc>
+        <loc>linziye.com/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/</loc>
         <lastmod>2017-11-02T08:44:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -40,7 +40,7 @@
     </url>
 
     <url>
-        <loc>linziye.com/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/</loc>
+        <loc>linziye.com/2017/09/05/ubuntu-system-user-and-user-group/</loc>
         <lastmod>2017-11-02T08:44:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -80,6 +80,14 @@
     </url>
 
     <url>
+        <loc>linziye.com/2017/09/02/hexo-github-build-personal-blog/</loc>
+        <lastmod>2017-11-02T08:44:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>linziye.com/2017/09/03/some-hexo-next-set-the-page-header-foter./</loc>
         <lastmod>2017-11-02T08:44:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -88,7 +96,7 @@
     </url>
 
     <url>
-        <loc>linziye.com/2017/09/02/hexo-github-build-personal-blog/</loc>
+        <loc>linziye.com/2016/05/19/linux-iptables-setings/</loc>
         <lastmod>2017-11-02T08:44:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -112,23 +120,15 @@
     </url>
 
     <url>
-        <loc>linziye.com/2016/03/22/%5Blearning%5D-mo-net-to-build-a-lamp-environment-in-ubuntu-server/</loc>
-        <lastmod>2017-11-02T08:44:44.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>linziye.com/2016/05/19/linux-iptables-setings/</loc>
-        <lastmod>2017-11-02T08:44:44.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>linziye.com/2016/01/08/nginx-instal/</loc>
+        <lastmod>2017-11-02T08:44:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>linziye.com/2016/03/22/%5Blearning%5D-mo-net-to-build-a-lamp-environment-in-ubuntu-server/</loc>
         <lastmod>2017-11-02T08:44:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

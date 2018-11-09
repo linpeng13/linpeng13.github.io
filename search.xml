@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[关于家庭剧院的几个认知备忘]]></title>
+    <url>%2F2018%2F11%2F09%2F%E5%85%B3%E4%BA%8E%E5%AE%B6%E5%BA%AD%E5%89%A7%E9%99%A2%E7%9A%84%E5%87%A0%E4%B8%AA%E8%AE%A4%E7%9F%A5%E5%A4%87%E5%BF%98%2F</url>
+    <content type="text"><![CDATA[HTPC家庭剧院个人电脑，家庭剧院电脑，作为视讯或音频拨放或数位照片浏览的电脑。连接到电视去显示，通常使用遥控器操作，而不是使用键盘或鼠标操作。这类的电脑因为注重影音拨放的效果，所以要求低噪音。虽然具有类似功能的电脑是从20世纪的80年代末期开始，但是HTPC出现在新闻媒体则是大约是从1996年开始。 KODIKodi是由XBMC基金会开发的开源媒体播放器，原名XBMC，Kodi可以运行在多种操作系统和硬件平台。 它可以让用户播放本地或网络存储设备中的大多数视频、音乐、播客及各种常见数位媒体文件。 它是Windows Media Center的很热门的替代物。 KODI 官网KODI 中文网 PlexPlex是一套媒体播放器及媒体服务器软件，让用户整理在设备上的有声书、音乐、播客、图片和视频文件，以供流至移动设备、智能电视和电子媒体播放器上。Plex可用于Windows、Android、Linux、OS X和FreeBSD。 Plex 官网 OpenELECOpenELEC是一个为家庭剧院个人电脑设计的Linux发行版，基于Kodi媒体播放器。 OpenELEC的设计使得它消耗较少资源并且可以迅速从闪存启动。 OpenELEC也有适用于树莓派的磁盘镜像。 OpenELEC 官网]]></content>
+      <tags>
+        <tag>entertainment</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[win+python+atom 环境搭建备忘]]></title>
     <url>%2F2018%2F01%2F17%2Fmake-dev-env-with-win-python-atom%2F</url>
     <content type="text"><![CDATA[目的在win7 平台安装Python3.6 开发环境，并使用Atom 作为IDE工具。 搭建顺序 win7 sp1 和 KB2999226 补丁包 Python3.6 Atom 将python 和 atom 加入环境变量PATH 常用插件 汉化（不推荐） simplified-chinese-menu 脚本运行工具 atom-runner python 代码自动补全 autocomplete-python python 语法检查 linter-flake8 python 定义跳转 python-tools Atom 快捷键 调出命令框 ctrl+shift+p 文件类型设置 ctrl+shift+l 问题1. 丢失“api-ms-win-crt-runtime-l1-1-0.dll” 错误提示 问题描述：Python3.6 安装完成，运行时报错api-ms-win-crt-runtime-l1-1-0.dll丢失 解决方案：安装KB2999226 补丁包（注意win系统是32位还是64位） 2. Atom 安装package 时报错“connect ETIMEDOUT 54.197.251.22:443” 问题描述：在Atom 中install package 时，报错“connect ETIMEDOUT 54.197.251.22:443” 解决方案：在cmd 中执行语句apm config set strict-ssl false (参考链接) 3. Python 安装后找不到pip 问题描述：Python 安装后在Scripts 目录下找不到pip 解决方案：在cmd 中执行语句python -m ensurepip (参考链接)。执行成功，在Scripts 目录下出现3个可执行文件easy_install-3.6.exe 、pip3.6.exe 和pip3.exe]]></content>
@@ -79,8 +87,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -91,8 +99,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Ubuntu</tag>
       </tags>
   </entry>
   <entry>
@@ -141,8 +149,8 @@
         <category>Linux</category>
       </categories>
       <tags>
-        <tag>Ubuntu</tag>
         <tag>Linux</tag>
+        <tag>Ubuntu</tag>
         <tag>Apache</tag>
         <tag>MySQL</tag>
         <tag>PHP</tag>

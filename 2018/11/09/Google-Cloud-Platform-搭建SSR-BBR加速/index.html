@@ -103,20 +103,20 @@
 
 
 
-<meta name="description" content="0. 准备工作 拥有Google Cloud Platform 账号，并创建实例 gcp 实例需生成静态IP 能SSH 访问gcp 实例   1. 修改防火墙规则在实例VPC网络–&amp;gt;防火墙规则中创建防火墙规则 具体防火墙规则参数如图">
+<meta name="description" content="准备工作 拥有Google Cloud Platform 账号，并创建实例 gcp 实例需生成静态IP 能SSH 访问gcp 实例   修改防火墙规则在实例VPC网络–&amp;gt;防火墙规则中创建防火墙规则 具体防火墙规则参数如图">
 <meta name="keywords" content="gcp,ssr,bbr">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Google Cloud Platform 搭建SSR &amp; BBR加速">
 <meta property="og:url" content="linziye.com/2018/11/09/Google-Cloud-Platform-搭建SSR-BBR加速/index.html">
 <meta property="og:site_name" content="木月天空">
-<meta property="og:description" content="0. 准备工作 拥有Google Cloud Platform 账号，并创建实例 gcp 实例需生成静态IP 能SSH 访问gcp 实例   1. 修改防火墙规则在实例VPC网络–&amp;gt;防火墙规则中创建防火墙规则 具体防火墙规则参数如图">
+<meta property="og:description" content="准备工作 拥有Google Cloud Platform 账号，并创建实例 gcp 实例需生成静态IP 能SSH 访问gcp 实例   修改防火墙规则在实例VPC网络–&amp;gt;防火墙规则中创建防火墙规则 具体防火墙规则参数如图">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/2018/11/09/Google-Cloud-Platform-搭建SSR-BBR加速/修改防火墙规则-1.png">
 <meta property="og:image" content="/2018/11/09/Google-Cloud-Platform-搭建SSR-BBR加速/修改防火墙规则-2.png">
-<meta property="og:updated_time" content="2018-11-09T16:17:18.039Z">
+<meta property="og:updated_time" content="2018-11-09T16:18:55.506Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Google Cloud Platform 搭建SSR &amp; BBR加速">
-<meta name="twitter:description" content="0. 准备工作 拥有Google Cloud Platform 账号，并创建实例 gcp 实例需生成静态IP 能SSH 访问gcp 实例   1. 修改防火墙规则在实例VPC网络–&amp;gt;防火墙规则中创建防火墙规则 具体防火墙规则参数如图">
+<meta name="twitter:description" content="准备工作 拥有Google Cloud Platform 账号，并创建实例 gcp 实例需生成静态IP 能SSH 访问gcp 实例   修改防火墙规则在实例VPC网络–&amp;gt;防火墙规则中创建防火墙规则 具体防火墙规则参数如图">
 <meta name="twitter:image" content="/2018/11/09/Google-Cloud-Platform-搭建SSR-BBR加速/修改防火墙规则-1.png">
 
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  462(字)
+                  458(字)
                 </span>
               
 
@@ -431,17 +431,17 @@
       
 
       
-        <h2 id="0-准备工作"><a href="#0-准备工作" class="headerlink" title="0. 准备工作"></a>0. 准备工作</h2><ul>
+        <h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ul>
 <li>拥有<code>Google Cloud Platform</code> 账号，并创建实例</li>
 <li>gcp 实例需生成静态IP</li>
 <li>能SSH 访问gcp 实例 </li>
 </ul>
-<h2 id="1-修改防火墙规则"><a href="#1-修改防火墙规则" class="headerlink" title="1. 修改防火墙规则"></a>1. 修改防火墙规则</h2><p>在实例<code>VPC网络</code>–&gt;<code>防火墙规则</code>中创建防火墙规则<br><img src="/2018/11/09/Google-Cloud-Platform-搭建SSR-BBR加速/修改防火墙规则-1.png"></p>
+<h2 id="修改防火墙规则"><a href="#修改防火墙规则" class="headerlink" title="修改防火墙规则"></a>修改防火墙规则</h2><p>在实例<code>VPC网络</code>–&gt;<code>防火墙规则</code>中创建防火墙规则<br><img src="/2018/11/09/Google-Cloud-Platform-搭建SSR-BBR加速/修改防火墙规则-1.png"></p>
 <p>具体防火墙规则参数如图<br><img src="/2018/11/09/Google-Cloud-Platform-搭建SSR-BBR加速/修改防火墙规则-2.png"></p>
 <a id="more"></a>
-<h2 id="2-安装最新内核并开启BBR脚本"><a href="#2-安装最新内核并开启BBR脚本" class="headerlink" title="2. 安装最新内核并开启BBR脚本"></a>2. 安装最新内核并开启BBR脚本</h2><p>BBR要求系统内核版本为4.9以上, 本文采用teddysun的脚本, 支持一键自动判断和安装所需内核版本并开启BBR.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 切换到root用户</span></span><br><span class="line">$ sudo -i</span><br><span class="line"></span><br><span class="line"><span class="comment">## 下载安装 wget</span></span><br><span class="line"><span class="comment"># yum install -y wget</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 下载 bbr.sh 脚本到当前目录</span></span><br><span class="line"><span class="comment"># wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 执行 bbr.sh 脚本</span></span><br><span class="line"><span class="comment"># chmod +x bbr.sh</span></span><br><span class="line"><span class="comment"># ./bbr.sh</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="安装最新内核并开启BBR脚本"><a href="#安装最新内核并开启BBR脚本" class="headerlink" title="安装最新内核并开启BBR脚本"></a>安装最新内核并开启BBR脚本</h2><p>BBR要求系统内核版本为4.9以上, 本文采用teddysun的脚本, 支持一键自动判断和安装所需内核版本并开启BBR.<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 切换到root用户</span></span><br><span class="line">$ sudo -i</span><br><span class="line"></span><br><span class="line"><span class="comment">## 下载安装 wget</span></span><br><span class="line"><span class="comment"># yum install -y wget</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 下载 bbr.sh 脚本到当前目录</span></span><br><span class="line"><span class="comment"># wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 执行 bbr.sh 脚本</span></span><br><span class="line"><span class="comment"># chmod +x bbr.sh</span></span><br><span class="line"><span class="comment"># ./bbr.sh</span></span><br></pre></td></tr></table></figure></p>
 <p>安装完成后，脚本会提示需要重启VPS，输入 <code>y</code> 并<code>回车</code>后重启。<br>重启后验证是否成功安装了最新内核并开启BBR<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 查看内核版本，如果返回值含有4.13或以上版本, 就表示OK了</span></span><br><span class="line">$ uname -r</span><br><span class="line">4.9.0-8-amd64</span><br><span class="line"></span><br><span class="line">$ sudo sysctl net.ipv4.tcp_available_congestion_control</span><br><span class="line">net.ipv4.tcp_available_congestion_control = cubic reno</span><br><span class="line"></span><br><span class="line">$ sudo sysctl net.ipv4.tcp_congestion_control</span><br><span class="line">net.ipv4.tcp_congestion_control = cubic</span><br><span class="line"></span><br><span class="line">$ sudo sysctl net.core.default_qdisc</span><br><span class="line">net.core.default_qdisc = pfifo_fast</span><br><span class="line"></span><br><span class="line"><span class="comment">## 返回值有 tcp_bbr 模块即说明bbr已启动</span></span><br><span class="line">$ lsmod | grep bbr</span><br><span class="line">tcp_bbr                20480  13</span><br></pre></td></tr></table></figure></p>
-<h2 id="3-安装SSR"><a href="#3-安装SSR" class="headerlink" title="3. 安装SSR"></a>3. 安装SSR</h2><p>本文采用秋水逸冰的Shadowsocks一键安装脚本(四合一)<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 切换到root用户</span></span><br><span class="line">$ sudo -i</span><br><span class="line"></span><br><span class="line"><span class="comment">## 下载 shadowsocks-all.sh 脚本</span></span><br><span class="line"><span class="comment"># wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 执行 shadowsocks-all.sh 脚本</span></span><br><span class="line"><span class="comment"># chmod +x shadowsocks-all.sh</span></span><br><span class="line"><span class="comment"># ./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="安装SSR"><a href="#安装SSR" class="headerlink" title="安装SSR"></a>安装SSR</h2><p>本文采用秋水逸冰的Shadowsocks一键安装脚本(四合一)<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">## 切换到root用户</span></span><br><span class="line">$ sudo -i</span><br><span class="line"></span><br><span class="line"><span class="comment">## 下载 shadowsocks-all.sh 脚本</span></span><br><span class="line"><span class="comment"># wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## 执行 shadowsocks-all.sh 脚本</span></span><br><span class="line"><span class="comment"># chmod +x shadowsocks-all.sh</span></span><br><span class="line"><span class="comment"># ./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log</span></span><br></pre></td></tr></table></figure></p>
 <p>按照提示步骤选择SSR版本, 设置端口、密码、加密方式等等</p>
 <p>参考链接：<br><a href="https://www.wmsoho.com/google-cloud-platform-ssr-bbr-tutorial/" target="_blank" rel="noopener">https://www.wmsoho.com/google-cloud-platform-ssr-bbr-tutorial/</a><br><a href="https://congcong0806.github.io/2018/04/20/SS/" target="_blank" rel="noopener">https://congcong0806.github.io/2018/04/20/SS/</a></p>
 
@@ -698,7 +698,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-准备工作"><span class="nav-number">1.</span> <span class="nav-text">0. 准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-修改防火墙规则"><span class="nav-number">2.</span> <span class="nav-text">1. 修改防火墙规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装最新内核并开启BBR脚本"><span class="nav-number">3.</span> <span class="nav-text">2. 安装最新内核并开启BBR脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装SSR"><span class="nav-number">4.</span> <span class="nav-text">3. 安装SSR</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改防火墙规则"><span class="nav-number">2.</span> <span class="nav-text">修改防火墙规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装最新内核并开启BBR脚本"><span class="nav-number">3.</span> <span class="nav-text">安装最新内核并开启BBR脚本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装SSR"><span class="nav-number">4.</span> <span class="nav-text">安装SSR</span></a></li></ol></div>
             
 
           </div>

@@ -9,7 +9,7 @@
 
     <url>
         <loc>linziye.com/2018/11/09/%E5%85%B3%E4%BA%8E%E5%AE%B6%E5%BA%AD%E5%89%A7%E9%99%A2%E7%9A%84%E5%87%A0%E4%B8%AA%E8%AE%A4%E7%9F%A5%E5%A4%87%E5%BF%98/</loc>
-        <lastmod>2018-11-09T05:13:09.702Z</lastmod>
+        <lastmod>2018-11-09T06:00:33.645Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -32,14 +32,6 @@
     </url>
 
     <url>
-        <loc>linziye.com/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/</loc>
-        <lastmod>2017-11-02T08:44:44.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>linziye.com/2017/09/05/ubuntu-system-user-and-user-group/</loc>
         <lastmod>2017-11-02T08:44:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -48,7 +40,7 @@
     </url>
 
     <url>
-        <loc>linziye.com/2017/09/15/python-built-in-data-structures/</loc>
+        <loc>linziye.com/2017/09/17/the-python-standard-library/</loc>
         <lastmod>2017-11-02T08:44:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -56,7 +48,7 @@
     </url>
 
     <url>
-        <loc>linziye.com/2017/09/17/the-python-standard-library/</loc>
+        <loc>linziye.com/2017/09/15/python-built-in-data-structures/</loc>
         <lastmod>2017-11-02T08:44:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -120,6 +112,14 @@
     </url>
 
     <url>
+        <loc>linziye.com/2016/03/22/%5Blearning%5D-mo-net-to-build-a-lamp-environment-in-ubuntu-server/</loc>
+        <lastmod>2017-11-02T08:44:44.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>linziye.com/2016/01/08/nginx-instal/</loc>
         <lastmod>2017-11-02T08:44:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -128,7 +128,7 @@
     </url>
 
     <url>
-        <loc>linziye.com/2016/03/22/%5Blearning%5D-mo-net-to-build-a-lamp-environment-in-ubuntu-server/</loc>
+        <loc>linziye.com/2017/09/05/the-ubuntu-system-cal-user-login-file-(or-environment-variables)/</loc>
         <lastmod>2017-11-02T08:44:44.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
